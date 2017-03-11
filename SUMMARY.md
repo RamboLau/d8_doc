@@ -10,5 +10,5 @@
   * [1.7 Drupal 路径 ](1.6-drupal.md)
   * [1.8 Drupal 是否安全 ](1.7-drupal.md)
   * [1.9 Drupal 8 新特性 ](1.8-drupal-8.md)
-  * [1.10 练习](1.9.md)
+  * [1.10 实践](1.9.md)
 
