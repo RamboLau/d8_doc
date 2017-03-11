@@ -11,5 +11,5 @@
   * [1.8 Drupal 是否安全 ](1.7-drupal.md)
   * [1.9 Drupal 8 新特性 ](1.8-drupal-8.md)
   * [1.10 实践](1.9.md)
-* 二、站点配置
+* [二、站点配置](er-3001-zhan-dian-pei-zhi.md)
 
