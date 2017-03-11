@@ -7,4 +7,6 @@
   * [1.4  用户、角色、权限](1.4.md)
   * [1.5 内容类型 ](1.5.md)
   * [1.6 Drupal 路径 ](1.6-drupal.md)
+  * [1.7 Drupal 是否安全 ](1.7-drupal.md)
+  * [1.8 Drupal 8 新特性 ](1.8-drupal-8.md)
 
