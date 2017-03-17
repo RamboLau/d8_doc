@@ -32,10 +32,7 @@ CKEditor已经是最好用的网络在线编辑器，其强大的功能，丰富
 
 定位到D8中CKEditor目录/core/assets/vendor/ckeditor，目录下有一个名为build-config.js的文件，这个文件的作用是用来创建CKEditor自定义功能的配置文件。这个文件是由CKEditor创建器自动添加的，主要目的是实现再一次创建CKEditor编辑器时重用。这个文件只是在创建CKEditor时使用，其本身在CKEditor中并无作用，因此删除它并不会影响其功能。
 
-定位到CKEditor官网(http://ckeditor.com)，点击右上角的Download按钮，进入下载CKEditor编辑器页面，如图所示。
-
-customize-download-ckeditor
-
+定位到CKEditor官网(http://ckeditor.com)，点击右上角的Download按钮，进入下载CKEditor编辑器页面。
 有三个版本可供选择：
 
     Basic Package:基本版，最小化工具栏－17个插件。
