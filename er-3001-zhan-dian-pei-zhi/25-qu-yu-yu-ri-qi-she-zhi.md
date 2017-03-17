@@ -9,7 +9,7 @@ Drupal 8 在安装的最后一步，要求站点管理员设置国家和时区�
 ### 日期时间格式设置
 点击 **管理->配置->日期和时间格式** ，出现日期和时间格式管理界面，在这一页列出了Drupal 8已创建的日期时间格式，这些格式与中国的时间日期格式有点不同，你可以对已存在的格式进行编辑和删除，也可以添加新的日期时间格式。
 
-添加新的日期格式，在日期时间格式列表页面，点击添加格式按钮(Add format)或输入admin/config/regional/dete-time/formats/add(以后这种不完整的URL都是省略了域名)后，出现添加日期时间格式页面，如下图:
+添加新的日期格式，在日期时间格式列表页面，点击添加格式按钮(Add format)或输入admin/config/regional/dete-time/formats/add后，出现添加日期时间格式页面，如下图:
 
 add_date_time_formats_in_drupal8
 
