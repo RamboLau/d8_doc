@@ -21,4 +21,5 @@
   * [2.7 日志与错误设置](er-3001-zhan-dian-pei-zhi/27-ri-zhi-yu-cuo-wu-she-zhi.md)
   * [2.8 开启维护模式](er-3001-zhan-dian-pei-zhi/28-kai-qi-wei-hu-mo-shi.md)
   * [2.9 站点报告](er-3001-zhan-dian-pei-zhi/29-zhan-dian-bao-gao.md)
+  * [2.10 实践](er-3001-zhan-dian-pei-zhi/210-lian-xi.md)
 
