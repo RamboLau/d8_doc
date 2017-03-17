@@ -1,6 +1,6 @@
 Drupal 8 为了使站点配置管理更加灵活，提供了Configuration Manager模块，这个模块的功能是允许管理员修改配置，包括导入导出配置，首先在admin/modules启用这个模块。
 
-现在我们一起来看看Drupal8的配置管理界面，点击管理->配置->配置同步或输入admin/config/development/configuration。在这个页面会显示你对Drupal8配置所作的任何修改，由于我们没有作出任何修改，这里没有列出。
+现在我们一起来看看Drupal8的配置管理界面，点击 **管理->配置->配置同步** 或输入admin/config/development/configuration。在这个页面会显示你对Drupal8配置所作的任何修改，由于我们没有作出任何修改，这里没有列出。
 
 ### drupal8站点配置导入导出
 
