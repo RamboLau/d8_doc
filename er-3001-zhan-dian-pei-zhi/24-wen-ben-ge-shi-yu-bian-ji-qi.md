@@ -39,7 +39,7 @@ CKEditor已经是最好用的网络在线编辑器，其强大的功能，丰富
     Standard Package:标准版，标准工具栏－48个插件。
     Full Package:完全版，包含所有特性－72个插件。
 
-仍选一个版本，然后点击Download CKEditor按钮下载。下载下来是一个压缩文件，解压后替换掉现有CKEditor即可完成CKEditor功能扩展。
+任选一个版本，然后点击Download CKEditor按钮下载。下载下来是一个压缩文件，解压后替换掉现有CKEditor即可完成CKEditor功能扩展。
 
 CKEditor除了提供这三个版本之外，还支持自定义创建CKEditor编辑器。在下载页面上点选”Or let me customize CKEditor”，然后点击Customize &Download CKEditor进入自定义CKEditor页面。在这一页你将完成CKEditor的创建设置，分为3步:
 
