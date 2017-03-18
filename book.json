@@ -1,0 +1,6 @@
+{
+  "title" : "Drupal8从入门到精通",
+  "author" : "rambo",
+  "description" : "Drupal8从入门到精通",
+  "plugins": ["toggle-chapters"]
+}
