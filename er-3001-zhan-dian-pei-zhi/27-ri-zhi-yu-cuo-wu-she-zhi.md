@@ -1,4 +1,4 @@
-Drupal 8提供了日志记录功能，在站点管理中可对其进行参数设置，到Manage->Configuration->Logging and errors(admin/config/development/logging)对日志和错误进行配置，如下图:
+Drupal 8提供了日志记录功能，在站点管理中可对其进行参数设置，到 **管理->配置->日志和错误** (admin/config/development/logging)对日志和错误进行配置。
 
 Drupal8日志与错误设置页面
 
