@@ -22,4 +22,11 @@
   * [2.8 开启维护模式](er-3001-zhan-dian-pei-zhi/28-kai-qi-wei-hu-mo-shi.md)
   * [2.9 站点报告](er-3001-zhan-dian-pei-zhi/29-zhan-dian-bao-gao.md)
   * [2.10 实践](er-3001-zhan-dian-pei-zhi/210-lian-xi.md)
+* 三、用户管理
+  * [3.1 账户操作](11.md)
+  * [3.2 角色管理](12.md)
+  * 3.3 角色权限
+  * [3.4 封禁用户](34.md)
+  * [3.5 注册、登录、找回密码](35-yong-hu-zhu-ce-3001-deng-lu-3001-zhao-hui-mi-ma.md)
+  * [3.6 实践](36.md)
 
