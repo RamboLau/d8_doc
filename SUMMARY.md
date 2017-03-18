@@ -1,7 +1,7 @@
 # Summary
 
 * [一、Drupal8介绍](README.md)
-  * [1.1 Drupal8安装1](1.1-drupal8.md)
+  * [1.1 Drupal8安装](1.1-drupal8.md)
   * [1.2 基本概念](1.1.md)
   * [1.3 使用领域](1.2.md)
   * [1.4 基本术语介绍](1.3.md)
