@@ -1,25 +1,14 @@
-我们从 https://localize.drupal.org/download 下载的一般是后缀为po的文件，格式为：
+我们从 https://localize.drupal.org/download 下载的一般是后缀为po的文件。
+基本格式说明：
 
-```bash
-# Chinese, Simplified translation of Drupal core (8.3.0-rc2)
-# Copyright (c) 2017 by the Chinese, Simplified translation team
-#
-msgid ""
-msgstr ""
-"Project-Id-Version: Drupal core (8.3.0-rc2)\n"
-"POT-Creation-Date: 2017-03-15 21:45+0000\n"
-"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
-"Language-Team: Chinese, Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-
-msgid "Forms"
-msgstr "表单"
-msgid "Home"
-msgstr "首页"
-msgid "User interface"
-msgstr "用户界面"
-```
-
+.po文件都是由一对对的msgid和msgstr组成的。
+msgid就是原文(Message ID)。
+msgstr就是译文（Message Translation)。
+原文、译文相互对照，所以非常适于翻译。
+基本示例
+示例--这是未翻译的.po文件：
+ msgid "Welcome to ADempiere ERP"
+ msgstr ""
+示例--这是翻译后的.po文件：
+ msgid "Welcome to ADempiere ERP"
+ msgstr "欢迎来到ADempiere ERP"
