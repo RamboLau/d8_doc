@@ -29,4 +29,6 @@
   * [3.4 封禁用户](34.md)
   * [3.5 注册、登录、找回密码](35-yong-hu-zhu-ce-3001-deng-lu-3001-zhao-hui-mi-ma.md)
   * [3.6 实践](36.md)
+* [四、语言管理](si-3001-yu-yan-guan-li.md)
+  * [4.1](si-3001-yu-yan-guan-li/41.md)
 
