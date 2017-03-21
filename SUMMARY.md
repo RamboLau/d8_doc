@@ -33,7 +33,7 @@
   * [4.1 语言配置](si-3001-yu-yan-guan-li/41.md)
   * [4.2 用户界面翻译](si-3001-yu-yan-guan-li/42-yong-hu-jie-mian-fan-yi.md)
   * [4.3 内容翻译](si-3001-yu-yan-guan-li/43-nei-rong-fan-yi.md)
-  * 4.4 配置翻译
+  * [4.4 配置翻译](si-3001-yu-yan-guan-li/44-pei-zhi-fan-yi.md)
   * 4.5 实践
   * 五、菜单管理
     * 5.1 菜单配置
