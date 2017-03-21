@@ -6,7 +6,9 @@
 msgid就是原文(Message ID)。
 msgstr就是译文（Message Translation)。
 原文、译文相互对照，所以非常适于翻译。
+
 基本示例
+
 示例--这是未翻译的.po文件：
 ```bash
  msgid "Welcome to ADempiere ERP"
