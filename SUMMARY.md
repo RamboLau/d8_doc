@@ -30,5 +30,12 @@
   * [3.5 注册、登录、找回密码](35-yong-hu-zhu-ce-3001-deng-lu-3001-zhao-hui-mi-ma.md)
   * [3.6 实践](36.md)
 * [四、语言管理](si-3001-yu-yan-guan-li.md)
-  * [4.1](si-3001-yu-yan-guan-li/41.md)
+  * [4.1 语言配置](si-3001-yu-yan-guan-li/41.md)
+  * [4.2 用户界面翻译](si-3001-yu-yan-guan-li/42-yong-hu-jie-mian-fan-yi.md)
+  * 4.3 内容翻译
+  * 4.4 配置翻译
+  * 4.5 实践
+  * 五、菜单管理
+    * 5.1 菜单配置
+    * 5.2 实践
 
