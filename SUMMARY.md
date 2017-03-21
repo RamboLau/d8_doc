@@ -36,7 +36,7 @@
   * [4.4 配置翻译](si-3001-yu-yan-guan-li/44-pei-zhi-fan-yi.md)
   * [4.5 po文件格式说明](si-3001-yu-yan-guan-li/45-shi-jian.md)
   * [4.6 实践](si-3001-yu-yan-guan-li/46-shi-jian.md)
-  * [五、菜单管理](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li.md)
-    * [5.1 菜单配置](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/51-cai-dan-pei-zhi.md)
-    * 5.2 实践
+* [五、菜单管理](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li.md)
+  * [5.1 菜单配置](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/51-cai-dan-pei-zhi.md)
+  * [5.2 实践](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/52-shi-jian.md)
 
