@@ -14,7 +14,7 @@
 
 除以上主要目录结构外，对于开发人员，对 core 目录下的目录结构及作用有所了解是非常必要的。
 
-* /core/asset - Drupal 8 所使用的各种扩展库，如 jQuery, CKEditor, Backbone, Underscore, Modernizer, Normalize CSS 等
+* /core/assets - Drupal 8 所使用的各种扩展库，如 jQuery, CKEditor, Backbone, Underscore, Modernizer, Normalize CSS 等
 
 * /core/includes - 提供核心API
 
