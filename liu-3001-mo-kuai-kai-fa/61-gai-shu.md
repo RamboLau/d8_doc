@@ -32,4 +32,4 @@
 
 * /core/themes - Drupal 8 内核主题
 
-* /core/vender - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
+* /core/vendor - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
