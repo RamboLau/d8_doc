@@ -14,13 +14,22 @@
 
 除以上主要目录结构外，对于开发人员，对 core 目录下的目录结构及作用有所了解是非常必要的。
 
-/core/asset - Drupal 8 所使用的各种扩展库，如 jQuery, CKEditor, Backbone, Underscore, Modernizer, Normalize CSS 等
-/core/include - Drupal 8 中还足以模块化的底层功能函数，如模块化系统本身
-/core/lib - Drupal 8 的各种核心类（classes）
-/core/misc - Drupal 8 核心所需要的前端杂项文件，如 js, css, 小图片等等
-/core/modules - Drupal 8 内核模块
-/core/profiles - Drupal 8 内置安装配置文件
-/core/scripts - 开发人员可用的各种命令行脚本
-/core/tests - Drupal 8 测试用相关文件
-/core/themes - Drupal 8 内核主题
-/core/vender - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
+* /core/asset - Drupal 8 所使用的各种扩展库，如 jQuery, CKEditor, Backbone, Underscore, Modernizer, Normalize CSS 等
+
+* /core/includes - 提供核心API
+
+* /core/lib - Drupal 8 的各种核心类（classes）
+
+* /core/misc - Drupal 8 核心所需要的前端杂项文件，如 js, css, 小图片等等
+
+* /core/modules - Drupal 8 内核模块
+
+* /core/profiles - Drupal 8 内置安装配置文件
+
+* /core/scripts - 开发人员可用的各种命令行脚本
+
+* /core/tests - Drupal 8 测试用相关文件
+
+* /core/themes - Drupal 8 内核主题
+
+* /core/vender - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
