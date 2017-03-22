@@ -41,5 +41,7 @@
   * [5.2 实践](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/52-shi-jian.md)
 * [六、模块开发](liu-3001-mo-kuai-kai-fa.md)
   * [6.1 Drupal8目录结构](liu-3001-mo-kuai-kai-fa/61-gai-shu.md)
+  * [6.2 基础概念](liu-3001-mo-kuai-kai-fa/62-ji-chu-gai-nian.md)
+  * 6.3 创建一个模块
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
