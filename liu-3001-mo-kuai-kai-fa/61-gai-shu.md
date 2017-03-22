@@ -12,7 +12,7 @@
 /sites/[default|all|domain]/files - （在多站点情况下），此目录放置各种站点文件，如用户上传的文件、站点配置等
  
 
-除以上主要目录结构外，对于内核开发人员（或者任何有兴趣了解的人），对 core 目录下的目录结构及作用有所了解是非常必要的。
+除以上主要目录结构外，对于内核开发人员，对 core 目录下的目录结构及作用有所了解是非常必要的。
 
 /core/asset - Drupal 8 所使用的各种扩展库，如 jQuery, CKEditor, Backbone, Underscore, Modernizer, Normalize CSS 等
 /core/include - Drupal 8 中还足以模块化的底层功能函数，如模块化系统本身
