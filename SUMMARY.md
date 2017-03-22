@@ -39,5 +39,6 @@
 * [五、菜单管理](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li.md)
   * [5.1 菜单配置](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/51-cai-dan-pei-zhi.md)
   * [5.2 实践](si-3001-yu-yan-guan-li/wu-3001-cai-dan-guan-li/52-shi-jian.md)
-* 六、模块开发
+* [六、模块开发](liu-3001-mo-kuai-kai-fa.md)
+* [如何排错？](ru-he-pai-cuo-ff1f.md)
 
