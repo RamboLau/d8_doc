@@ -80,3 +80,40 @@ example.admin_3rd_party: # The second plugin ID
   base_route: example.admin
 ```
 这里定义了两个菜单，admin和admin_3rd_party，并且默认显示admin。
+
+当然也可以动态定义：
+```php
+example.local_tasks:
+  deriver: 'Drupal\example\Plugin\Derivative\DynamicLocalTasks'
+  weight: 100
+```
+
+```php
+/**
+ * @file
+ * Contains \Drupal\example\Plugin\Derivative\DynamicLocalTasks.
+ */
+
+namespace Drupal\example\Plugin\Derivative;
+
+use Drupal\Component\Plugin\Derivative\DeriverBase;
+
+/**
+ * Defines dynamic local tasks.
+ */
+class DynamicLocalTasks extends DeriverBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getDerivativeDefinitions($base_plugin_definition) {
+    // Implement dynamic logic to provide values for the same keys as in example.links.task.yml.
+    $this->derivatives['example.task_id'] = $base_plugin_definition;
+    $this->derivatives['example.task_id']['title'] = "I'm a tab";
+    $this->derivatives['example.task_id']['route_name'] = 'example.route';
+    return $this->derivatives;
+  }
+
+}
+
+```
