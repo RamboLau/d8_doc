@@ -12,7 +12,7 @@
 
 * 机器名必须唯一，不能与模块、主题、或配置文件重命。
 
-不能使用保留字:src、lib、vendor、assets、css、files、images、js、misc、templates、includes、fixtures、Drupal。
+* 不能使用保留字: src、lib、vendor、assets、css、files、images、js、misc、templates、includes、fixtures、Drupal。
 
 在本例中，我们使用”hello_world”作为模块的机器名。
 
