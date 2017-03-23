@@ -52,6 +52,6 @@
   * [7.1](qi-3001-qu-kuai-kai-fa/71.md)
   * [7.2](qi-3001-qu-kuai-kai-fa/72.md)
   * [7.3](qi-3001-qu-kuai-kai-fa/73.md)
-  * 7.4
+  * [7.4](qi-3001-qu-kuai-kai-fa/74.md)
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
