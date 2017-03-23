@@ -115,4 +115,4 @@ class HelloController extends ControllerBase {
 }
 ```
 
-在url地址栏输入/hello，你将会看到”Hello,World!”这样的信息
+在url地址栏输入/hello，你将会看到”Hello,World!”这样的信息。
