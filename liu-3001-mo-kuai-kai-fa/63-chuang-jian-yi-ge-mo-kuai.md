@@ -23,5 +23,13 @@
 
 我们这个模块现在还没有任何功能，我们需要先建立一个.info.yml文件，以使Drupal 8能发现它。
 
-###3、创建.info.yml文件
-
+###3、创建info.yml文件
+* 1、创建hello_world.info.yml文件
+* 2、增加以下代码
+```php
+name: 'hello_world'
+type: module
+description: 'An example module showing how to define a page to be displayed at a given URL.'
+package: 'Example'
+core: 8.x
+```
