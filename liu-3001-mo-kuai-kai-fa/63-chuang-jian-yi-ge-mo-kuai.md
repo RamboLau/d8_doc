@@ -92,3 +92,24 @@ page_example_description:
 * path: 路由注册的路径，需要以斜线开头
 * _controller: 定义路由的路径HelloController的content方法
 * requirements: 用户能够访问这个页面所具有的权限
+
+在模块目录中，创建一个符合PSR-4标准的目录结构/src/Controller，并在该目录下创建控制器文件HelloController.php。我们这个模块只是想输出hello world这样的字符串，需要在/src/Controller/HelloController.php文件中输入以下代码:
+```php
+<?php
+/**
+ * @file
+ * Contains \Drupal\hello_world\Controller\HelloController.
+ */
+
+namespace Drupal\hello_world\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+class HelloController extends ControllerBase {
+  public function content() {
+    return array(
+        '#type' => 'markup',
+        '#markup' => $this->t('Hello, World!'),
+    );
+  }
+}
+```
