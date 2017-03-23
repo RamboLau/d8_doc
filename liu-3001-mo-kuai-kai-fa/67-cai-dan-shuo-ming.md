@@ -3,4 +3,4 @@
 
 
 ###1、在admin/config添加一个菜单
-要用到hello_world.links.menu.yml.
+要用到hello_world.links.menu.yml。
