@@ -1,8 +1,4 @@
-* hello_world.links.action.yml 等效Drual7的常量MENU_LOCAL_ACTION
-* hello_world.links.task.yml 等效Drupal7的常量MENU_DEFAULT_LOCAL_TASK
-
-
-###1、在admin/config添加一个菜单
+###1、links.menu.yml
 要用到hello_world.links.menu.yml。
 
 在模块的根目录下，创建一个名为hello_world.links.menu.yml的文件，并输入以下内容:
@@ -21,7 +17,7 @@
 
 清空缓存，看一下效果。
 
-###2、动作菜单
+###2、links.action.yml
 在模块的根目录下，创建一个名为hello_world.links.action.yml的文件，并输入一下的内容:
 ```php
 hello_world.link_add:
@@ -69,3 +65,5 @@ class CustomLocalAction extends LocalActionDefault {
 
 }
 ```
+
+###3、links.task.ym
