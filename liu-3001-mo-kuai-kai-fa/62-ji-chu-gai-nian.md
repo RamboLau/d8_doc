@@ -4,7 +4,7 @@
 Drupal 8支持面向对象特性，其核心大多使用类、接口写成。并遵循一些公共的设计标准，如
 * The Factory Pattern(http://design-patterns.readthedocs.io/zh_CN/latest/creational_patterns/simple_factory.html)
 
-* Software design pattern
+* Software design pattern (https://design-patterns.readthedocs.io/zh_CN/latest/)
 
 * Foundations of Programming:Design Pattern
 
