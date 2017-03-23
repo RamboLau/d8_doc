@@ -91,3 +91,4 @@ page_example_description:
 
 * path: 路由注册的路径，需要以斜线开头
 * _controller: 定义路由的路径HelloController的content方法
+* requirements: 用户能够访问这个页面所具有的权限
