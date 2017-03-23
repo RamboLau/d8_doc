@@ -72,3 +72,29 @@ $settings['extension_discovery_scan_tests'] = TRUE
 以显示模块。
 
 ###4、创建routing.yml文件
+Drupal8中的菜单主要由这几个文件构成：
+
+* hello_world.routing.yml 包含URL路径和回调函数的映射关系
+* hello_world.links.menu.yml 包含菜单项的结构
+* hello_world.links.action.yml 等效Drual7的常量MENU_LOCAL_ACTION
+* hello_world.links.task.yml 等效Drupal7的常量MENU_DEFAULT_LOCAL_TASK
+
+在hello_world.routing.yml中添加如下代码：
+```php
+page_example_description:
+  path: '/examples/page_example'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\PageExampleController::description'
+  requirements:
+    _access: 'TRUE'
+
+page_example_simple:
+  path: '/examples/page_example/simple'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\PageExampleController::simple'
+  requirements:
+    _permission: 'access simple page'
+```
+
+* path: 路由注册的路径，需要以斜线开头
+* _controller: 定义路由的路径PageExampleController的description方法
