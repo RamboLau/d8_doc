@@ -15,3 +15,6 @@
    route_name: hello_world.content
    weight: 100
 ```
+
+* route_name: 在routing.yml中定义的路由名称
+* parent: 描述的是菜单的父链接菜单。这个菜单链接将会在admin>config>development下创建。
