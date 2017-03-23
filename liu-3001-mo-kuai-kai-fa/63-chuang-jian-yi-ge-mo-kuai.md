@@ -37,7 +37,7 @@ core: 8.x
 
 info.yml里还有其他的一些属性：
 ```php
-name: Hello World Module
+name: hello_world
 description: Creates a page showing “Hello World”
 package: Custom
 type: module
@@ -58,10 +58,11 @@ hidden: true
 version:1.0
 ```
 
-dependencies:列出你的模块依赖的模块。其格式为{project}:{module}，{project}是出现在Drupal.org项目url中的项目名称，例如drupal.org/project/views，{module}是模块的机器名。
+* dependencies: 列出你的模块依赖的模块。其格式为{project}:{module}，{project}是出现在Drupal.org项目url中的项目名称，例如drupal.org/project/views，{module}是模块的机器名。
 
-test_dependencies:在被添加为你的模块的依赖关系的过程中的其它模块的列表。这允许对依赖关系进行测试。一般地，你应该尽可能地提交test_dependecies，testbot会对整个开发过程的依赖关系进行测试。依赖关系是正确的、完整的，你应该将其移动dependencies中。在上面的例子中，在测试期间testbot会包含image模块。但站点安装”Hello World Module”模块时不会要求安装image模块。测试依赖的命名规则应该与依赖的命名规则相同。
+* test_dependencies: 测试的依赖模块。testbot会对整个模块的依赖关系进行测试。如果通过测试依赖关系是正确的、完整的，应该将其移动dependencies中。在上面的例子中，在测试期间testbot会包含image模块。但站点安装”Hello World Module”模块时不会要求安装image模块。测试依赖的命名规则应该与依赖的命名规则相同。
+testbot测试见 https://www.drupal.org/docs/8/phpunit/running-phpunit-tests。
 
-configure:如果你的模块提供了一个配置表单，你就可能为这个表单指定一个路由。当用户展开模块细节时，它将会在Extend页(/admin/modules)显示一个链接。
+* configure: 如果你的模块提供了一个配置表单，你就可能为这个表单指定一个路由。当用户展开模块细节时，它将会在Extend页(/admin/modules)显示一个链接。
 
 hidden:true在站点Extend页面(/admin/modules)的模块列表中隐藏你的模块。如果模块仅仅包含一个测试或只是作为一个开发例子实现模块主要的API，你发现使用这个键是非常有用的。你可以在settings.php文件中添加$settings[‘extension_discovery_scan_tests’] = TRUE以显示模块。
