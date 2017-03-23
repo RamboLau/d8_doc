@@ -4,3 +4,12 @@
 
 ###1、在admin/config添加一个菜单
 要用到hello_world.links.menu.yml。
+
+在模块的根目录下，创建一个命为hello_world.links.menu.yml的文件，并输入以下内容:
+
+ hello_world.admin:
+   title: ‘Hello module settings’
+   description: ‘example of how to make an admin settings page link’
+   parent: system.admin_config_development
+   route_name: hello_world.content
+   weight: 100

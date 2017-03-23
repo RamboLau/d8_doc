@@ -8,7 +8,7 @@ Drupal8中的菜单主要由这几个文件构成：
 
 在hello_world.routing.yml中添加如下代码：
 ```php
-page_example_description:
+hello_world.content:
   path: '/hello'
   defaults:
     _controller: '\Drupal\hello_world\Controller\HelloController::content'
