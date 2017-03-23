@@ -79,3 +79,4 @@ example.admin_3rd_party: # The second plugin ID
   route_name: example.admin_3rd_party
   base_route: example.admin
 ```
+这里定义了两个菜单，admin和admin_3rd_party，并且默认显示admin。
