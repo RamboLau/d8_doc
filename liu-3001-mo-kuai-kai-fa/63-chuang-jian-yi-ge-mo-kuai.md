@@ -28,9 +28,9 @@
 * 2、增加以下代码
 ```php
 name: 'hello_world'
-type: module
-description: 'An example module showing how to define a page to be displayed at a given URL.'
 package: 'Example'
+description: 'An example module showing how to define a page to be displayed at a given URL.'
+type: module
 core: 8.x
 ```
 前三行用于描述模块名、模块描述、所属包(组)，它们将会显示在Drupal 8的模块管理页面。name键指定显示在模块管理页面的名称，description键批定显示在模块管理页面的描述，package键允许对模块进行分组。例如Core包是由Drupal 8核心提供的模块。我们这里使用package:Custom表明此模块属于自定义模块包。
