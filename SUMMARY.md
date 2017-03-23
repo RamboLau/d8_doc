@@ -51,7 +51,7 @@
 * [七、区块开发](qi-3001-qu-kuai-kai-fa.md)
   * [7.1](qi-3001-qu-kuai-kai-fa/71.md)
   * [7.2](qi-3001-qu-kuai-kai-fa/72.md)
-  * 7.3
+  * [7.3](qi-3001-qu-kuai-kai-fa/73.md)
   * 7.4
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
