@@ -84,17 +84,10 @@ Drupal8中的菜单主要由这几个文件构成：
 page_example_description:
   path: '/examples/page_example'
   defaults:
-    _controller: '\Drupal\hello_world\Controller\PageExampleController::description'
+    _controller: '\Drupal\hello_world\Controller\HelloController::content'
   requirements:
     _access: 'TRUE'
-
-page_example_simple:
-  path: '/examples/page_example/simple'
-  defaults:
-    _controller: '\Drupal\hello_world\Controller\PageExampleController::simple'
-  requirements:
-    _permission: 'access simple page'
 ```
 
 * path: 路由注册的路径，需要以斜线开头
-* _controller: 定义路由的路径PageExampleController的description方法
+* _controller: 定义路由的路径HelloController的content方法
