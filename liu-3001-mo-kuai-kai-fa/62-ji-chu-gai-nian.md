@@ -7,6 +7,7 @@ Drupal 8支持面向对象特性，其核心大多使用类、接口写成。并
 * Software design pattern (https://design-patterns.readthedocs.io/zh_CN/latest/)
 
 ###2、Symfony 2
+Drupal 8引入了Symfony 2开发框架，目的是为了减少代码重复。Drupal 8主要用它处理路由(routing)、sessions和服务(service)。阅读Symfony 2手册(https://symfony-docs-chs.readthedocs.io/en/latest/) 以学习更多的Symfony框架知识。学习它根本不需要任何Drupal 知识，学习它将使你成为更好的Drupal开发者和PHP开发者。
 
 ###3、命名空间
 
