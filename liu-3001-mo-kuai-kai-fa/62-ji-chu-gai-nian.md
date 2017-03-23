@@ -6,8 +6,6 @@ Drupal 8支持面向对象特性，其核心大多使用类、接口写成。并
 
 * Software design pattern (https://design-patterns.readthedocs.io/zh_CN/latest/)
 
-* Foundations of Programming:Design Pattern
-
 ###2、Symfony 2
 
 ###3、命名空间
