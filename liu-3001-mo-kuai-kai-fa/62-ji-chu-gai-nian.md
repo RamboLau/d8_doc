@@ -10,6 +10,9 @@ Drupal 8支持面向对象特性，其核心大多使用类、接口写成。并
 Drupal 8引入了Symfony 2开发框架，目的是为了减少代码重复。Drupal 8主要用它处理路由(routing)、session和服务(service)。阅读Symfony 2手册(https://symfony-docs-chs.readthedocs.io/en/latest/) 以学习更多的Symfony框架知识。学习它根本不需要任何Drupal 知识，学习它将使你成为更好的Drupal开发者和PHP开发者。
 
 ###3、命名空间
+如果你对PHP命名空间概念不熟悉，请阅读PHP手册或阅读PHP书籍。Drupal 8使用了PSR-4标准开发。PSR-4标准是基于PHP命名空间的自动加载包的方式。它定了如何自动加载基于命名空间和类名的类。Drupal模块在Drupal根命名空间中有自已的命名空间。在大多数情况下，Drupal 代码的命名空间是按照模块命名的如 block.module命名空间为Drupal\block。
+
+PSR-4规定文件仅仅包含一个类、接口或trait。这些文件的名称必须与所包含的类、接口或trait的名称相同。以便于类加载器进行自动加载。
 
 ###4、依赖注入
 
