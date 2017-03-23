@@ -44,5 +44,6 @@
   * [6.2 基础概念](liu-3001-mo-kuai-kai-fa/62-ji-chu-gai-nian.md)
   * [6.3 模块命名](liu-3001-mo-kuai-kai-fa/63-chuang-jian-yi-ge-mo-kuai.md)
   * [6.4 模块目录](liu-3001-mo-kuai-kai-fa/64-mo-kuai-mu-lu.md)
+  * [6.5 info.yml文件](liu-3001-mo-kuai-kai-fa/65-infoymlwen-jian.md)
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
