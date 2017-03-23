@@ -12,7 +12,7 @@ Drupal 8引入了Symfony 2开发框架，目的是为了减少代码重复。Dru
 ###3、命名空间
 如果你对PHP命名空间概念不熟悉，请阅读 http://php.net/manual/zh/language.namespaces.basics.php 。Drupal 8使用了PSR-4标准开发。PSR-4标准是基于PHP命名空间的自动加载包的方式。它定了如何自动加载基于命名空间和类名的类。Drupal 代码的命名空间是按照模块命名的如 block.module命名空间为Drupal\block。
 
-PSR-4规定文件仅仅包含一个类、接口或trait。这些文件的名称必须与所包含的类、接口或trait的名称相同。以便于类加载器进行自动加载。
+PSR-4规定文件仅仅包含一个类、接口或trait。这些文件的名称必须与所包含的类、接口或trait的名称相同以便于类加载器进行自动加载。
 
 ###4、依赖注入
 
