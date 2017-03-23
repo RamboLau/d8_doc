@@ -70,3 +70,5 @@ testbot测试见 https://www.drupal.org/docs/8/phpunit/running-phpunit-tests。
 $settings['extension_discovery_scan_tests'] = TRUE
 ```
 以显示模块。
+
+###4、创建routing.yml文件
