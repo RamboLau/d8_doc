@@ -1,4 +1,6 @@
 ###、创建routing.yml文件
+routing文档见 https://www.drupal.org/node/2092643
+
 Drupal8中的菜单主要由这几个文件构成：
 
 * hello_world.routing.yml 包含URL路径和回调函数的映射关系
