@@ -46,5 +46,6 @@
   * [6.4 模块目录](liu-3001-mo-kuai-kai-fa/64-mo-kuai-mu-lu.md)
   * [6.5 info.yml文件](liu-3001-mo-kuai-kai-fa/65-infoymlwen-jian.md)
   * [6.6 routing.yml文件](liu-3001-mo-kuai-kai-fa/66-routingymlwen-jian.md)
+  * [6.7  菜单说明](liu-3001-mo-kuai-kai-fa/67-cai-dan-shuo-ming.md)
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
