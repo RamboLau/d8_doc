@@ -67,3 +67,15 @@ class CustomLocalAction extends LocalActionDefault {
 ```
 
 ###3、links.task.yml
+主要是定义tab切换的菜单，如：
+```php
+example.admin: # The first plugin ID
+  title: 'Settings'
+  route_name: example.admin
+  base_route: example.admin
+  
+example.admin_3rd_party: # The second plugin ID
+  title: 'Third party services'
+  route_name: example.admin_3rd_party
+  base_route: example.admin
+```
