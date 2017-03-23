@@ -18,3 +18,6 @@
 
 * route_name: 在routing.yml中定义的路由名称
 * parent: 描述的是菜单的父链接菜单。这个菜单链接将会在admin>config>development下创建。
+
+清空缓存，看一下效果。
+
