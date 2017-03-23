@@ -94,6 +94,7 @@ page_example_description:
 * requirements: 用户能够访问这个页面所具有的权限
 
 在模块目录中，创建一个符合PSR-4标准的目录结构/src/Controller，并在该目录下创建控制器文件HelloController.php。我们这个模块只是想输出hello world这样的字符串，需要在/src/Controller/HelloController.php文件中输入以下代码:
+
 ```php
 <?php
 /**
