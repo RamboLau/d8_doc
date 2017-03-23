@@ -14,6 +14,4 @@
 
 * 不能使用保留字: src、lib、vendor、assets、css、files、images、js、misc、templates、includes、fixtures、Drupal。
 
-在本例中，我们使用”hello_world”作为模块的机器名。
-
-注意:在模块的机器名中请不要使用大写字母，因为Drupal将无法识别你的HOOK实现。
+这里，我们使用”hello_world”作为模块的机器名。
