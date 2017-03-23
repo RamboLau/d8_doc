@@ -15,7 +15,7 @@ Drupal 8引入了Symfony 2开发框架，目的是为了减少代码重复。Dru
 PSR-4规定文件仅仅包含一个类、接口或trait。这些文件的名称必须与所包含的类、接口或trait的名称相同以便于类加载器进行自动加载。
 
 ###4、依赖注入
-依赖注入已经成为了一种OOP设计模式，因为Drupal 8需要大量地调用核心API或核心服务，所以应该把它作为一种概念来理解。请阅读 https://laravel-china.github.io/php-the-right-way/#dependency_injection ，以便更好地理解这种方式。Drupal 8 的服务调用请阅读 Services and dependency injection in Drupal 8。
+依赖注入已经成为了一种OOP设计模式，因为Drupal 8需要大量地调用核心API或核心服务，所以应该把它作为一种概念来理解。请阅读 https://laravel-china.github.io/php-the-right-way/#dependency_injection ，以便更好地理解这种方式。Drupal 8 的服务调用请阅读 https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8 。
 
 ###5、注解
 
