@@ -66,4 +66,4 @@ class CustomLocalAction extends LocalActionDefault {
 }
 ```
 
-###3、links.task.ym
+###3、links.task.yml
