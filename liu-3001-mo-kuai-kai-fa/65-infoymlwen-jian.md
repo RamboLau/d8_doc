@@ -1,4 +1,4 @@
-###3、创建info.yml文件
+###、创建info.yml文件
 * 1、创建hello_world.info.yml文件
 * 2、增加以下代码
 ```php
