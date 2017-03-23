@@ -28,5 +28,7 @@ Drupal8中的service是一种多态。用来解耦可复用的功能，并且可
 
 对开发者而言，服务用来执行类似访问数据库，发送邮件等操作。我们不使用PHP原生的MySQL函数，而是通过服务容器来使用Drupal提供的核心服务来执行这些操作，这样我们的代码可以很简单的访问数据库，而不需要考虑数据库是MySQL还是SQLite，同样，发邮件时也不需要考虑是通过SMTP还是其他方式。
 
+请阅读 http://verynull.com/2015/12/15/Drupal8-Service-DependencyInjection/
+
 ###8、YAML
 YAML文档见 http://yaml.org/
