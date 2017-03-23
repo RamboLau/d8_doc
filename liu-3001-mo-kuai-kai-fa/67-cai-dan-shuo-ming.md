@@ -25,8 +25,47 @@
 在模块的根目录下，创建一个名为hello_world.links.action.yml的文件，并输入一下的内容:
 ```php
 hello_world.link_add:
-  route_name: menu_ui.link_add
-  title: 'Add link'
+  route_name: hello_world.content.add
+  title: 'Add hello world'
   appears_on:
-    - menu_ui.menu_edit
+    - hello_world.hello_world
+```
+
+* appears_on: 在哪个路由显示
+
+当然也可以定义动态的菜单，如下：
+```php
+hello_world.content.action:
+  route_name: hello_world.content
+  title: 'Example dynamic title action'
+  weight: -20
+  class: '\Drupal\hello_world\Plugin\Menu\LocalAction\CustomLocalAction'
+  appears_on:
+    - hello_world.content
+```
+
+代码如下：
+```php
+/**
+ * @file
+ * Contains \Drupal\hello_world\Plugin\Menu\LocalAction\CustomLocalAction.
+ */
+
+namespace Drupal\hello_world\Plugin\Menu\LocalAction;
+
+use Drupal\Core\Menu\LocalActionDefault;
+
+/**
+ * Defines a local action plugin with a dynamic title.
+ */
+class CustomLocalAction extends LocalActionDefault {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getTitle() {
+    return $this->t('My @arg action', array('@arg' => 'dynamic-title'));
+  }
+
+}
 ```
