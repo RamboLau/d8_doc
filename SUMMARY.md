@@ -48,5 +48,10 @@
   * [6.6 routing.yml文件](liu-3001-mo-kuai-kai-fa/66-routingymlwen-jian.md)
   * [6.7  菜单说明](liu-3001-mo-kuai-kai-fa/67-cai-dan-shuo-ming.md)
   * [6.8 实践](liu-3001-mo-kuai-kai-fa/68-shi-jian.md)
+* [七、区块开发](qi-3001-qu-kuai-kai-fa.md)
+  * [7.1](qi-3001-qu-kuai-kai-fa/71.md)
+  * 7.2
+  * 7.3
+  * 7.4
 * [TODO LIST](ru-he-pai-cuo-ff1f.md)
 
