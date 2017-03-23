@@ -18,6 +18,7 @@ PSR-4规定文件仅仅包含一个类、接口或trait。这些文件的名称�
 依赖注入已经成为了一种OOP设计模式，因为Drupal 8需要大量地调用核心API或核心服务，所以应该把它作为一种概念来理解。请阅读 https://laravel-china.github.io/php-the-right-way/#dependency_injection ，以便更好地理解这种方式。Drupal 8 的服务调用请阅读 https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8 。
 
 ###5、注解
+Drupal 8采用了注解方式，通过特定的插件可以找到并为代码提供一些附加内容。注释能被Doctrine注释解析器解析，并能转化为Drupal能使用的信息，以便于更好地理解你代码的功能。请到Drupal 8官网阅读更多的相关信息。
 
 ###6、插件
 
