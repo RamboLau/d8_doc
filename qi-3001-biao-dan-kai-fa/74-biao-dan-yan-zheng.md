@@ -15,3 +15,10 @@ public function validateForm(array &$form, FormStateInterface $form_state) {
     }
 }
 ```
+
+* isValueEmpty: 用来验证值是否为空
+
+* getValue: 获取元素的值
+
+* setErrorByName: 抛出异常错误，第一个参数是元素名称，第二个参数是错误信息。
+
