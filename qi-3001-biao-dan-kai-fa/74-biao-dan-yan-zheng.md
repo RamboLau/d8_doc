@@ -10,7 +10,7 @@
 public function validateForm(array &$form, FormStateInterface $form_state) {
     if (!$form_state->isValueEmpty('company_name')) {
         if (strlen($form_state->getValue('company_name')) <= 5) {
-            $form_state->setErrorByName('company_name', t('Company name is less than 5 characters'            ));
+            $form_state->setErrorByName('company_name', t('Company name is less than 5 characters'));
         }
     }
 }
