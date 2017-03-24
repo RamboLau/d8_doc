@@ -22,7 +22,30 @@ function hello_world_form_system_site_information_settings_alter(&$form, \Drupal
         '#title' => t('Site phone'),
         '#default_value' => Drupal::config('system.site')- >get('phone'),
     );
+    
+    $form['#submit'][] = 'hello_world_system_site_information_phone_submit';
 }
 ```
 
 注意：$form是通过引用传递过来的。
+
+定义submit方法，代码如下：
+
+```php
+/**
+ * Form callback to save site_phone.
+ *
+ * @param array $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+
+function hello_world_system_site_information_phone_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $config = Drupal::configFactory()->getEditable('system.site');
+    $config
+        ->set('phone', $form_state->getValue('site_phone'))
+        ->save();
+
+}
+```
+
+在后台验证保存是否成功。
