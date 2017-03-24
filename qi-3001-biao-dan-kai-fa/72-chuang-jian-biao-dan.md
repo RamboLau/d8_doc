@@ -83,7 +83,11 @@ hello_world.form:
 
 drush cr清空缓存，然后访问/hello/form查看效果。
 
-如何在controller中调用form呢？可以用
+###3、如何在controller中调用form？
+
+可以通过formBuilder方法来调用。
+
+代码如下：
 ```php
 $form = \Drupal::formBuilder()->getForm('Drupal\hello_world\Form\HelloWorldForm');
 ```
