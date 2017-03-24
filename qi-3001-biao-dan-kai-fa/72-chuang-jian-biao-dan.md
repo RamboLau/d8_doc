@@ -82,3 +82,8 @@ hello_world.form:
 注意：这里把_controller改为了_form,表示调用一个form类。
 
 drush cr清空缓存，然后访问/hello/form查看效果。
+
+如何在controller中调用form呢？可以用
+```php
+$form = \Drupal::formBuilder()->getForm('Drupal\hello_world\Form\HelloWorldForm');
+```
