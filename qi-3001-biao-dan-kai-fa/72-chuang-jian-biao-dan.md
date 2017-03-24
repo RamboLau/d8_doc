@@ -71,5 +71,12 @@ class HelloWorldForm extends FormBase {
 ###2、定义路由
 路由追加到hello_world.routing.yml中，代码如下：
 ```php
-
+hello_world.form:  
+  path: '/hell/form'
+  defaults:
+    _form: '\Drupal\hello_world\Form\HelloWorldForm'
+    _title: 'Demo Form'
+  requirements:
+    _permission: 'access simple page'
 ```
+注意：这里把_controller改为了_form,表示调用一个form类。
