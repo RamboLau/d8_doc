@@ -1,3 +1,4 @@
+###1、创建表单
 首先来看表单的四个方法：
 
 * getFormId: 必须定义的方法，返回表单机器名。
@@ -8,7 +9,7 @@
 
 * submitForm: 执行提交处理，类似 hook_form_submit。
 
-在src\Form目录下创建一个文件HelloWorldForm.php，内容如下：
+在src\Form目录下创建一个文件HelloWorldForm.php，代码如下：
 
 ```php
 <?php
@@ -66,3 +67,9 @@ class HelloWorldForm extends FormBase {
 ```
 
 表单使用一个类来定义，实现了\Drupal\Core\Form\FormInterface接口。而 \Drupal\Core\Form\FormBase是表单的基类。form有textarea,textfield等类型。
+
+###2、定义路由
+路由追加到hello_world.routing.yml中，代码如下：
+```php
+
+```
