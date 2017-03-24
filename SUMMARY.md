@@ -50,6 +50,7 @@
   * [6.8 实践](liu-3001-mo-kuai-kai-fa/68-shi-jian.md)
 * [七、表单开发](qi-3001-biao-dan-kai-fa.md)
   * [7.1 基本概念](qi-3001-biao-dan-kai-fa/71-ji-ben-gai-nian.md)
+  * [7.2 创建表单](qi-3001-biao-dan-kai-fa/72-chuang-jian-biao-dan.md)
 * [八、区块开发](qi-3001-qu-kuai-kai-fa.md)
   * [8.1 基本概念](qi-3001-qu-kuai-kai-fa/71.md)
   * [8.2 创建区块](qi-3001-qu-kuai-kai-fa/72.md)
