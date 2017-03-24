@@ -6,6 +6,7 @@ Drupal 8可以很方便的处理表单的创建、验证、提交等POST请求�
 
 Drupal 8中，表单和表单状态都是对象。
 
+文档见：https://www.drupal.org/docs/8/api/form-api/introduction-to-form-api
 
 ###1、表单元素
 
