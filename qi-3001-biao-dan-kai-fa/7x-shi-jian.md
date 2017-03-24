@@ -4,4 +4,4 @@
 
 3、尝试在controller中调用form
 
-4、更改admin/config/system/site-information的表单，增加meta keywords, meta description
+4、修改admin/config/system/site-information的表单，增加meta keywords, meta description

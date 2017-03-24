@@ -52,8 +52,8 @@
   * [7.1 基本概念](qi-3001-biao-dan-kai-fa/71-ji-ben-gai-nian.md)
   * [7.2 创建表单](qi-3001-biao-dan-kai-fa/72-chuang-jian-biao-dan.md)
   * [7.3 H5表单元素](qi-3001-biao-dan-kai-fa/73-h5biao-dan-yuan-su.md)
-  * 7.4 表单验证
-  * 7.5 表单提交
+  * [7.4 表单验证](qi-3001-biao-dan-kai-fa/74-biao-dan-yan-zheng.md)
+  * [7.5 表单提交](qi-3001-biao-dan-kai-fa/75-biao-dan-ti-jiao.md)
   * [7.6 修改已存在的表单](qi-3001-biao-dan-kai-fa/76-xiu-gai-yi-cun-zai-de-biao-dan.md)
   * [7.7 实践](qi-3001-biao-dan-kai-fa/7x-shi-jian.md)
 * [八、区块开发](qi-3001-qu-kuai-kai-fa.md)
