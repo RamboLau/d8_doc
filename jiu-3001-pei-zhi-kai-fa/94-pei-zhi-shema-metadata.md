@@ -2,29 +2,33 @@
 * metadata 配置的元数据
 
 ###1、一个简单的示例
+当我们使用如下代码时:
+```php
+<?php
+$config = \Drupal::config('system.maintenance');
+$message  = $config->get('message');
+$langcode = $config->get('langcode');
+?>
+```
+config数据结构体的默认值是保存在配置文件core/modules/system/config/install/system.maintenance.yml 
+
 代码如下:
 ```php
-config/install/hello_world.settings.yml
-
-type: warning
-message: 'Hello!'
+message: '@site is currently under maintenance. We should be back shortly. Thank you for your patience.'
 langcode: en
-
-config/schema/hello_world.schema.yml
-
-hello_world.settings:
-  type: config_object
-  mapping:
-    type:
-	  type: string
-	  label: 'Message type'
-	message:
-	  type: label
-	  label: 'Message text'
-	langcode:
-	  type: string
-	  label: 'Language code'
 ```
+
+在core/modules/system/config/schema/system.schema.yml文件中定义数据结构体。
+```php
+system.maintenance:
+  type: config_object
+  label: 'Maintenance mode'
+  mapping:
+    message:
+      type: text
+      label: 'Message to display when in maintenance mode
+```
+
 
 需要说明的是，my_module.schema.yml我们可以认为是一个自定义的数据结构体，而my_module.settings.yml则是给这个自定义的数据结构体定义了默认值，
 在my_module.schema.yml中我们可以看到这个数据结构体中定义了一个mapping结构体(可以简单的认为是一个数组类型)，这个数组有三个key，分别是type、message、langcode，
