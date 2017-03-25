@@ -63,4 +63,5 @@
   * [8.4 实践](qi-3001-qu-kuai-kai-fa/74.md)
 * [九、配置管理](jiu-3001-pei-zhi-kai-fa.md)
   * [9.1 基本概念](jiu-3001-pei-zhi-kai-fa/91-ji-ben-gai-nian.md)
+  * [9.2 配置存储](jiu-3001-pei-zhi-kai-fa/92-pei-zhi-cun-chu.md)
 
