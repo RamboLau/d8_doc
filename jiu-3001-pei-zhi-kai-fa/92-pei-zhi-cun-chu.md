@@ -34,3 +34,17 @@ effects:
     uuid: 1cfec298-8620-4749-b100-ccb6c4500779
 ```
 
+也可以动态的去修改setting.yml中的配置。如在hello_world.install中定义如下代码：
+
+```php
+/**
+ * Implements hook_install().
+ */
+function modulename_install() {
+  // Set default values for config which require dynamic values.
+  \Drupal::configFactory()->getEditable('modulename.settings')
+    ->set('default_from_address', \Drupal::config('system.site')->get('mail'))
+    ->save();
+}
+```
+
