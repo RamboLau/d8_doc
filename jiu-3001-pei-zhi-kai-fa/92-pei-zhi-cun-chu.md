@@ -54,3 +54,14 @@ function modulename_install() {
 
 如A模块有一个可选配置依赖于B模块，A模块先安装，当安装B模块时，会自动扫描A模块的config/optional，找到依赖并安装。如果B模块没有安装，那么A模块的可选配置将不会启用。
 
+
+###3、更新配置
+可以使用drush config-import(cim)这个命令把配置更新到数据库中。
+
+首先在settings.php中找到如下配置，如:
+
+```php
+$config_directories['sync'] = 'sites/default/files/config_bBkGn-0ZX0fe_fnnlVS3dmxhz7_z6guu819vcYXEpc4NtTBYgr8vB2Tqwp0t8-Oz9j71_los1g/sync';
+```
+
+接下来把hello_world.setting.yml放到这个目录下，然后执行drush cim && drush cr命令。访问数据库config，查询配置是否更新成功。
