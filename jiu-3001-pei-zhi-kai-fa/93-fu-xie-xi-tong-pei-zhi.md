@@ -65,4 +65,5 @@ $mail_config  = \Drupal::config('user.mail');
 $language_manager->setConfigOverrideLanguage($original_language);
 ```
 
-这段代码主要是把user.mail这个配置更改为language.config.$langcode.user.mail，主要发送邮件的时候就会自动找用户设置的语言。
+这段代码主要是把user.mail这个配置更改为language.config.$langcode.user.mail，主要发送邮件的时候就会自动找用户设置的语言，从而找到跟用户语言相符合的邮件模板。
+
