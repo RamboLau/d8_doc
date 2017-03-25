@@ -67,3 +67,60 @@ $language_manager->setConfigOverrideLanguage($original_language);
 
 这段代码主要是把user.mail这个配置更改为language.config.$langcode.user.mail，主要发送邮件的时候就会自动找用户设置的语言，从而找到跟用户语言相符合的邮件模板。
 
+###4、模块中覆写配置
+ConfigFactory会扫描所有模块，并从中找到实现了config.factory.override的service。
+如在hello_world.services.yml中定义如下：
+
+```php
+services:
+  hello_world.config_example.overrider:
+    class: \Drupal\hello_world\ConfigExampleOverrides
+    tags:
+      - {name: config.factory.override, priority: 5}
+```
+
+在src/ConfigExampleOverrides.php编写如下代码：
+```php
+namespace Drupal\hello_world;
+
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Config\ConfigFactoryOverrideInterface;
+use Drupal\Core\Config\StorageInterface;
+
+/**
+ * Example configuration override.
+ */
+class ConfigModuleOverrides implements ConfigFactoryOverrideInterface {
+
+  public function loadOverrides($names) {
+    $overrides = array();
+    if (in_array('system.site', $names)) {
+      $overrides['system.site'] = ['name' => 'Overridden site name!'];
+    }
+    return $overrides;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheSuffix() {
+    return 'ConfigExampleOverrider';
+  }
+  
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheableMetadata($name) {
+    return new CacheableMetadata();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function createConfigObject($name, $collection = StorageInterface::DEFAULT_COLLECTION) {
+    return NULL;
+  }
+
+}
+```
+
