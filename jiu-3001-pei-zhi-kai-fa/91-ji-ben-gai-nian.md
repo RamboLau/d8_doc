@@ -10,7 +10,7 @@
 
 * 2、Configuration Entity API
 
-其中，Config API可以认为是一个单独的配置实例，如站点名称(site name).
+其中，Config API可以认为是一个单独的配置实例，一般只保存简单的Boolean值、数字、字符串等，如站点名称(site name).
 
 Configuration Entity API主要用来存储多个配置集，例如节点类型、视图、词汇和字段等。
 
