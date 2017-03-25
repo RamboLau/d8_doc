@@ -2,7 +2,7 @@
 * metadata 配置的元数据
 
 ###1、一个简单的示例
-当我们使用如下代码时:
+有如下代码时:
 ```php
 <?php
 $config = \Drupal::config('system.maintenance');
