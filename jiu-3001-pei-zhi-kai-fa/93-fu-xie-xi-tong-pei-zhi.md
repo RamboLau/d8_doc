@@ -124,3 +124,10 @@ class ConfigExampleOverrides implements ConfigFactoryOverrideInterface {
 }
 ```
 
+上面代码实现了ConfigFactoryOverrideInterface的四个方法：
+
+* loadOverrides: 返回配置覆写数组
+* getCacheSuffix: 返回cache的前缀名称
+* getCacheableMetadata: 返回被覆写后的cache数据
+* createConfigObject: 安装或同步的时候创建一个config对象，这里是覆写，所有返回NULL
+
