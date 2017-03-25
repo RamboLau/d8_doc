@@ -1,12 +1,5 @@
-Drupal 8中configuration schema是用来描述配置文件的结构的. 它应用于:
-定型配置以确保数据一致性
-(see StorableConfigBase::castValue())
-
-自动持久化实体属性的配置
- (see ConfigEntityBase::toArray())
-
-自动生成用户界面的翻译配置
- (see the core module)
+* schema 描述配置文件的结构
+* metadata 配置的元数据
 
 1、一个简单的示例
 如下:
