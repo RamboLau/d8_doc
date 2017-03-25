@@ -1,5 +1,6 @@
 Drupal8的配置信息默认是保存在数据库中，配置文件格式是YAML。
 
+###1、基础配置(hello_world.setting.yml)
 以下是创建一个简单配置的示例：
 
 ```bash
@@ -47,4 +48,9 @@ function modulename_install() {
     ->save();
 }
 ```
+
+###2、可选配置
+可选配置一般保存在config/optional中，它只在依赖存在的情况下才会生效。
+
+如A模块有一个可选配置依赖于B模块，A模块先安装，当安装B模块时，会自动扫描A模块的config/optional，找到依赖并安装。如果B模块没有安装，那么A模块的可选配置将不会启用。
 
