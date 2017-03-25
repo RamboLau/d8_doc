@@ -29,14 +29,10 @@ system.maintenance:
       label: 'Message to display when in maintenance mode
 ```
 
+schema定义了一个mapping数据结构体，可以认为是一个数组.
+注意：一个schema.yml文件可以定义多个数据结构体，每一个数据结构体的机器名必须与setting.yml文件名一致。
 
-需要说明的是，my_module.schema.yml我们可以认为是一个自定义的数据结构体，而my_module.settings.yml则是给这个自定义的数据结构体定义了默认值，
-在my_module.schema.yml中我们可以看到这个数据结构体中定义了一个mapping结构体(可以简单的认为是一个数组类型)，这个数组有三个key，分别是type、message、langcode，
-前面说了my_module.settings.yml是给my_module.schema.yml这个数据结构体定义了默认值，我们可以看到在my_module.settings.yml中type的默认值是warning,message的默认值
-是'Hello!',langcode的默认值是en,值的注意的一点是，一个schema.yml文件可以定义多个数据结构体，但是每一个的数据结构体的root元素必须与settings.yml文件的文件名一致，
-比如上面的两个文件settings.yml文件的文件名是my_module.settings.yml，my_module.schema.yml的root元素的名称就是my_module.settings。
-
-2、schema中常用的数据类型
+###2、schema中常用的数据类型
 基本类型：
 boolean，
 integer，
