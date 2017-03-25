@@ -14,3 +14,9 @@ $message = \Drupal::config('system.maintenance')->get('message');
 ```php
 $config['system.maintenance']['message'] = 'Sorry, our site is down now.';
 ```
+
+在性能-> css合并这里，安装完以后Drupal8是默认打开的，关闭代码如下：
+
+```php
+$config['system.performance']['css']['preprocess'] = 0;
+```
