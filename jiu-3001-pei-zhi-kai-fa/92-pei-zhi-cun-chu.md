@@ -54,6 +54,24 @@ function modulename_install() {
 
 如A模块有一个可选配置依赖于B模块，A模块先安装，当安装B模块时，会自动扫描A模块的config/optional，找到依赖并安装。如果B模块没有安装，那么A模块的可选配置将不会启用。
 
+核心模块中有很多的示例，比如block_content模块中，views.view.block_content.yml中有如下配置，只列举一部分：
+
+```php
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - user
+id: block_content
+label: 'Custom block library'
+module: views
+description: 'Find and manage custom blocks.'
+tag: default
+base_table: block_content_field_data
+base_field: id
+core: 8.x
+```
 
 ###3、更新配置
 可以使用drush config-import(cim)这个命令把配置更新到数据库中。
