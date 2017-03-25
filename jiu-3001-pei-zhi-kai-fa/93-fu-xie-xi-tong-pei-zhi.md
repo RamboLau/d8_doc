@@ -27,3 +27,40 @@ drush config-list
 drush config-get system.performance
 ```
 
+###2、获取原值
+配置被覆写了以后，怎么获取原值呢？以下是示例代码：
+
+```php
+// Get the site name, with overrides.
+$site_name = \Drupal::config('system.site')->get('name');
+
+// Get the site name without overrides.
+$site_name = \Drupal::config('system.site')->getOriginal('name', FALSE);
+
+// Note that mutable config is always override free.
+$site_name = \Drupal::configFactory()->getEditable('system.site')->get('name');
+```
+
+###3、覆写语言配置
+多语言站点中，要给用户发送邮件，这时候邮件语言取决于用户的语言配置。代码如下：
+
+```php
+// Load the language_manager service
+$language_manager = \Drupal::service('language_manager');
+
+// Get the target language object
+$langcode = $account->getPreferredLangcode();
+$language = $language_manager->getLanguage($langcode);
+
+// Remember original language before this operation.
+$original_language = $language_manager->getConfigOverrideLanguage();
+// Set the translation target language on the configuration factory.
+$language_manager->setConfigOverrideLanguage($language);
+
+$mail_config  = \Drupal::config('user.mail');
+
+// Now send email based on $mail_config which is in the proper language.
+
+// Set the configuration language back.
+$language_manager->setConfigOverrideLanguage($original_language);
+```
