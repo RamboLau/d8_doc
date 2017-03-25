@@ -1,16 +1,18 @@
 * schema 描述配置文件的结构
 * metadata 配置的元数据
 
-1、一个简单的示例
-如下:
+###1、一个简单的示例
+代码如下:
 ```php
-config/install/my_module.settings.yml
+config/install/hello_world.settings.yml
+
 type: warning
 message: 'Hello!'
 langcode: en
 
-config/schema/my_module.schema.yml
-my_module.settings:
+config/schema/hello_world.schema.yml
+
+hello_world.settings:
   type: config_object
   mapping:
     type:
