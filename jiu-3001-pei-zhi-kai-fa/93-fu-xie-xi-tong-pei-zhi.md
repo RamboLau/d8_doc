@@ -20,3 +20,9 @@ $config['system.maintenance']['message'] = 'Sorry, our site is down now.';
 ```php
 $config['system.performance']['css']['preprocess'] = 0;
 ```
+
+然后通过drush命令查看是否覆写成功。
+```bash
+drush config-list
+drush config-get system.performance
+```
