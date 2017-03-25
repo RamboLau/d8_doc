@@ -20,7 +20,7 @@ function hello_world_form_system_site_information_settings_alter(&$form, \Drupal
     $form['site_phone'] = array(
         '#type' => 'tel',
         '#title' => t('Site phone'),
-        '#default_value' => Drupal::config('system.site')- >get('phone'),
+        '#default_value' => \Drupal::config('system.site')- >get('phone'),
     );
     
     $form['#submit'][] = 'hello_world_system_site_information_phone_submit';
@@ -40,7 +40,7 @@ function hello_world_form_system_site_information_settings_alter(&$form, \Drupal
  */
 
 function hello_world_system_site_information_phone_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-    $config = Drupal::configFactory()->getEditable('system.site');
+    $config = \Drupal::configFactory()->getEditable('system.site');
     $config
         ->set('phone', $form_state->getValue('site_phone'))
         ->save();
