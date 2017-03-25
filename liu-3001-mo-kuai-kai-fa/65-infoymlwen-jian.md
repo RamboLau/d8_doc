@@ -41,6 +41,7 @@ testbot测试见 https://www.drupal.org/docs/8/phpunit/running-phpunit-tests。
 * configure: 如果你的模块提供了一个配置表单，在这里可以指定配置的路由。当用户展开模块细节时，它将会在Extend页(/admin/modules)显示一个链接。
 
 * hidden:true 在站点Extend页面(/admin/modules)的模块列表中隐藏你的模块。如果模块仅仅包含一个测试或作为一个开发例子，你发现使用这个键是非常有用的。也可以在settings.php文件中添加
+
 ```php
 $settings['extension_discovery_scan_tests'] = TRUE
 ```
