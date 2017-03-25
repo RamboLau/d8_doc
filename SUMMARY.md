@@ -65,4 +65,5 @@
   * [9.1 基本概念](jiu-3001-pei-zhi-kai-fa/91-ji-ben-gai-nian.md)
   * [9.2 配置存储](jiu-3001-pei-zhi-kai-fa/92-pei-zhi-cun-chu.md)
   * [9.3 覆写系统配置](jiu-3001-pei-zhi-kai-fa/93-fu-xie-xi-tong-pei-zhi.md)
+  * [9.4 配置shema/metadata](jiu-3001-pei-zhi-kai-fa/94-pei-zhi-shema-metadata.md)
 
