@@ -10,7 +10,8 @@
 * /themes - 第三方主题或自定义主题
 /sites/[default|all|domain]/[modules|themes] - （在多站点情况下），只在指定站点使用的主题和模块可以放置在此目录结构下，以避免模块和主题出现在所有站点中
 /sites/[default|all|domain]/files - （在多站点情况下），此目录放置各种站点文件，如用户上传的文件、站点配置等
- 
+
+* /vendor - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
 
 除以上主要目录结构外，对于开发人员，对 core 目录下的目录结构及作用有所了解是非常必要的。
 
@@ -32,4 +33,3 @@
 
 * /core/themes - Drupal 8 内核主题
 
-* /core/vendor - Drupal 8 核心所需要的后端库，如 Symfony2, Twig 等
