@@ -13,7 +13,7 @@ core: 8.x
 info.yml里还有其他的一些属性：
 ```php
 name: hello_world
-description: Creates a page showing “Hello World”
+description: Creates a page showing "Hello World"
 package: Custom
 type: module
 core: 8.x
