@@ -26,13 +26,13 @@ system.maintenance:
   mapping:
     message:
       type: text
-      label: 'Message to display when in maintenance mode
+      label: 'Message to display when in maintenance mode'
 ```
 
 schema定义了一个mapping数据结构体，可以认为是一个数组.
 注意：一个schema.yml文件可以定义多个数据结构体，每一个数据结构体的机器名必须与setting.yml文件名一致。
 
-###2、schema中常用的数据类型
+###2、schema属性
 基本类型：
 boolean，
 integer，
