@@ -90,7 +90,7 @@ use Drupal\Core\Config\StorageInterface;
 /**
  * Example configuration override.
  */
-class ConfigModuleOverrides implements ConfigFactoryOverrideInterface {
+class ConfigExampleOverrides implements ConfigFactoryOverrideInterface {
 
   public function loadOverrides($names) {
     $overrides = array();
