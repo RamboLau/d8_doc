@@ -132,36 +132,40 @@ hello_world_message.multiple:
 * *表示通配符，这里指single或multiple
 * %parent.type 指我们在下面定义的数据类型，注意：这里定义的机器名要和父节点的机器名不能重名
 
-###4、关于动态类型 [type]
+###4、动态类型 [type]
 如果想要在已有的数据下面定义你自己不同的数据类型 那么[type]将会变的非常有用.
+
+config/install/hello_world.message.single.yml
 ```php
-config/install/my_module.message.single.yml
  message: 
   type: warning
   value: 'Hello!'
  langcode: en
+```
  
-config/install/my_module.message.multiple.yml
+config/install/hello_world.message.multiple.yml
+```php
  message:
   type: multiple 
   value:
    -'Hello!'
    -'Hi!'
  langcode: en
-
-config/schema/my_module.schema.yml
-my_module.message.*:
+```
+config/schema/hello_world.schema.yml
+```php
+hello_world.message.*:
  type: config_object
  mapping:
   message:
-   type: my_module_message.[type]
+   type: hello_world_message.[type]
   […]
   
-my_module_message.warning:
+hello_world_message.warning:
  type: mapping
  […]
  
-my_module_message.multiple:
+hello_world_message.multiple:
  type: mapping
  […]
 ```
