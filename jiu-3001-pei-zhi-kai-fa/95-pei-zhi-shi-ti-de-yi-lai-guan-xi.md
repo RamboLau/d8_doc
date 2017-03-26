@@ -1,1 +1,38 @@
 最终实现效果![效果](https://www.drupal.org/files/2016-12-18-002716.png)
+
+###1、定义路由
+在example/example.routing.yml中定义四个路由，list,add,edit,delete，代码如下：
+```php
+entity.example.collection:
+  path: '/admin/config/system/example'
+  defaults:
+    _entity_list: 'example'
+    _title: 'Example configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.add_form:
+  path: '/admin/config/system/example/add'
+  defaults:
+    _entity_form: 'example.add'
+    _title: 'Add example'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.edit_form:
+  path: '/admin/config/system/example/{example}'
+  defaults:
+    _entity_form: 'example.edit'
+    _title: 'Edit example'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.example.delete_form:
+  path: '/admin/config/system/example/{example}/delete'
+  defaults:
+    _entity_form: 'example.delete'
+    _title: 'Delete example'
+  requirements:
+    _permission: 'administer site configuration'
+```
+
