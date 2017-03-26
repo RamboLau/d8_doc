@@ -212,6 +212,4 @@ hello_world_message.messages:
    label: 'Message'	
 ```
 
-首先看config/schema/my_module.schema.yml，messages的类型是sequence，而sequence的类型则是以my_module_message为前缀的动态类型，再往下看定义了my_module_message.single:*:跟 
-my_module_message.multiple:*:两个结构类型，这两个类型对应的messages值分别是以'single:*'跟'multiple:*'为前缀的，所以我们在config/install/my_module.messages.yml这个文件中
-看到了'single:*'跟'multiple:*'为前缀的的messages的默认值
+这里定义了一个序列数组messages,而序列数组的类型就是hello_world_message定义的动态类型。
