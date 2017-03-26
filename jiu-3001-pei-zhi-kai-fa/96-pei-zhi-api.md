@@ -76,3 +76,18 @@ $config->save();
 注意：setData会完全改变配置数据结构，务必更改的时候对应好键值。
 
 ###3、删除配置
+
+#### 删除一个单独的配置
+代码如下：
+```php
+$config = \Drupal::service('config.factory')->getEditable('system.performance');
+$config->clear('cache.page.max_age')->save();
+$page_cache_data = $config->get('cache.page');
+```
+这时候打印$page_cache_data，会发现max_age已经被删除了。
+
+#### 删除所有配置
+通常使用delete方法，代码如下：
+```php
+\Drupal::service('config.factory')->getEditable('system.performance')->delete();
+```
