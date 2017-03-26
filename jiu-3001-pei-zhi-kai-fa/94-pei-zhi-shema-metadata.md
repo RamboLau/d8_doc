@@ -33,9 +33,7 @@ schema定义了一个mapping数据结构体，可以认为是一个数组.
 注意：一个schema.yml文件可以定义多个数据结构体，每一个数据结构体的机器名必须与setting.yml文件名一致。
 
 ###2、schema属性
-* type: 
-
-
+* type: 有基本类型和派生类型
 
 基本类型：
 boolean，
