@@ -83,3 +83,6 @@ class TextTrimmedFormatter extends FormatterBase {
 ...
 }
 ```
+
+###5、在插件类型中使用注解
+如何在插件类型中使用注解呢？只要扩展DefaultPlguinManager并使用AnnotatedClassDiscovery.
