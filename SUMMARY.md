@@ -75,7 +75,7 @@
 * 十二、缓存系统
 * 十三、服务与依赖注入
 * 十四、数据库
-* 十五、RESTful开发
+* [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
 * [十七、主题开发](shi-qi-3001-zhu-ti-kai-fa.md)
 * 十八、视图开发
