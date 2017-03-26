@@ -73,15 +73,18 @@ uri:
   class: '\Drupal\Core\TypedData\Plugin\DataType\Uri'
 ```
 
+另外还有
+config_object: 默认配置结构
+config_entity: 实体配置结构
+
 > 派生类型：
 mapping: 关联数组(associative array)，key/value数据结构，只支持string类型
 sequence: 索引数组(indexed array)
 
-常见的子类型：
-label: 短标签
-text: 长文本
-config_object: object根元素类型
-config_entity: entity根元素类型
+* label: 短标签
+* translatable: 是否可被翻译
+* nullable: 是否允许空值
+* class: 实现的类名
 
 子类型化
 所有configuration schema的子类型都是从现有的类型演化而来. 
