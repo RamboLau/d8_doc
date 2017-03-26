@@ -66,4 +66,5 @@
   * [9.2 配置存储](jiu-3001-pei-zhi-kai-fa/92-pei-zhi-cun-chu.md)
   * [9.3 覆写系统配置](jiu-3001-pei-zhi-kai-fa/93-fu-xie-xi-tong-pei-zhi.md)
   * [9.4 配置shema/metadata](jiu-3001-pei-zhi-kai-fa/94-pei-zhi-shema-metadata.md)
+  * [9.5 配置实体的依赖关系](jiu-3001-pei-zhi-kai-fa/95-pei-zhi-shi-ti-de-yi-lai-guan-xi.md)
 
