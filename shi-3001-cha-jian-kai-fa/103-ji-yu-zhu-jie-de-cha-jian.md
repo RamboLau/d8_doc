@@ -16,6 +16,6 @@ class UserNameUnique extends Constraint {
 }
 ```
 
-这里定义了@Constraint注解包含两个字段：
+这里定义了一个Constraint插件，注解包含两个字段：
 * id 插件ID
 * label 标签
