@@ -73,7 +73,7 @@
 * 十、插件开发
 * 十一、实体开发
 * 十二、缓存系统
-* 十三、服务与依赖注入
+* [十三、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
 * [十四、数据库](shi-si-3001-shu-ju-ku.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
