@@ -125,6 +125,8 @@ class Example extends ConfigEntityBase implements ExampleInterface {
 
 #### example/config/schema/example.schema.yml
 在\Drupal\example\Entity\Example中定义的属性添加到这里。
+
+注意：ConfigEntityType注解里的config_prefix字段必须跟schema的prefix一致。
 ```php
 example.example.*:
   type: config_entity
