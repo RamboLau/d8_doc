@@ -74,3 +74,29 @@ class ArchiverManager extends DefaultPluginManager {
     return $this->discovery;
   }
 ```
+
+###4、使用插件管理器
+
+假定我们的插件管理器已可以使用，首先我们必须调用该插件类:
+
+```php
+$type = \Drupal::service(‘plugin.manager.archiver’);
+```
+
+获取可用的插件列表:
+
+```php
+$plugin_definitions = $type->getDefinitions();
+```
+
+获取指定的插件:
+
+```php
+$plugin_definition = $type->getDefinition(‘plugin_id’);
+```
+
+创建一个插件实例:
+
+```php
+$plugin = $type->createInstance(‘plugin_id’,[‘of’ => ‘configuration values’]);
+```
