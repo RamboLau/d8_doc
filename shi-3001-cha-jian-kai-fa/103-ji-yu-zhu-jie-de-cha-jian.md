@@ -140,3 +140,10 @@ class FieldBundle extends Bundle {
 
 }
 ```
+
+###6、如何调用自定义的插件
+
+必须在类的构造函数中注入命名空间：
+```php
+$type = new CustomPluginManager(\Drupal::getContainer()->getParameter('container.namespaces'));
+```
