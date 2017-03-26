@@ -1,4 +1,4 @@
-Drupal8中要声明一个插件，通常是通过注解来完成的，以@Plugin开头。
+Drupal8中要声明一个插件，通常是通过注解来完成的。
 
 如在core/modules/user/src/Plugin/Validation/Constraint/UserNameUnique.php中可以找到如下代码：
 
@@ -16,6 +16,6 @@ class UserNameUnique extends Constraint {
 }
 ```
 
-注解包含两个字段：
+这里定义了@Constraint注解包含两个字段：
 * id 插件ID
 * label 标签
