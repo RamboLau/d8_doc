@@ -115,7 +115,7 @@ hello_world.message.*:
    label: 'Message type'
   message:
    type: hello_world_message.[%parent.type]
- langcode:	
+  langcode:	
    type: string
    label: 'Language code'
 
