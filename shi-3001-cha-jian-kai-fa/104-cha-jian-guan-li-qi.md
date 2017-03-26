@@ -59,4 +59,4 @@ class ArchiverManager extends DefaultPluginManager {
 
 }
 ```
-
+上面的代码告诉系统，我们将寻找任何可用的Plugin/Archiver注解类，使用它来发现插件，并支持插件派生。其它模块可以通过hook_archiver_info_alter()来修改插件定义。系统使用缓存id为archiver_info_plugins对该定义进行缓存。
