@@ -35,7 +35,7 @@ schema定义了一个mapping数据结构体，可以认为是一个数组.
 ###2、schema属性
 * type: 有基本类型和派生类型
 
-基本类型：
+> 基本类型：
 boolean，
 integer，
 float，
@@ -43,7 +43,7 @@ string，
 uri，
 email
 
-列表类型：
+> 派生类型：
 mapping(知道key是什么)，
 sequence(不知道key的具体值)
 
