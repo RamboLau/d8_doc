@@ -105,7 +105,7 @@ message:
 langcode: en
 ```
 
-config/schema/hello_world.schema.yml, *是一个通配符。
+config/schema/hello_world.schema.yml
 ```php
 hello_world.message.*:
  type: config_object 
@@ -129,13 +129,10 @@ hello_world_message.multiple:
   type: string
   label: 'Message'
 ```
+* *表示通配符，这里指single或multiple
+* %parent.type 指我们在下面定义的数据类型，注意：这里定义的机器名要和父节点的机器名不能重名
 
-首先看my_module.schema.yml这个文件，'my_module.message.*'用了通配符定义结构体，所以它适用于一组配置名称。所以我们看到分别有my_module.message.single.yml跟my_module.message.multiple.yml
-这两个配置文件。接着往下看my_module.schema.yml，'type: my_module_message.[%parent.type]' message的类型用了动态元素[%parent.type]来定义，所以在下面我们看到了my_module_message.warning跟
-my_module_message.multiple两个类型定义，无论是my_module_message.warning还是my_module_message.multiple的前缀都是跟my_module_message.[%parent.type]的前缀一致的，另外需要注意的是内部节点的
-名称要避免与根节点相同以免造成冲突。
-
-4、关于动态类型 [type]
+###4、关于动态类型 [type]
 如果想要在已有的数据下面定义你自己不同的数据类型 那么[type]将会变的非常有用.
 ```php
 config/install/my_module.message.single.yml
