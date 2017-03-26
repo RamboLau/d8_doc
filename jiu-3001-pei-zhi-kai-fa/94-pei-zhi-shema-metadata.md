@@ -170,6 +170,8 @@ hello_world_message.multiple:
  […]
 ```
 
+* [type]动态定义了message的类型，并且要求warning和multiple的类型必须一致，上面的示例代码都是mapping类型
+
 首先看my_module.schema.yml文件用[type]来动态定义message的类型，所以my_module.schema.yml这个文件中我们又看到了my_module_message.warning跟my_module_message.multiple这两个定义类型，
 需要说明的是无论是my_module_message.warning还是my_module_message.multiple它们的类型都是mapping类型，那么它们对应的值也必须mapping类型，我们再来看my_module.message.single.yml跟
 my_module.message.multiple.yml两个文件，message的值也是mapping类型。
