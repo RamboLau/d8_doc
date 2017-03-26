@@ -32,17 +32,17 @@ class UserNameUnique extends Constraint {
 * id: 插件的机器名，也是唯一ID
 * 必须使用双引号，不要使用单引号，单引号会抛出异常
 * 常用的数据类型：
-   String: 字符串类型必须使用双引号例如"foo"。如果字符串中包含双引号则需再使用一对双引号以转义，如 "The  ""On""  Value"。
-   Numbers: 不能使用引号例如21，使用引号将被解析成字符串。
-   Booleans: 不能使用引号例如TRUE或者FALSE，使用引号将被解析成字符串。
-   Lists: 列表数组，如:
+   * String: 字符串类型必须使用双引号例如"foo"。如果字符串中包含双引号则需再使用一对双引号以转义，如 "The  ""On""  Value"。
+   * Numbers: 不能使用引号例如21，使用引号将被解析成字符串。
+   * Booleans: 不能使用引号例如TRUE或者FALSE，使用引号将被解析成字符串。
+   * Lists: 列表数组，如:
    > base = {
      "node",
      "foo",
    }
    请注意列表中的最后一个元素后的逗号，它有助于防止解析错误。
-   Maps: 数据映射，形如数组。如:
+   * Maps: 数据映射，形如数组。如:
    > edit = {
       "editor" = "direct"，
    }
-   允许使用常量
+   * 允许使用常量
