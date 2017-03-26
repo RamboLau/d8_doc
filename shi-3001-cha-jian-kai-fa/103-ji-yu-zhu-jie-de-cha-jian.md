@@ -46,3 +46,40 @@ class UserNameUnique extends Constraint {
       "editor" = "direct"，
    }
    * 允许使用常量
+   
+###4、自定义注解类
+在 core/modules/text/src/Plugin/Field/FieldFormatter/TextTrimmedFormatter.php 中可以看到使用了一个自定义的注解类FieldFormatter。
+```php
+<?php
+
+namespace Drupal\text\Plugin\Field\FieldFormatter;
+
+use Drupal\Core\Field\FormatterBase;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Plugin implementation of the 'text_trimmed' formatter.
+ *
+ * Note: This class also contains the implementations used by the
+ * 'text_summary_or_trimmed' formatter.
+ *
+ * @see \Drupal\text\Field\Formatter\TextSummaryOrTrimmedFormatter
+ *
+ * @FieldFormatter(
+ *   id = "text_trimmed",
+ *   label = @Translation("Trimmed"),
+ *   field_types = {
+ *     "text",
+ *     "text_long",
+ *     "text_with_summary"
+ *   },
+ *   quickedit = {
+ *     "editor" = "form"
+ *   }
+ * )
+ */
+class TextTrimmedFormatter extends FormatterBase {
+...
+}
+```
