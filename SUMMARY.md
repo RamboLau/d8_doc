@@ -61,7 +61,7 @@
   * [8.2 创建区块](qi-3001-qu-kuai-kai-fa/72.md)
   * [8.3 区块配置表单](qi-3001-qu-kuai-kai-fa/73.md)
   * [8.4 实践](qi-3001-qu-kuai-kai-fa/74.md)
-* [九、配置管理](jiu-3001-pei-zhi-kai-fa.md)
+* [九、配置开发](jiu-3001-pei-zhi-kai-fa.md)
   * [9.1 基本概念](jiu-3001-pei-zhi-kai-fa/91-ji-ben-gai-nian.md)
   * [9.2 配置存储](jiu-3001-pei-zhi-kai-fa/92-pei-zhi-cun-chu.md)
   * [9.3 覆写系统配置](jiu-3001-pei-zhi-kai-fa/93-fu-xie-xi-tong-pei-zhi.md)
