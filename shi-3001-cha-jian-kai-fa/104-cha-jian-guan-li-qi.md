@@ -54,9 +54,12 @@ class ArchiverManager extends DefaultPluginManager {
     );
     $this->alterInfo('archiver_info');
     $this->setCacheBackend($cache_backend, 'archiver_info_plugins');
-    $this->factory = new DefaultFactory($this->getDiscovery());
   }
 
 }
 ```
 上面的代码告诉系统，我们将寻找任何可用的Plugin/Archiver注解类，使用它来发现插件，并支持插件派生。其它模块可以通过hook_archiver_info_alter()来修改插件定义。系统使用缓存id为archiver_info_plugins对该定义进行缓存。
+
+###3、发现封装器
+
+发现封装器是对一个定义发现的类的封装，它实际上也是一个类，它实现了所有相同的方法，并可以提供其它的方法以作一些额外的处理。使用这种机制实际上是对Drupal的插件机制的扩展，这样可以使它更易扩展，更加灵活。例如扩展至DefaultPluginManager类可以使用下面的方法来派生发现。
