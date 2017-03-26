@@ -62,4 +62,15 @@ class ArchiverManager extends DefaultPluginManager {
 
 ###3、发现封装器
 
-发现封装器是对一个定义发现的类的封装，它实际上也是一个类，它实现了所有相同的方法，并可以提供其它的方法以作一些额外的处理。使用这种机制实际上是对Drupal的插件机制的扩展，这样可以使它更易扩展，更加灵活。例如扩展至DefaultPluginManager类可以使用下面的方法来派生发现。
+发现封装器是对一个定义发现的类的封装，它实际上也是一个类，它实现了所有相同的方法，并可以提供其它的方法以作一些额外的处理。使用这种机制实际上是对Drupal的插件机制的扩展，这样可以使它更易扩展，更加灵活。
+
+例如DefaultPluginManager::getDiscovery()：
+```php
+ protected function getDiscovery() {
+    if (!$this->discovery) {
+      $discovery = new AnnotatedClassDiscovery($this->subdir, $this->namespaces, $this->pluginDefinitionAnnotationName, $this->additionalAnnotationNamespaces);
+      $this->discovery = new ContainerDerivativeDiscoveryDecorator($discovery);
+    }
+    return $this->discovery;
+  }
+```
