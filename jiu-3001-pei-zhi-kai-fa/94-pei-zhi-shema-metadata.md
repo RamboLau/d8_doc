@@ -35,16 +35,46 @@ schema定义了一个mapping数据结构体，可以认为是一个数组.
 ###2、schema属性
 * type: 有基本类型和派生类型
 
-> 基本类型：
-boolean，
-integer，
-float，
-string，
-uri，
-email
+> 基本类型(core.data_types.schema.yml)：
+```php
+# Undefined type used by the system to assign to elements at any level where
+# configuration schema is not defined. Using explicitly has the same effect as
+# not defining schema, so there is no point in doing that.
+undefined:
+  label: 'Undefined'
+  class: '\Drupal\Core\Config\Schema\Undefined'
+
+# Explicit type to use when no data typing is possible. Instead of using this
+# type, we strongly suggest you use configuration structures that can be
+# described with other structural elements of schema, and describe your schema
+# with those elements.
+ignore:
+  label: 'Ignore'
+  class: '\Drupal\Core\Config\Schema\Ignore'
+
+# Basic scalar data types from typed data.
+boolean:
+  label: 'Boolean'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\BooleanData'
+email:
+  label: 'Email'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\Email'
+integer:
+  label: 'Integer'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\IntegerData'
+float:
+  label: 'Float'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\FloatData'
+string:
+  label: 'String'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\StringData'
+uri:
+  label: 'Uri'
+  class: '\Drupal\Core\TypedData\Plugin\DataType\Uri'
+```
 
 > 派生类型：
-mapping(知道key是什么)，
+mapping: key/value数据结构，只支持string类型
 sequence(不知道key的具体值)
 
 常见的子类型：
