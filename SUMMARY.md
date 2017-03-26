@@ -70,7 +70,7 @@
   * [9.6 配置API](jiu-3001-pei-zhi-kai-fa/96-pei-zhi-api.md)
   * [9.7 如何更改配置](jiu-3001-pei-zhi-kai-fa/97-ru-he-geng-gai-pei-zhi.md)
   * [9.8 实践](jiu-3001-pei-zhi-kai-fa/98-shi-jian.md)
-* 十、插件开发
+* [十、插件开发](shi-3001-cha-jian-kai-fa.md)
 * [十一、实体开发](shi-yi-3001-shi-ti-kai-fa.md)
 * [十二、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十三、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
