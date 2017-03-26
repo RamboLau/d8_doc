@@ -87,24 +87,27 @@ sequence: 索引数组(indexed array)
 * class: 实现的类名
 
 ###3、关于动态类型[%parent]
-下面的示例我们定义了两个动态类型warning和multiple
-确切的数据类型可能不会知道，而且还有类型取决于数据的可能性，configuration schema同样支持基于数据的类型。假设Message的类型可能取决于数据的类型：无论Message是一个列表
-或者是一个简单的警告。让我们用 'multiple' 来定义列表情况,用 'warning' 来表示一个单行的警告。
+下面的示例我们定义了两个动态类型warning和multiple，multiple是一个列表，warning是一个当行文本。
+
+config/install/hello_world.message.single.yml
 ```php
-config/install/my_module.message.single.yml
 type: warning
 message: 'Hello!'
 langcode: en
+```
 
-config/install/my_module.message.multiple.yml
+config/install/hello_world.message.multiple.yml
+```php
 type: multiple
 message:
  -'Hello!'
  -'Hi!' 
 langcode: en
+```
 
-config/schema/my_module.schema.yml
-my_module.message.*:
+config/schema/hello_world.schema.yml, *是一个通配符。
+```php
+hello_world.message.*:
  type: config_object 
  mapping:
   type:
