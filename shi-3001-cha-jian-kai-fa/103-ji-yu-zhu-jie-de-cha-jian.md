@@ -86,3 +86,57 @@ class TextTrimmedFormatter extends FormatterBase {
 
 ###5、在插件类型中使用注解
 如何在插件类型中使用注解呢？只要扩展DefaultPlguinManager并使用AnnotatedClassDiscovery.
+
+DefaultPluginManager构造函数的第一个参数是指定插件的搜索路径，最后一个参数是上面定义的自定义注释类。在这个例子中，将会在hello_world/src/Plugin/Field/FieldFormatter目录中搜索插件。
+
+```php
+use Drupal\Component\Plugin\Factory\DefaultFactory;
+use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Plugin\DefaultPluginManager;
+  
+class FormatterPluginManager extends DefaultPluginManager {
+    
+  /**
+   * Constructs a FormatterPluginManager object.
+   */
+  public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler, FieldTypePluginManagerInterface $field_type_manager) {
+    parent::__construct('Plugin/Field/FieldFormatter', $namespaces, $module_handler, 'Drupal\Core\Field\FormatterInterface', 'Drupal\Core\Field\Annotation\FieldFormatter');
+   
+    $this->setCacheBackend($cache_backend, 'field_formatter_types_plugins');
+    $this->alterInfo('field_formatter_info');
+    $this->fieldTypeManager = $field_type_manager;
+  }
+}
+```
+
+而注入的命名空间来自于依赖注入容器，如FieldBundle:
+```php
+/**
+ * @file
+ * Contains Drupal\field\FieldBundle.
+ */
+
+namespace Drupal\field;
+
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+/**
+ * Field dependency injection container.
+ */
+class FieldBundle extends Bundle {
+
+  /**
+   * Overrides Symfony\Component\HttpKernel\Bundle\Bundle::build().
+   */
+  public function build(ContainerBuilder $container) {
+    // Register the plugin managers for our plugin types with the dependency injection container.
+    $container->register('plugin.manager.field.widget', 'Drupal\field\Plugin\Type\Widget\WidgetPluginManager')
+      ->addArgument('%container.namespaces%');
+    $container->register('plugin.manager.field.formatter', 'Drupal\field\Plugin\Type\Formatter\FormatterPluginManager')
+      ->addArgument('%container.namespaces%');
+  }
+
+}
+```
