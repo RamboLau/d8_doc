@@ -93,3 +93,19 @@ $page_cache_data = $config->get('cache.page');
 ```php
 \Drupal::service('config.factory')->getEditable('system.performance')->delete();
 ```
+
+###4、最佳实践
+如果要在一个配置里保存多个字段，我们可能要写多个save，如下：
+```php
+\Drupal::service('config.factory')->getEditable('foo.bar')->set('foo', 'foo')->save();
+\Drupal::service('config.factory')->getEditable('foo.bar')->set('bar', 'bar')->save();
+```
+
+这种代码是不合理的，应该主要来写：
+```php
+$config = \Drupal::service('config.factory')->getEditable('foo.bar');
+$config
+  ->set('foo', 'foo')
+  ->set('bar', 'bar')
+  ->save();
+```
