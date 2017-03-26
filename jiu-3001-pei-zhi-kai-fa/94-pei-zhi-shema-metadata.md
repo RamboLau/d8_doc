@@ -87,6 +87,7 @@ sequence: 索引数组(indexed array)
 * class: 实现的类名
 
 ###3、关于动态类型[%parent]
+下面的示例我们定义了两个动态类型warning和multiple
 确切的数据类型可能不会知道，而且还有类型取决于数据的可能性，configuration schema同样支持基于数据的类型。假设Message的类型可能取决于数据的类型：无论Message是一个列表
 或者是一个简单的警告。让我们用 'multiple' 来定义列表情况,用 'warning' 来表示一个单行的警告。
 ```php
