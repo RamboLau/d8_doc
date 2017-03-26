@@ -33,6 +33,7 @@ $enabled = \Drupal::config('system.performance')->get('cache.page.enabled');
 \Drupal::service('config.factory')->getEditable('system.performance');
 ```
 
+#### 覆写单个配置
 一般使用set和save方法来变更配置。如：
 ```php
 $config = \Drupal::service('config.factory')->getEditable('system.performance');
@@ -53,6 +54,7 @@ $config->save();
 \Drupal::service('config.factory')->getEditable('system.performance')->set('cache.page.enabled', 1)->save();
 ```
 
+#### 覆写所有配置
 如果要覆盖所有的配置数据，可以使用setData方法，代码如下:
 ```php
 // Set all values.
