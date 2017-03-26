@@ -172,44 +172,39 @@ hello_world_message.multiple:
 
 * [type]动态定义了message的类型，并且要求warning和multiple的类型必须一致，上面的示例代码都是mapping类型
 
-首先看my_module.schema.yml文件用[type]来动态定义message的类型，所以my_module.schema.yml这个文件中我们又看到了my_module_message.warning跟my_module_message.multiple这两个定义类型，
-需要说明的是无论是my_module_message.warning还是my_module_message.multiple它们的类型都是mapping类型，那么它们对应的值也必须mapping类型，我们再来看my_module.message.single.yml跟
-my_module.message.multiple.yml两个文件，message的值也是mapping类型。
-你同样可以定义一个包含相同的key，例如’type’的 基础类型,并且继承这个基础的类型你可以扩展任何自定义类型的key。
+###5、动态类型[%key]
 
-5、关于动态类型[%key]
-
+config/install/hello_world.messages.yml
 ```php
-config/install/my_module.messages.yml
 messages: 
  'single:1': 'Hello!'
  'single:2': 'Hi!'
  'multiple:1':
   -'Good morning!'
   -'Good night!'
-langcode: en
+langcode: enhello_world
 ```
 
 这是一个任意消息元素的列表.
+config/schema/hello_world.schema.yml
 ```php
-config/schema/my_module.schema.yml
- my_module.messages:
+hello_world_message.messages:
   type: config_object
   mapping:		
    messages:
     type: sequence
     label:'Messages'				
     sequence:				
-     type: my_module_message.[%key] 
+     type: hello_world_message.[%key] 
    langcode:
     type: string
     label: 'Language code'
  
- my_module_message.single:*:
+ hello_world_message.single:*:
   type: string
   label: 'Message'
 
- my_module_message.multiple:*:
+ hello_world_message.multiple:*:
   type: sequence
   label: 'Messages'
   sequence:
