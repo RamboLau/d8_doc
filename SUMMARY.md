@@ -68,4 +68,5 @@
   * [9.4 配置shema/metadata](jiu-3001-pei-zhi-kai-fa/94-pei-zhi-shema-metadata.md)
   * [9.5 创建配置实体](jiu-3001-pei-zhi-kai-fa/95-pei-zhi-shi-ti-de-yi-lai-guan-xi.md)
   * [9.6 配置API](jiu-3001-pei-zhi-kai-fa/96-pei-zhi-api.md)
+  * [9.7 如何更改配置](jiu-3001-pei-zhi-kai-fa/97-ru-he-geng-gai-pei-zhi.md)
 
