@@ -17,5 +17,5 @@ class UserNameUnique extends Constraint {
 ```
 
 注解包含两个字段：
-* id
-* label
+* id 插件ID
+* label 标签
