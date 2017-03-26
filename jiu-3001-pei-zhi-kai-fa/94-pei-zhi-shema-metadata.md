@@ -114,15 +114,15 @@ hello_world.message.*:
    type: string
    label: 'Message type'
   message:
-   type: my_module_message.[%parent.type]
+   type: hello_world_message.[%parent.type]
  langcode:	
    type: string
    label: 'Language code'
 
-my_module_message.warning:
+hello_world_message.warning:
  type: string
 
-my_module_message.multiple:
+hello_world_message.multiple:
  type: sequence
  label: 'Messages'
  sequence:
