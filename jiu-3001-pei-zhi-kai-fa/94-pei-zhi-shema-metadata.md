@@ -74,8 +74,8 @@ uri:
 ```
 
 > 派生类型：
-mapping: key/value数据结构，只支持string类型
-sequence(不知道key的具体值)
+mapping: 关联数组(associative array)，key/value数据结构，只支持string类型
+sequence: 索引数组(indexed array)
 
 常见的子类型：
 label: 短标签
