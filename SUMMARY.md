@@ -70,4 +70,13 @@
   * [9.6 配置API](jiu-3001-pei-zhi-kai-fa/96-pei-zhi-api.md)
   * [9.7 如何更改配置](jiu-3001-pei-zhi-kai-fa/97-ru-he-geng-gai-pei-zhi.md)
   * [9.8 实践](jiu-3001-pei-zhi-kai-fa/98-shi-jian.md)
+* 十、插件开发
+* 十一、实体开发
+* 十二、缓存系统
+* 十三、服务与依赖注入
+* 十四、数据库
+* 十五、RESTful开发
+* 十六、渲染系统
+* 十七、主题开发
+* 十八、视图开发
 
