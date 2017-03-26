@@ -86,12 +86,7 @@ sequence: 索引数组(indexed array)
 * nullable: 是否允许空值
 * class: 实现的类名
 
-子类型化
-所有configuration schema的子类型都是从现有的类型演化而来. 
-早些时候的简单示例子类型config_object (mapping的一个子类型) 可以进一步自定义key。
-configuration schema根节点的数据类型一般都是config_object或者config_entity。
-
-3、关于动态类型[%parent]
+###3、关于动态类型[%parent]
 确切的数据类型可能不会知道，而且还有类型取决于数据的可能性，configuration schema同样支持基于数据的类型。假设Message的类型可能取决于数据的类型：无论Message是一个列表
 或者是一个简单的警告。让我们用 'multiple' 来定义列表情况,用 'warning' 来表示一个单行的警告。
 ```php
