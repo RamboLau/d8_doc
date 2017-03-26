@@ -73,6 +73,7 @@
 * [十、插件开发](shi-3001-cha-jian-kai-fa.md)
   * [10.1 基本概念](shi-3001-cha-jian-kai-fa/101-ji-ben-gai-nian.md)
   * [10.2 为什么使用插件？](shi-3001-cha-jian-kai-fa/102-wei-shi-yao-shi-yong-cha-jian-ff1f.md)
+  * [10.3 基于注解的插件](shi-3001-cha-jian-kai-fa/103-ji-yu-zhu-jie-de-cha-jian.md)
 * [十一、实体开发](shi-yi-3001-shi-ti-kai-fa.md)
 * [十二、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十三、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
