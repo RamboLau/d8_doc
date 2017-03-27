@@ -145,3 +145,16 @@ class NodeType extends ConditionPluginBase implements ContainerFactoryPluginInte
 }
 ```
 
+@Condition注解解释：
+* id: 插件ID
+* label: 用户界面上显示的标签
+* context: 调用evaluate方法来检测node的类型
+
+其他的一些键：
+* required: 指定是否为必须，默认为true
+* multiple: 指定是否有多个条件，默认为false
+* description: 上下文的描述，用于UI
+* default_value: 默认为false
+* class: 默认\Drupal\Core\Plugin\ContextDefinition类。如果你提供你自已的类，你必须实现\Drupal\Core\Plugin\Context\ContextDefinitionInterface接口。
+
+注意：上下文定义可以不使用default_value键。
