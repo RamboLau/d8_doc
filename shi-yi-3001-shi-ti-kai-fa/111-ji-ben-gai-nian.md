@@ -13,7 +13,7 @@ Drupal8包含user、node、comment等实体。每个实体包含若干方法：
 
 另外还有其他一些处理器，比如access control, viewing, listings and forms。
 
-### 核心最常用的两个实体类型
+### 最常用的两个实体类型
 
 #### 配置实体(Configuration Entity)
 用于配置系统中，支持翻译并提供安装默认值。
