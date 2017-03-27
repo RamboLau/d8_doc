@@ -8,3 +8,13 @@ Drupal8包含user、node、comment等实体。每个实体包含若干方法：
 * 普遍使用的方法： $entity->id()
 * 实体中指定的方法：$node->getTitle()
 
+### 处理器
+实体通常需要storage处理器，它支持实体的加载、保存和删除。
+
+另外还有其他一些处理器，比如access control, viewing, listings and forms。
+
+### 核心最常用的两个实体类型
+
+#### 配置实体(Configuration Entity)
+
+#### 内容实体(Content Entity)
