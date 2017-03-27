@@ -158,3 +158,22 @@ class NodeType extends ConditionPluginBase implements ContainerFactoryPluginInte
 * class: 默认\Drupal\Core\Plugin\ContextDefinition类。如果你提供你自已的类，你必须实现\Drupal\Core\Plugin\Context\ContextDefinitionInterface接口。
 
 > 注意：上下文定义可以不使用default_value键。
+
+###3、其他的一些示例
+
+其他的一些示例可以在Drupal8目录下搜索到：
+
+```bash
+jerry@mac:~/Sites/drupal8 > grep "@Condition" * -R
+core/modules/block/tests/modules/block_test/src/Plugin/Condition/BaloneySpam.php: * @Condition(
+core/modules/block/tests/modules/block_test/src/Plugin/Condition/MissingSchema.php: * @Condition(
+core/modules/language/src/Plugin/Condition/Language.php: * @Condition(
+core/modules/node/src/Plugin/Condition/NodeType.php: * @Condition(
+core/modules/system/src/Plugin/Condition/CurrentThemeCondition.php: * @Condition(
+core/modules/system/src/Plugin/Condition/RequestPath.php: * @Condition(
+core/modules/system/tests/modules/condition_test/src/Plugin/Condition/ConditionTestDualUser.php: * @Condition(
+core/modules/system/tests/modules/condition_test/src/Plugin/Condition/ConditionTestNoExistingType.php: * @Condition(
+core/modules/system/tests/modules/condition_test/src/Plugin/Condition/OptionalContextCondition.php: * @Condition(
+core/modules/user/src/Plugin/Condition/UserRole.php: * @Condition(
+modules/ctools/src/Plugin/Condition/EntityBundle.php: * @Condition(
+```
