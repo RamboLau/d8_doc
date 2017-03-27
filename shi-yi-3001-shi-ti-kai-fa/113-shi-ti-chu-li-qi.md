@@ -26,12 +26,4 @@ View Builder实现了EntityViewBuilderInterface接口，默认使用EntityViewBu
  
 ###5、表单(Form)
 
-表单处理器实现了EntityFormInterface接口。因为EntityForm类已经实现了这个接口，你可以直接对该类进行扩展，以实现如add、edit和delete等操作。然后你可以通过routing.yml文件访问这些操作。请看Drupal配置实体的例子，如src/Entity/Robot.php。
-
-$storage = \Drupal::entityManager()->getStorage('node');
-
-$storage->load(1);
-$storage->loadMultiple(array(1, 2, 3));
-// Equaivalent to $node->save().
-$storage->save($node);
-$new_node = $storage->create(array('title' => 'My awesome node'));
+表单处理器实现了EntityFormInterface接口。因为EntityForm类已经实现了这个接口，你可以直接对该类进行扩展，以实现如add、edit和delete等操作。
