@@ -9,7 +9,7 @@ Drupal8的实体处理器主要有：
 存储处理器实现了EntityStorageInterface接口,EntityStorageInterface继承ContentEntityStorageBase类，这个类中提供了标准的CRUD方法。
 
  
-访问(Access)
+###2、访问(Access)
 
 访问处理器实现了EntityAccessControlHandlerInterface接口，默认使用EntityAccessControlHandler类。
 
