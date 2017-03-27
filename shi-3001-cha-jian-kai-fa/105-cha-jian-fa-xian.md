@@ -60,6 +60,8 @@ interface DiscoveryInterface {
 * getDefinitions: 返回插件定义的集合
 * hasDefinition: 指出插件定义是否存在
 
+如何实现自定义的插件发现类呢？在src\Plugin\Discovery\HelloWorldDiscovery.php中实现DiscoveryInterface。
+
 Drupal8还包含其他四种不同的插件发现类型：
 ####1.StaticDiscovery
 
