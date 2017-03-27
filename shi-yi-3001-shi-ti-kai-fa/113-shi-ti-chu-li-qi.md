@@ -1,6 +1,6 @@
 处理器(Handlers)用于响应实体的一些操作。
 
-实体处理器可以通过entity_type.manager服务来访问。
+实体处理器可以通过entity_type.manager service来访问。
 
  
 存储(Storage)
