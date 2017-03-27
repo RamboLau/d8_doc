@@ -65,3 +65,16 @@ class User extends ContentEntityBase implements UserInterface {
 ...
 }
 ```
+
+注解使用了一下这些键：
+
+* id: 实体类型唯一标识符。
+* label: 实体标题用于UI，@Translation表明其可被翻译。
+* handlers: 处理器，实现实体的各种功能。
+* admin_permission: 实体的管理权限。
+* base_table: 实体的基础表。
+* data_table: 实体的数据表。
+* translatable: 实体是否可被翻译。
+* entity_keys: 实体键的数组。
+* links: 使用URI模板语法的Link模板，它是一个数组。
+* field_ui_base_route: 字段UI的基本路由。
