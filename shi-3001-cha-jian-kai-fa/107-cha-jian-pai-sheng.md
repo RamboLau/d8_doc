@@ -263,3 +263,39 @@ class SystemMenuBlock extends DeriverBase implements ContainerDeriverInterface {
 
 }
 ```
+
+#### 改变插件类型
+通常我们是注意来实现一个hook.
+```php
+namespace Drupal\block\Plugin\Type;
+
+use Drupal\Component\Plugin\PluginType;
+use Drupal\Core\Plugin\Discovery\HookDiscovery;
+use Drupal\Component\Plugin\Factory\DefaultFactory;
+
+class BlockPluginType extends PluginType {
+  public function __construct() {
+    $this->discovery = new HookDiscovery('block_info');
+    $this->factory = new DefaultFactory($this);
+  }
+}
+```
+
+这样我们就可以通过hook_block_info来改变插件。
+
+也可以通过派生来改变，代码如下：
+```php
+namespace Drupal\block\Plugin\Type;
+use Drupal\Component\Plugin\Discovery\DerivativeDiscoveryDecorator;
+
+use Drupal\Component\Plugin\PluginType;
+use Drupal\Core\Plugin\Discovery\HookDiscovery;
+use Drupal\Component\Plugin\Factory\DefaultFactory;
+
+class BlockPluginType extends PluginType {
+  public function __construct() {
+    $this->discovery = new DerivativeDiscoveryDecorator(new HookDiscovery('block_info'));
+    $this->factory = new DefaultFactory($this);
+  }
+}
+```
