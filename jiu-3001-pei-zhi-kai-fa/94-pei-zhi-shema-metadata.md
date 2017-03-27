@@ -75,11 +75,15 @@ uri:
 ```
 
 另外还有
+
 config_object: 默认配置结构
+
 config_entity: 实体配置结构
 
 > 派生类型：
+
 mapping: 关联数组(associative array)，key/value数据结构，只支持string类型
+
 sequence: 索引数组(indexed array)
 
 * label: 短标签
