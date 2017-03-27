@@ -2,8 +2,9 @@
 
 实体处理器可以通过entity_type.manager service来访问。
 
- 
-存储(Storage)
+Drupal8的实体处理器主要有：
+  
+###1、存储(Storage)
 
 存储处理器实现了EntityStorageInterface接口并且缺省为ContentEntityStorageBase类，在这个类中提供了标准的方法以实现CRUD操作
 
