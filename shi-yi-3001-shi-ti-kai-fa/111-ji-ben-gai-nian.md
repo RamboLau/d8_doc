@@ -1,7 +1,15 @@
 实体(entity)API文档见：https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8
 
 ### Drupal8实体
-Drupal8包含user、node、comment等实体。每个实体包含若干方法：
+Drupal8常见的实体如下：
+
+* 节点(node)
+* 评论(comment)
+* 分类术语(taxonomy)
+* 用户(user)
+* 配置实体(configuration)
+
+每个实体包含若干方法：
 
 如：
 
