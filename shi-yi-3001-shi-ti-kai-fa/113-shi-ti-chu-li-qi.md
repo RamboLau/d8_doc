@@ -14,17 +14,17 @@ Drupal8的实体处理器主要有：
 访问处理器实现了EntityAccessControlHandlerInterface接口，默认使用EntityAccessControlHandler类。
 
  
-List Builder
+###3、管理列表(List Builder)
 
-列表建立器实现了EntityListBuilderInterface接口，默认使用EntityListBuilder类。
+列表实现了EntityListBuilderInterface接口，默认使用EntityListBuilder类。
 
  
-View Builder
+###4、视图(View Builder)
 
 View Builder实现了EntityViewBuilderInterface接口，默认使用EntityViewBuilder类。
 
  
-表单(Form)
+###5、表单(Form)
 
 表单处理器实现了EntityFormInterface接口。因为EntityForm类已经实现了这个接口，你可以直接对该类进行扩展，以实现如add、edit和delete等操作。然后你可以通过routing.yml文件访问这些操作。请看Drupal配置实体的例子，如src/Entity/Robot.php。
 
