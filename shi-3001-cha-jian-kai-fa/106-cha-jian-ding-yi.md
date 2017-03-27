@@ -157,4 +157,4 @@ class NodeType extends ConditionPluginBase implements ContainerFactoryPluginInte
 * default_value: 默认为false
 * class: 默认\Drupal\Core\Plugin\ContextDefinition类。如果你提供你自已的类，你必须实现\Drupal\Core\Plugin\Context\ContextDefinitionInterface接口。
 
-注意：上下文定义可以不使用default_value键。
+> 注意：上下文定义可以不使用default_value键。
