@@ -67,11 +67,11 @@ StaticDiscovery允许在插件发现类中直接注册插件。在类中的prote
 
 ####2.HookDiscovery
 
-HookDiscovery类允许使用Drupal的hook_comonent_info()/hook_comonent_info_alter()进行插件发现。使用这种插件发现机制，插件管理器将会调用info hook来返回可用的插件列表。
+HookDiscovery类允许使用Drupal的hook_comonent_info()/hook_comonent_info_alter()进行插件发现。使用这种插件发现机制，插件管理器将会调用hook来返回可用的插件列表。
 
 ####3.AnnotatedClassDiscovery
 
-AnnotatedClassDiscovery即注释类发现，该发现机制允许你在定义插件的类的文件中插入注释，在注释中按照相关的格式定义插件注释类，AnnotatedClassDiscovery会对这些文件进行扫描，从而发现插件。这种方式内存占用小。
+AnnotatedClassDiscovery即注解类发现，该发现机制允许你在定义插件的类的文件中插入注释，在注释中按照相关的格式定义插件注释类，AnnotatedClassDiscovery会对这些文件进行扫描，从而发现插件。
 
 ####4.YamlDiscovery
 
