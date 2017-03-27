@@ -71,7 +71,7 @@ HookDiscovery类允许使用Drupal的hook_comonent_info()/hook_comonent_info_alt
 
 ####3.AnnotatedClassDiscovery
 
-AnnotatedClassDiscovery即注解类发现，该发现机制允许你在定义插件的类的文件中插入注释，在注释中按照相关的格式定义插件注释类，AnnotatedClassDiscovery会对这些文件进行扫描，从而发现插件。
+AnnotatedClassDiscovery即注解类发现，该发现机制允许你在定义插件的类的文件中插入注解，在注解中按照相关的格式定义插件注解类，AnnotatedClassDiscovery会对这些文件进行扫描，从而发现插件。
 
 ####4.YamlDiscovery
 
