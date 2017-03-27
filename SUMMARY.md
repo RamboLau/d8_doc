@@ -83,6 +83,7 @@
   * [11.1 基本概念](shi-yi-3001-shi-ti-kai-fa/111-ji-ben-gai-nian.md)
   * [11.2  实体注解](shi-yi-3001-shi-ti-kai-fa/112-shi-ti-zhu-jie.md)
   * [11.3 实体处理器](shi-yi-3001-shi-ti-kai-fa/113-shi-ti-chu-li-qi.md)
+  * [11.4 实体API](shi-yi-3001-shi-ti-kai-fa/114-shi-ti-api.md)
   * [11.x 实践](shi-yi-3001-shi-ti-kai-fa/11x-shi-jian.md)
 * [十二、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十三、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
