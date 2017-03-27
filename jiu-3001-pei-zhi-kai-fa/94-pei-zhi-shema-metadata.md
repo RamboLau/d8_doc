@@ -35,7 +35,7 @@ schema定义了一个mapping数据结构体，可以认为是一个数组.
 ###2、schema属性
 * type: 有基本类型和派生类型
 
-> 基本类型(core.data_types.schema.yml)：
+基本类型(core.data_types.schema.yml)：
 
 ```php
 # Undefined type used by the system to assign to elements at any level where
