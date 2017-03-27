@@ -14,8 +14,10 @@
 
 比如缓存上下文CacheContext，就是指相对于缓存系统的环境（缓存环境是系统环境的子集），缓存系统依据此环境才能正确行动，具体实现就是缓存依据这个上下文来存放或取回正确的数据。
 
-###2、core/modules/node/src/Plugin/Condition/NodeType.php
-代码如下：
+###2、插件上下文
+通常，插件上下文我们放在目录src/Plugin/Condition下。
+
+如core/modules/node/src/Plugin/Condition/NodeType.php代码如下：
 ```php
 <?php
 
