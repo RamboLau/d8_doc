@@ -17,7 +17,7 @@
 ###2、插件上下文
 通常，插件上下文我们放在目录src/Plugin/Condition下。
 
-如core/modules/node/src/Plugin/Condition/NodeType.php代码如下：
+下面例子我们事先了一个NodeType类，core/modules/node/src/Plugin/Condition/NodeType.php代码如下：
 ```php
 <?php
 
