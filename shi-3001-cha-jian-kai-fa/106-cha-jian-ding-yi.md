@@ -19,6 +19,7 @@
 
 下面例子我们事先了一个NodeType类，
 core/modules/node/src/Plugin/Condition/NodeType.php代码如下：
+
 ```php
 <?php
 
