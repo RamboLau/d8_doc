@@ -265,7 +265,7 @@ class SystemMenuBlock extends DeriverBase implements ContainerDeriverInterface {
 ```
 
 #### 改变插件类型
-通常实现一个hook来改变插件的类型.
+通常实现一个hook来改变插件的类型。
 ```php
 namespace Drupal\block\Plugin\Type;
 
