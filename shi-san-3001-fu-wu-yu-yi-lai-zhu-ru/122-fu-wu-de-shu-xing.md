@@ -35,8 +35,8 @@ services:
 上面的例子我们定义了一个抽象的服务logger.channel_base，下面的default、php等服务都继承了这个抽象服务。
 
 * alias: 服务的别名
-* arguments: 参数用于工厂方法(‘factory_class’)或者是类构造函数(‘class’)。’@’指出其它服务，然后将服务名放在后面，并在它自已的services.yml文件中定义。
-    calls:使用setter注入。定义其它方法来调用已经实例化的服务。
+* arguments: 参数，@指其他服务
+* calls: 使用setter注入，定义其它方法来调用已经实例化的服务。
     class:服务的类。
     configurator:一个可调用的配置服务。
     factory_class:这个类将会实例化服务的类。
