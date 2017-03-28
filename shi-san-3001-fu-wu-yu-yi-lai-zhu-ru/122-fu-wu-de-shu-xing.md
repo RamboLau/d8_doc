@@ -47,4 +47,4 @@ services:
 * public: 设置服务为公共或私有。私有服务仅仅能被用作其它服务的参数。true(default): 服务是公共的，false: 服务是私有的
 * scope: 确定被服务容器使用实例的范围。'container'(default): 每次从容器中请求该实例都使用同一实例。'prototype': 每次调用服务时都创建一个新实例。'request':每个请求都创建一个新的实例。
 * synthetic: 注入到容器中的服务替换由容器创建的服务。true:synthetic服务;false(default):normal服务。
-* tags: 标识服务分组的名称。
+* tags: 指该服务用于特定的应用。
