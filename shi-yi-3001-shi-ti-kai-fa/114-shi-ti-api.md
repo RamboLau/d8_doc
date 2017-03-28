@@ -95,43 +95,42 @@ $entity->save();
 
 这一方法既可用于新实体，也可用于已存在的实体，可以从实体信息中得知实体是否是一个新实体。一般地，对于内容实体，会提供一个实体ID。为了保存一个新实体(例如导入数据)，可以强制使用isNew标志，请看以下代码。
 
-//下面的代码试图插入一个节点ID为5的节点，如果这个节点ID已存在则会失败
-
+// 下面的代码试图插入一个节点ID为5的节点，如果这个节点ID已存在则会失败
+```php
 $node->nid->value = 5;
 
 $node->enforceIsNew(TRUE);
 
 $node->save();
+```
 
-删除实体
-
-//删除单个实体
-
+###6、删除实体
+```php
+// 删除单个实体
 $entity = \Drupal::entityTypeManager()->getStorage(‘node’)->load(1);
-
 $entity->delete();
 
-//一次删除多个实体
-
+// 一次删除多个实体
 \Drupal::entityTypeManager()->getStorage($entity_type)->delete(array($id1 => $entity1,$id2 => $entity2));
+```
 
-访问控制
+###7、访问控制
 
 access()方法可以用于检测谁有权访问实体。这个方法支持很多操作，标准的操作有view、update、delete和create，create有点特殊，请看下面。
 
 访问检测会被转发给访问控制器。
 
-//检测实体的查看权限，默认会对当前登录用户进行这一检测
-
+```php
+// 检测实体的查看权限，默认会对当前登录用户进行这一检测
 if ($entity->access(‘view’)){
 
 }
 
-//检测一个用户是否可以删除一个实体
-
+// 检测一个用户是否可以删除一个实体
 if ($entity->access(‘delete’,$account)){
 
 }
+```
 
 当检查实体创建权限时，通常还没有实体。这个权限只是为了检测某人是否有权创建该实体，开销较大，因此应直接使用访问控制器进行检查。
 
