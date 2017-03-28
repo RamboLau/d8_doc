@@ -30,7 +30,7 @@ Drupal8中的实体字段主要有这些：
 * text_with_summary 带摘要的文本
 
 
-###1、自定义字段类型
+###1、自定义字段类型(Field Type)
 #### modules/custom/hello_world/src/Plugin/Field/FieldType/EntityUserAccessField.php
 
 字段类型注解以@FieldType开头。
@@ -109,3 +109,65 @@ class EntityUserAccessField extends FieldItemBase {
 实现了2个方法：
 * propertyDefinitions: 和baseFieldDefinition类似，定义字段的属性。
 * schema: 告诉Drupal如何创建字段。 
+
+###2、自定义字段控件(Field Widget)
+字段控件用于呈现用户输入表单的数据。如:
+* 需要表单输入一个整数，但用户可以通过勾选checkbox以实现输入。
+* 你想用自动完成功能输入数据。
+* 密码输入有特殊的UI。
+
+#### modules/custom/hello_world/src/Plugin/Field/FieldWidget/EntityUserAccessWidget.php
+字段控件注解以@FieldWidget开头：
+* id: 控件的机器名
+* field_types: 这个字段能使用的字段类型数组
+* multiple_values: 缺省为FALSE。如果它是TRUE就可以让你向实体表单提交更多的值。
+
+```php
+namespace Drupal\MODULENAME\Plugin\Field\FieldWidget;
+ 
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Field\WidgetBase;
+use Drupal\Core\Form\FormStateInterface;
+ 
+/**
+ * Plugin implementation of the 'entity_user_access_w' widget.
+ *
+ * @FieldWidget(
+ *   id = "entity_user_access_w",
+ *   label = @Translation("Entity User Access - Widget"),
+ *   description = @Translation("Entity User Access - Widget"),
+ *   field_types = {
+ *     "entity_user_access",
+ *   },
+ *   multiple_values = TRUE,
+ * )
+ */
+ 
+class EntityUserAccessWidget extends WidgetBase {
+  /**
+   * {@inheritdoc}
+   */
+  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
+    $element['userlist'] = array(
+      '#type' => 'select',
+      '#title' => t('User'),
+      '#description' => t('Select group members from the list.'),
+      '#options' => array(
+         0 => t('Anonymous'),
+         1 => t('Admin'),
+         2 => t('foobar'),
+         // This should be implemented in a better way!
+       ),
+    );
+
+    $element['passwordlist'] = array(
+      '#type' => 'password',
+      '#title' => t('Password'),
+      '#description' => t('Select a password for the user'),
+    );
+   
+    return $element;
+  }
+}
+```
+你现在打开带有这个控件的表单，你会看到至少有两个输入字段，一个是用于输入用户名，另一个用于输入密码。如果你想验证表单数据，你需要实现这个控件的验证方法。
