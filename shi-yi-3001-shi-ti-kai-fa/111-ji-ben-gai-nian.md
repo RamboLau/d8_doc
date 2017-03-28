@@ -30,3 +30,19 @@ Drupal8常见的实体如下：
 
 #### 内容实体(Content Entity)
 由基本字段组成，提供内容修订和翻译支持。
+
+### Bundles
+Bundles是一个信息容器，包含了字段或配置的定义。如：
+
+#### 内容实体(Content Entity Types)
+
+* 1、节点(Node), Bundles如内容类型(Content Types)，默认包含Article和Basic page
+
+* 2、分类(Taxonomy), Bundles如词汇(Vocabulary)，如词汇A，词汇B
+
+* 3、区块(Block), Bundles如自定义区块类型，如区块类型A，区块类型B
+
+* 4、用户(User), 没有Bundles
+
+#### 配置实体(Configuration Entity Types)u
+暂无Bundles
