@@ -18,7 +18,34 @@ services:
 
 ### 服务的属性
 
-* abstract: 这个服务定义将不会产生一项真正的服务。服务假定使用’parent’.Values:’true’=service将会抽象；’false’(default)=service将会实例化。
+* abstract: 取值true/false, true定义一个抽象的服务，false定义一个可实例化的服务。
+如：
+```php
+ logger.channel_base:
+    abstract: true
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+  logger.channel.default:
+    parent: logger.channel_base
+    arguments: ['system']
+  logger.channel.php:
+    parent: logger.channel_base
+    arguments: ['php']
+  logger.channel.image:
+    parent: logger.channel_base
+    arguments: ['image']
+  logger.channel.cron:
+    parent: logger.channel_base
+    arguments: ['cron']
+  logger.channel.file:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['file']
+  logger.channel.form:
+    parent: logger.channel_base
+    arguments: ['form']               
+```
+
 * alias: 服务的别名
     arguments:参数用于工厂方法(‘factory_class’)或者是类构造函数(‘class’)。’@’指出其它服务，然后将服务名放在后面，并在它自已的services.yml文件中定义。
     calls:使用setter注入。定义其它方法来调用已经实例化的服务。
