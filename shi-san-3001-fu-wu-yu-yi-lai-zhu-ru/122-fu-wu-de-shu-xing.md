@@ -30,21 +30,9 @@ services:
     arguments: ['system']
   logger.channel.php:
     parent: logger.channel_base
-    arguments: ['php']
-  logger.channel.image:
-    parent: logger.channel_base
-    arguments: ['image']
-  logger.channel.cron:
-    parent: logger.channel_base
-    arguments: ['cron']
-  logger.channel.file:
-    class: Drupal\Core\Logger\LoggerChannel
-    factory: logger.factory:get
-    arguments: ['file']
-  logger.channel.form:
-    parent: logger.channel_base
-    arguments: ['form']               
+    arguments: ['php']             
 ```
+上面的例子我们定义了一个抽象的服务logger.channel_base，下面的default、php等服务都继承了这个抽象服务。
 
 * alias: 服务的别名
     arguments:参数用于工厂方法(‘factory_class’)或者是类构造函数(‘class’)。’@’指出其它服务，然后将服务名放在后面，并在它自已的services.yml文件中定义。
