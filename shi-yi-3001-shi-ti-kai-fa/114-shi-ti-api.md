@@ -58,39 +58,40 @@ $node = entity_create('node', [
 ]);
 ```
 
-//你也可以使用静态的创建方法
+// 你也可以使用静态的创建方法
 
-$node = Node::create(array(‘title’ => ‘The node title’));
+```php
+$node = Node::create(['title' => 'The node title']);
+```
 
-//使用实体管理器(entity manager)
+// 使用实体管理器(entity manager)
+```php
+$node = \Drupal::entityTypeManager()->getStorage(‘node’)->create(['type' => 'article', 'title' => 'Another node'));
+```
 
-$node = \Drupal::entityTypeManager()->getStorage(‘node’)->create(array(‘type’=>’article’,’title’=>’Another node’));
-
-加载实体
-
-//使用静态方法
-
+###4、加载实体
+```php
+// 使用静态方法
 $node = Node::load(1);
 
-//动态实体类型，entity_load()加载新单个实体，在7.x中entity_load()已经重命名为entity_load_multiple()。
-
+// 动态实体类型，entity_load()加载新单个实体。
 $entity = entity_load($entity_type,$id);
 
-//使用存储控制器
-
+// 使用存储控制器
 $entity = \Drupal::entityTypeManager()->getStorage($entity_type)->load(1);
 
-//加载多个实体使用entity_load_multiple()
-
+// 加载多个实体使用entity_load_multiple()
 $entity = \Drupal::entityTypeManager()->getStorage($entity_type)->loadMultiple(array(1,2,3));
+```
 
 为了更新实体，可以先加载它，然后修改，最后保存。
 
-保存实体
+###5、保存实体
 
-//保存一个实体
-
+```php
+// 保存一个实体
 $entity->save();
+```
 
 这一方法既可用于新实体，也可用于已存在的实体，可以从实体信息中得知实体是否是一个新实体。一般地，对于内容实体，会提供一个实体ID。为了保存一个新实体(例如导入数据)，可以强制使用isNew标志，请看以下代码。
 
