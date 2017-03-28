@@ -89,6 +89,7 @@
   * [11.7 实体字段](shi-yi-3001-shi-ti-kai-fa/117-shi-ti-zi-duan.md)
   * [11.8 实践](shi-yi-3001-shi-ti-kai-fa/11x-shi-jian.md)
 * [十二、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
+  * [12.1 基本概念](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru/121-ji-ben-gai-nian.md)
 * [十三、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十四、数据库](shi-si-3001-shu-ju-ku.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
