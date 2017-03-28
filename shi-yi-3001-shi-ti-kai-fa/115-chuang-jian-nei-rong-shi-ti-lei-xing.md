@@ -812,3 +812,9 @@ class ContactAccessControlHandler extends EntityAccessControlHandler {
 }
 ?>
 ```
+
+###7、注册实体
+在已有模块中注册实体，base_table不会去自动创建，通常我们使用drush来操作。
+```php
+drush updatedb --entity-updates
+```
