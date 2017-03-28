@@ -33,6 +33,11 @@ Drupal8中的实体字段主要有这些：
 ###1、自定义字段类型
 #### modules/custom/hello_world/src/Plugin/Field/FieldType/EntityUserAccessField.php
 
+字段类型注解以@FieldType开头。
+* id: 字段类型的机器名，唯一ID。
+* label: 用于用户界面的标签。
+* description: 字段描述
+
 ```php
 namespace Drupal\MODULENAME\Plugin\Field\FieldType;
  
