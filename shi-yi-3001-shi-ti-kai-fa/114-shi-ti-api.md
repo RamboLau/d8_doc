@@ -132,10 +132,12 @@ if ($entity->access(‘delete’,$account)){
 }
 ```
 
-当检查实体创建权限时，通常还没有实体。这个权限只是为了检测某人是否有权创建该实体，开销较大，因此应直接使用访问控制器进行检查。
+这个权限只是为了检测某人是否有权创建该实体，开销较大，因此应直接使用访问控制器进行检查。
 
-\Drupal::entity::entityTypeManager()->getAccessController(‘node’)->createAccess(‘article’);
+```php
+\Drupal::entity::entityTypeManager()->getAccessController('node')->createAccess('article');
+```
 
-如果已经有一个实体，$entity->access(‘create’)也可以工作，它会被转到createAccess()方法，同样地其它操作会被转到访问控制器的access()方法上。
+如果已经有一个实体，$entity->access('create')也可以执行，它会调用createAccess()方法，同样地其它操作会被转到访问控制器的access()方法上。
 
-注意:有些资料上使用\Drupal::entityManager()，但已不提倡，并会在9.x中删除。因此请用\Drupa::entityTypeManager()代替\Drupal::entityManager()。
+注意: 有些资料上使用\Drupal::entityManager()，但已不提倡，并会在9.x中删除。因此请用\Drupa::entityTypeManager()代替\Drupal::entityManager()。
