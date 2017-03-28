@@ -171,3 +171,48 @@ class EntityUserAccessWidget extends WidgetBase {
 }
 ```
 你现在打开带有这个控件的表单，你会看到至少有两个输入字段，一个是用于输入用户名，另一个用于输入密码。如果你想验证表单数据，你需要实现这个控件的验证方法。
+
+###3、自定义字段格式(Field Formatter)
+字段格式用于呈现数据，这叫做实体的查看模式。一般地，控件是用于表单模式，字段格式用于实体字段的查看模式。
+
+```php
+namespace Drupal\MODULENAME\Plugin\Field\FieldFormatter;
+     
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Field\FormatterBase;
+ 
+/**
+ * Plugin implementation of the 'entity_user_access_f' formatter.
+ *
+ * @FieldFormatter(
+ *   id = "entity_user_access_f",
+ *   label = @Translation("Entity User Access - Formatter"),
+ *   description = @Translation("Entity User Access - Formatter"),
+ *   field_types = {
+ *     "entity_user_access",
+ *   }
+ * )
+ */
+ 
+class EntityUserAccessFormatter extends FormatterBase {
+  /**
+   * {@inheritdoc}
+   */
+  public function viewElements(FieldItemListInterface $items, $langcode) {
+    $elements = array();
+ 
+    foreach ($items as $delta => $item) {
+      $elements[$delta] = array(
+        'uid' => array(
+          '#markup' => \Drupal\user\Entity\User::load($item->user_id)->getUsername(),
+        ),
+        // Add more content
+      );
+    }
+ 
+    return $elements;
+  }
+}
+```
+
+* viewElements()将我们的字段的用户名存入$elements数组中。在实体中必须实现访问控制，这个实现将会显示有权访问实体的用户名。
