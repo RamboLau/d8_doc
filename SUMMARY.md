@@ -86,6 +86,7 @@
   * [11.4 实体API](shi-yi-3001-shi-ti-kai-fa/114-shi-ti-api.md)
   * [11.5 创建内容实体类型](shi-yi-3001-shi-ti-kai-fa/115-chuang-jian-nei-rong-shi-ti-lei-xing.md)
   * [11.x 实践](shi-yi-3001-shi-ti-kai-fa/11x-shi-jian.md)
+  * [11.6  实体验证](shi-yi-3001-shi-ti-kai-fa/116-shi-ti-yan-zheng.md)
 * [十二、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十三、服务与依赖注入](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru.md)
 * [十四、数据库](shi-si-3001-shu-ju-ku.md)
