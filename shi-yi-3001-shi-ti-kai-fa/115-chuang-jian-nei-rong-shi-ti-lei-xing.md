@@ -10,3 +10,19 @@ jerry@mac:~/Sites/drupal8 > drupal list | grep entity
   generate:entity:content (gect)          Generate a new content entity
 ```
 
+###1、创建模块
+#### content_entity_example.info.yml
+
+```php
+name: Content Entity Example
+type: module
+description: 'Provides ContentEntityExampleContact entity.'
+package: Example modules
+core: 8.x
+# These modules are required by the tests, must be available at bootstrap time
+dependencies:
+  - options
+  - entity_reference
+  - examples
+```
+
