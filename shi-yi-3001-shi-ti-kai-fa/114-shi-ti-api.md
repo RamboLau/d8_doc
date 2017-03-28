@@ -56,16 +56,11 @@ $node = entity_create('node', [
  'title' => 'My node',
  'body' => 'The body content. This just works like this due to the new Entity Field API. It will be assigned as the value of the first field item in the default language.'
 ]);
-```
 
 // 你也可以使用静态的创建方法
-
-```php
 $node = Node::create(['title' => 'The node title']);
-```
 
 // 使用实体管理器(entity manager)
-```php
 $node = \Drupal::entityTypeManager()->getStorage(‘node’)->create(['type' => 'article', 'title' => 'Another node'));
 ```
 
@@ -95,8 +90,8 @@ $entity->save();
 
 这一方法既可用于新实体，也可用于已存在的实体，可以从实体信息中得知实体是否是一个新实体。一般地，对于内容实体，会提供一个实体ID。为了保存一个新实体(例如导入数据)，可以强制使用isNew标志，请看以下代码。
 
-// 下面的代码试图插入一个节点ID为5的节点，如果这个节点ID已存在则会失败
 ```php
+// 下面的代码试图插入一个节点ID为5的节点，如果这个节点ID已存在则会失败
 $node->nid->value = 5;
 
 $node->enforceIsNew(TRUE);
