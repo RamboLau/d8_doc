@@ -105,3 +105,7 @@ class EntityUserAccessField extends FieldItemBase {
   }
 }
 ```
+
+实现了2个方法：
+* propertyDefinitions: 和baseFieldDefinition类似，定义字段的属性。
+* schema: 告诉Drupal如何创建字段。 
