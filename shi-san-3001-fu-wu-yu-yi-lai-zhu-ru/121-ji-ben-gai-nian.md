@@ -19,5 +19,3 @@ https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and
 比如从apc改成redis，仅仅是缓存的内部实现机制需要变换。
 
 所以缓存应该设计成一种服务。
-
-* 注意：通常来说，如果提供了一个UI想让用户进行配置，应该使用插件系统。
