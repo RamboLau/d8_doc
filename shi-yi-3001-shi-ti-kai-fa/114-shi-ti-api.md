@@ -30,39 +30,33 @@ if ($entity->getEntityTypeId() == $needed_type){
 
 使用一些方法可以获取实体的信息，如实体的ID，实体bundle，修订ID等等。请看EntityInterface接口获取更多的细节。
 
-//获取实体id
-
+```php
+// 获取实体id
 $entity->id();
 
-//获取实体bundle
-
+// 获取实体bundle
 $entity->bundle();
 
-//检测实体是否为新实体
-
+// 检测实体是否为新实体
 $entity->isNew();
 
-//获取实体的标签
-
+// 获取实体的标签
 $entiry->label();
 
-//获取实体URI
-
+// 获取实体URI
 $entity->uri();
 
-//创建实体的副本
-
+// 创建实体的副本
 $duplicate = $entity->createDuplicate();
+```
 
-创建实体
-
-$node = entity_create( ‘node’,array(
-
- ‘title’ => ‘My node’,
-
- ‘body’ => ‘The body content. This just works like this due to the new Entity Field API. It will be assigned as the value of the first field item in the default language.’
-
-));
+###3、创建实体
+```php
+$node = entity_create('node', [
+ 'title' => 'My node',
+ 'body' => 'The body content. This just works like this due to the new Entity Field API. It will be assigned as the value of the first field item in the default language.'
+]);
+```
 
 //你也可以使用静态的创建方法
 
