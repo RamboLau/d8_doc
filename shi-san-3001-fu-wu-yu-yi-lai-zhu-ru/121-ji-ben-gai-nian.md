@@ -6,7 +6,7 @@ Drupal8服务API文档：
 https://www.drupal.org/docs/8/api/services-and-dependency-injection/services-and-dependency-injection-in-drupal-8
 
 
-再来重温一下插件和服务的区别
+再来重温一下插件和服务的区别:
 
 ###1、插件
 
