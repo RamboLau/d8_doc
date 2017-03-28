@@ -28,3 +28,4 @@ Drupal8中的实体字段主要有这些：
 * text 文本
 * text_long 长文本
 * text_with_summary 带摘要的文本
+
