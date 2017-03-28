@@ -92,3 +92,66 @@ content_entity_example.contact_settings:
     _permission: 'administer contact entity'
 ```   
     
+#### content_entity_example.links.menu.yml
+设置管理员菜单。
+
+```php
+# Define the menu links for this module
+
+entity.content_entity_example_contact.collection:
+  title: 'Content Entity Example: Contacts Listing'
+  route_name: entity.content_entity_example_contact.collection
+  description: 'List Contacts'
+  weight: 10
+content_entity_example_contact.admin.structure.settings:
+  title: Contact Settings
+  description: 'Configure Contact entity'
+  route_name:  content_entity_example.contact_settings
+  parent: system.admin_structure
+```
+  
+#### content_entity_example.links.action.yml
+设置操作菜单。
+
+```php
+# All action links for this module
+
+content_entity_example.contact_add:
+  # Which route will be called by the link
+  route_name: content_entity_example.contact_add
+  title: 'Add Contact'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.content_entity_example_contact.collection
+    - entity.content_entity_example_contact.canonical
+```
+
+#### content_entity_example.links.task.yml
+设置tab切换菜单。
+
+```php
+# Define the 'local' links for the module
+
+contact.settings_tab:
+  route_name: content_entity_example.contact_settings
+  title: Settings
+  base_route: content_entity_example.contact_settings
+
+contact.view:
+  route_name: entity.content_entity_example_contact.canonical
+  base_route: entity.content_entity_example_contact.canonical
+  title: View
+
+contact.page_edit:
+  route_name: entity.content_entity_example_contact.edit_form
+  base_route: entity.content_entity_example_contact.canonical
+  title: Edit
+
+contact.delete_confirm:
+  route_name:  entity.content_entity_example_contact.delete_form
+  base_route:  entity.content_entity_example_contact.canonical
+  title: Delete
+  weight: 10
+```
+
