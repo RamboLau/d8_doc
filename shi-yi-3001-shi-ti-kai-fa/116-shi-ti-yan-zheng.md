@@ -28,3 +28,31 @@ if ($violations->count() > 0) {
 return \Drupal::typedDataManager()->getValidator()->validate($typed_data);
 ```
 
+###2、实体验证
+
+实体字段和字段项是类型化的数据对象，因此能够被验证，如:
+
+```php
+$violations = $entity->field_text->validate();
+```
+
+把实体作为一个整体来验证:
+```php
+$violations = $entity->validate();
+```
+
+$violations变量包含了验证失败的属性的路径，这个路径相对于验证开始的地方。例如，如果字段的文本值($field[0]->value)验证失败，在第一个例子中$violation->getPropertyPath()的属性路径为”0.value”，在第二个例子中它是”field_text.0.value”。
+
+###3、给字段设置约束
+
+通过setPropertyConstraints方法，可以很方便的给字段设置约束，如给字段设置一个最大长度的约束：
+
+```
+$fields['name'] = BaseFieldDefinition::create('string')
+  ->setLabel(t('Name'))
+  ->setPropertyConstraints('value', array('Length' => array('max' => 32)));
+```
+
+
+
+ 
