@@ -109,6 +109,7 @@
   * [14.4 视图](shi-si-3001-shu-ju-ku/145-shi-tu.md)
   * [14.5 schema API](shi-si-3001-shu-ju-ku/142-schema-api.md)
   * [14.6 数据库配置](shi-si-3001-shu-ju-ku/146-shu-ju-ku-pei-zhi.md)
+  * [14.x 实践](shi-si-3001-shu-ju-ku/14x-shi-jian.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
 * [十七、主题开发](shi-qi-3001-zhu-ti-kai-fa.md)
