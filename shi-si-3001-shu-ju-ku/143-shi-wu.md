@@ -18,7 +18,6 @@ Java解决了嵌套锁。Java允许你将函数标记为'synchronized'，只要�
 ```
 function my_transaction_function() {
   // The transaction opens here.
-  //开启一个事务
   $transaction = db_transaction();
 
   try {
@@ -44,7 +43,6 @@ function my_transaction_function() {
 
 function my_other_function($id) {
   // The transaction is still open here.
-  //事务仍然是打开的
   if ($id % 2 == 0) {
     db_update('example')
       ->condition('id', $id)
