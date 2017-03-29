@@ -8,24 +8,26 @@ hook_schema()返回一个定义表结构的关联数组。
 * description: 用于描述表用途的纯文本字符串。如果要引用其它表，请使用花括号。例如，node_field_revision表的描述包含"Stores per-revision title and body data for each {node}."，这里的{node}就是引用节点表。
 * fields: 描述数据库表的列的关联数组。如'fieldname' => specification，specification是一个数组，它可以使用下面的键:
   * description: 描述字段用途的纯文本字行串。引用其它的表应使用花括号。例如节点表的vid字段的描述包含"Always holds the largest(most recent){node_field_revision}.vid value for this nid"。
-  * type: 字段的数据类型: char,varchar,text,blob,int,tinyint,float,numeric,serial。这些数据类型会映射成具体的数据库类型。如自动增加字段使用'serial'，在MySQL中它相当于'auto_increment'。
-        mysql_type,pgsql_type,sqlite_type,etc:如果你需要使用的记录类型没有包含在上面列出的官方支持列表中，你可以为每种数据库后端指定一种类型。在这种情况下，你可以省略类型参数，但建议你的schema在失败时加载一个没有那种类型的后端。一种可行的解决方案是使用”text”作为回退。
-        serialize:指出字段值是否被保存为一个序列化的字符串。
-        size:数据大小:tiny,small,medium,normal,big。能存储的最大值的提示，这取决于具体的数据库引擎，如MySQL上的TINYINT,INT,BIGINT等。默认为normal。
-        not null:如果设为true，数据库列将不允许NULL值。默认为false。
-        default:字段的默认值。这与PHP类型是有关的，’0’和0是不同的。如果你指定’0’作为一个int型字段的默认值这是不行的，因为它是一个字符串值。
-        length:char,varchar,text字段类型的最大长度。忽略其它的字段类型。
-        unsigned:指出是否为无符号数字型。默认为false。忽略其它类型。
-        precision,scale:对于’numeric’字段，指出精度和小数位，这两个值是强制性的，对其它字段无效。
-        binary:char,varchar或者text字段是否使用区分大小写的二进制collation。这对于那些已经把区分大小写作为默认行为的数据类型是没有影响的。
-        除type外其它参数可选，但对于numeric列必须指定precision和scale，对于varchar必须指定length。
-    primary key:指定主键的数组。
-    unique keys:指定唯一键的关联数组。形如(‘keyname’ => specification)。每个specification是一个数组。
-    foreign keys:定义外键的关联数组。
-    indexes:定义索引的关联数组。
+  * type: 字段的数据类型: char,varchar,text,blob,int,float,numeric,serial。这些数据类型会映射成具体的数据库类型。如自动增加字段使用'serial'，在MySQL中它相当于'auto_increment'。
+  * mysql_type,pgsql_type,sqlite_type,etc: 如果你需要使用的字段数据类型没有包含在上面列出的官方支持列表中，你可以为每种数据库后端指定一种类型。在这种情况下，你可以省略类型参数。
+  * serialize: 指出字段值是否被保存为一个序列化的字符串。
+  * size: 数据大小:tiny,small,medium,normal,big。这取决于具体的数据库引擎，如MySQL上的TINYINT,INT,BIGINT等。默认为normal。
+  * not null: 如果设为true，数据库列将不允许NULL值。默认为false。
+  * default: 字段的默认值。这与PHP类型是有关的，’0’和0是不同的。如果你指定’0’作为一个int型字段的默认值这是不行的，因为它是一个字符串值。
+  * length: char,varchar,text字段类型的最大长度，只针对这几种字段类型生效。
+  * unsigned: 指出是否为无符号数字型。默认为false，只针对int型生效。
+  * precision,scale: 仅对于'numeric'字段类型，表示精度和小数位，这两个值是强制性的。
+  * binary: char,varchar或者text字段是否使用区分大小写的二进制collation。这对于那些已经把区分大小写作为默认行为的数据类型是没有影响的。
+* primary key: 指定主键的数组。
+* unique keys: 指定唯一键的关联数组。如'keyname' => specification。每个specification是一个数组。
+* foreign keys: 定义外键的关联数组。
+* indexes: 定义索引的关联数组。
+
+注意：除type外其它参数可选，但对于numeric列必须指定precision和scale，对于varchar必须指定length。
 
 为了更好地理解schema的定义，下面是node表的一部份schema定义。它显示了四个字段(nid,vid,type,title)，主键为nid，唯一键为vid，两个外键，几个索引。
 
+```php
 $schema['node'] = array(
   'description' => 'The base table for nodes.',
   'fields' => array(
@@ -72,3 +74,4 @@ $schema['node'] = array(
    ),
   'primary key' => array('nid'),
 );
+```
