@@ -39,9 +39,10 @@ services:
 * calls: 使用setter注入，定义其它方法来调用已经实例化的服务
 如:
 ```php
-  cache_factory:
-    class: Drupal\Core\Cache\CacheFactory
-    arguments: ['@settings', '%cache_default_bin_backends%']
+  http_middleware.session:
+    class: Drupal\Core\StackMiddleware\Session
+    tags:
+      - { name: http_middleware, priority: 50 }
     calls:
       - [setContainer, ['@service_container']]
 ```
