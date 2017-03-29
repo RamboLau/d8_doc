@@ -74,15 +74,11 @@ $databases['extra']['default'] = array(
 上面的配置定义了一个主数据库和名为extra的外部数据库，它使用SQLite数据库类型。注意SQLite的连接信息结构与MySQL不同。
 
  
-需求PDO
+### PDO配置
+文档见：http://php.net/manual/zh/pdo.setattribute.php
 
-因为Drupal的数据库抽象层是建立在PHP的PDO类库之上，因此你的主机需要支持PDO扩展，才能运行Drupal。
-
- 
-PDO选项
-
-PDO选项和基于特定数据库类型的PDO选项可以在$databases变量中指定，这需要使用pdo键，它的值是一个数据库选项数组。请看下面的例子:
-
+配置例子如：
+```php
 $databases['default']['default'] = array(
   'driver' => 'mysql',
   'database' => 'drupaldb',
@@ -91,3 +87,4 @@ $databases['default']['default'] = array(
   'host' => 'dbserver1',
   'pdo' => array(ATTR_TIMEOUT => 2.0, MYSQL_ATTR_COMPRESS => 1),
 );
+```
