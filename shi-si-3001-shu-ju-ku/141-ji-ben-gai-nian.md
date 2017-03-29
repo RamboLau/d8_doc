@@ -16,6 +16,7 @@ Drupal 8的数据库API提供了访问数据库服务的标准抽象层。通常
 
 Drupal的数据库抽象层是建立在PHP的PDO库之上。PDO提供了访问不同数据库的统一的面向对象的API，但是它并没有抽象出通过不同的数据库而使用不同的SQL专业用语。
 
+开发的时候注意,MySQL关键字必须大写。 
  
 ###1、驱动(Drivers)
 因为不同的数据库有不同的特性，Drupal的数据库抽象层需要为每种数据库类型提供了一个驱动器。一个驱动由许多文件组成，它们位于core/lib/drupal/core/database/driver目录下，driver是一个唯一的字符串。在大多数情况下，driver就是小写的数据库名，如"mysql"、"pgsql"或者"mycustomdriver"。
