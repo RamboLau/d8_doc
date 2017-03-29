@@ -1,3 +1,5 @@
+缓存API文档见：https://www.drupal.org/docs/8/api/cache-api/cache-api
+
 ###1、缓存元数据
 包含三个属性：
 * cache tags: cache标签，如entities和configuration
@@ -22,5 +24,4 @@ $renderer->addCacheableDependency($build, $config);
 ```
 
 #### 响应缓存
-
 缓存元数据通过渲染API冒泡所有方面到响应对象(通常是HtmlResponse)，它实现了CacheableResponseInterface接口。在这些响应对象上的缓存元数据允许Drupal 8使用页面缓存和动态页缓存，这两个模块默认是开启的。
