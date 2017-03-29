@@ -44,5 +44,5 @@ Bundles是一个信息容器，包含了字段或配置的定义。如：
 
 * 4、用户(User), 没有Bundles
 
-#### 配置实体(Configuration Entity Types)u
+#### 配置实体(Configuration Entity Types)
 暂无Bundles
