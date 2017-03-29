@@ -15,11 +15,20 @@ API见：https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3
 * data: 包含根据路径或者上下文而产生的不同数据。
 * discovery: 包含缓存的发现数据，如发现了一个插件就要缓存它，避免再次发现它，如发现的YAML数据等。
 
+调用方法为：
+```php
+\Drupal::cache('bootstrap');
+\Drupal::cache('render');
+...
+```
+
 一个模块可以定义一个缓存bin，需要在模块目录下的modulename.services.yml文件中定义服务，假定缓存bin的名称为’nameofbin’，其定义的代码如下:
 
+```php
 cache.nameofbin:
   class: Drupal\Core\Cache\CacheBackendInterface
   tags:
     - { name: cache.bin }
   factory: cache_factory:get
   arguments: [nameofbin]
+```
