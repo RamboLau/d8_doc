@@ -818,3 +818,8 @@ class ContactAccessControlHandler extends EntityAccessControlHandler {
 ```php
 drush updatedb --entity-updates
 ```
+
+或者简写为:
+```php
+drush updb --entity-updates
+```
