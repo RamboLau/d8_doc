@@ -64,3 +64,24 @@
     tags:
       - { name: backend_overridable }
 ```
+
+* service_collector: 服务收集器 
+```php
+string_translation:
+  class: Drupal\Core\StringTranslation\TranslationManager
+  arguments: ['@language_manager']
+  calls:
+    - [initLanguageManager]
+  tags:
+    - { name: service_collector, tag: string_translator, call: addTranslator }
+```
+这里定义了一个服务收集器。在tags定义中定义了tag属性，它会告诉服务收集器什么样的tag名称可以被收集。tags上的call属性告诉Drupal应该为每一项已收集的服务调用TranslationManager::addTranslator()方法一次。
+```php
+// \Drupal\Core\StringTranslation\TranslationManager:
+public function addTranslator(TranslatorInterface $translator, $priority = 0) {
+  $this->translators[$priority][] = $translator;
+  // Reset sorted translators property to trigger rebuild.
+  $this->sortedTranslators = NULL;
+  return $this;
+}
+```
