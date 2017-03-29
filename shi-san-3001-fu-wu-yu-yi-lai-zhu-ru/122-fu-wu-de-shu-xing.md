@@ -45,6 +45,19 @@ services:
 * parent: 一个服务定义的属性能被继承。请看'abstract'。
 * properties: 属性注入。
 * public: 设置服务为公共或私有。私有服务仅仅能被用作其它服务的参数。true(default): 服务是公共的，false: 服务是私有的
+如：
+```php
+  session:
+    class: Symfony\Component\HttpFoundation\Session\Session
+    arguments: ['@session_manager', '@session.attribute_bag', '@session.flash_bag']
+  session.flash_bag:
+    class: Symfony\Component\HttpFoundation\Session\Flash\FlashBag
+    public: false
+  session.attribute_bag:
+    class: Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag
+    public: false
+```
+
 * scope: 确定被服务容器使用实例的范围。'container'(default): 每次从容器中请求该实例都使用同一实例。'prototype': 每次调用服务时都创建一个新实例。'request':每个请求都创建一个新的实例。
 * synthetic: 注入到容器中的服务替换由容器创建的服务。true:synthetic服务;false(default):normal服务。
 如：
