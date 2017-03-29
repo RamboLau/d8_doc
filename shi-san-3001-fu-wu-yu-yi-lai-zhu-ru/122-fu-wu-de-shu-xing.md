@@ -58,7 +58,10 @@ services:
     factory: GuzzleHttp\HandlerStack::create
     configurator: ['@http_handler_stack_configurator', configure]
 ```
-代码见：/vendor/guzzlehttp/guzzle/src/HandlerStack.php
+代码见：
+/core/lib/Drupal/Core/Http/HandlerStackConfigurator.php
+
+/vendor/guzzlehttp/guzzle/src/HandlerStack.php
 
 * factory_class: 服务的工厂类
 * factory_method: 实例化服务工厂类的方法
