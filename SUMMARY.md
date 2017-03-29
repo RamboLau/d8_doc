@@ -92,6 +92,7 @@
   * [12.1 基本概念](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru/121-ji-ben-gai-nian.md)
   * [12.2 服务的属性](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru/122-fu-wu-de-shu-xing.md)
   * [12.3 服务Tags](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru/123-fu-wu-tags.md)
+  * [12.4 如何访问服务？](shi-san-3001-fu-wu-yu-yi-lai-zhu-ru/124-ru-he-fang-wen-fu-wu-ff1f.md)
 * [十三、缓存系统](shi-er-3001-huan-cun-xi-tong.md)
 * [十四、数据库](shi-si-3001-shu-ju-ku.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
