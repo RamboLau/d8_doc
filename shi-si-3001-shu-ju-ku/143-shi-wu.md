@@ -10,7 +10,7 @@ Java解决了嵌套锁。Java允许你将函数标记为'synchronized'，只要�
 虽然我们不能在PHP中将函数申请为"transactional"，但我们可以通过使用对象的构造函数(constuct)和析构函数(destruct)来模拟Java的嵌套逻辑。调用"$transaction = db_transaction();"的函数首先将自身置于事务中。如果这个事务函数调用其它函数，我们的事务抽象层将它嵌套到函数中。这样，在内层函数中不进行锁请求操作，但外层的锁仍然可用。
 
 ###2、开启事务
-要开启一个新的事务，只需调用$transaction = db_transaction()；。这个事务会在$transaction的作用范围中开启。当$transaction销毁时，将会提交这个事务。如果你的事务嵌套在其它事务中，Drupal将会跟踪每个事务，并且仅仅提交最外层的事务。
+要开启一个新的事务，只需调用$transaction = db_transaction()。这个事务会在$transaction的作用范围中开启。当$transaction销毁时，将会提交这个事务。如果你的事务嵌套在其它事务中，Drupal将会跟踪每个事务，并且仅仅提交最外层的事务。
 
 你必须将db_transaction()的返回值赋给一个变量，如上面的例子。如果你直接调用这个函数没有将其赋给一个变量，你的事务将会立即提交。
 
