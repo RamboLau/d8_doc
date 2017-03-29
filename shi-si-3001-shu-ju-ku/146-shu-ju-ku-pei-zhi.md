@@ -1,6 +1,4 @@
-数据库配置主要是定义数据库连接，它是通过在settings.php文件中定义$databases数组变量来实现的。正如它的名称一样，$databases允许定义多个数据库连接。它也支持定义多个目标。一个数据库连接直到在它上运行第一个查询时才会打开(一开始并没有创建这一连接)。
-
-Drupal8在settings.php里通过$databases变量来配置数据库，$databases允许定义多个数据库连接。
+Drupal8在settings.php里通过$databases变量来配置数据库，$databases允许定义多个数据库连接，也支持定义多个target。
  
 连接键
 
