@@ -38,7 +38,25 @@ services:
 * arguments: 参数，@指其他服务
 * calls: 使用setter注入，定义其它方法来调用已经实例化的服务
 * class: 服务的类
+如:
+```php
+  cache_factory:
+    class: Drupal\Core\Cache\CacheFactory
+    arguments: ['@settings', '%cache_default_bin_backends%']
+    calls:
+      - [setContainer, ['@service_container']]
+```
+
 * configurator: 一个可调用的配置服务
+如：
+```php
+  http_handler_stack:
+    class: GuzzleHttp\HandlerStack
+    public: false
+    factory: GuzzleHttp\HandlerStack::create
+    configurator: ['@http_handler_stack_configurator', configure]
+```
+
 * factory_class: 服务的工厂类
 * factory_method: 实例化服务工厂类的方法
 * file: 在服务加载以前包含的文件
