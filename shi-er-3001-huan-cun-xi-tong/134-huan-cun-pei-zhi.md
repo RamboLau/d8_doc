@@ -34,8 +34,7 @@ cache.nameofbin:
 ```
 
 ###2、配置缓存
-
-Drupal 8 的默认缓存数据是存储于数据库中的，这个配置是可以改变的。可以将整个缓存数据或者是单个缓存bin配置到其它的后端缓存，比如APCu或者Memcache等等。
+Drupal 8的默认缓存数据是存储于数据库中的，这个配置是可以改变的。也可以将整个缓存数据或者是单个缓存bin配置到其它的后端缓存，比如APCu或redis等。
 
 在setttings.php文件中，你可以覆盖这项服务以配置其它的后端缓存。如果你的缓存服务实现了\Drupal\Core\CacheBackendInterface接口并名为cache.custom，下面这一行将让Drupal为缓存bin”cache_render”使用cache.custom缓存服务。
 
