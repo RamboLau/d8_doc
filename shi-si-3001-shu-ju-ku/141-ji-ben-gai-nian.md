@@ -50,7 +50,7 @@ db_set_active($key);
 一个查询是将一个SQL表达式发送给数据库连接。当前的数据库系统支持多种类型的查询: 如静态查询、动态查询、插入、更新、删除、合并等等。有些查询直接写成SQL表达式，而其它的查询使用面向对象的方法调用，即查询对象。
 
  
-查询表达式(Statements)
+###4、查询表达式(Statements)
 
 一个表达式对象是一个select查询的结果。它总是Statement类型，或者是它的子类，Statement类扩展至\PDOStatement类并实现StatementInterface接口。
 
