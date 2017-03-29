@@ -71,7 +71,7 @@ $databases['extra']['default'] = array(
 );
 ```
 
-上面的配置定义了一个Drupal主数据库和名为”extra”的外部数据库，它使用SQLite数据库类型。注意SQLite的连接信息结构与MySQL不同。
+上面的配置定义了一个主数据库和名为extra的外部数据库，它使用SQLite数据库类型。注意SQLite的连接信息结构与MySQL不同。
 
  
 需求PDO
