@@ -16,6 +16,12 @@ Drupal的数据管理主要分为三类:
 * configuration：缓存tags如config:<configuration name>
 * custom(例子library_info)
 
-Drupal自动地为实体&配置提供缓存tags----请看实体基类和配置基类。(所有的实体类型和配置对象继承它们)。使用::getCacheTages()获取它们的缓存tags，例如$node->getCacheTags()，$user->getCacheTags(),$view->getCacheTags()等。EntityTypeInterface::getListCacheTags()用于当创建、更新或删除实体类型时使缓存实体类型的列表失效。
+Drupal自动地为实体&配置提供缓存tags,之前的几节课已经说过，请看实体基类和配置基类。如：
 
-使用cache_tags.invalidator:invalidateTags()让缓存tags失效(或者当你不能注入cache_tags.invalidator服务:Cache::invalidateTages()时)，它接受一个缓存tags集合(string[])。
+#### 获取缓存tags
+使用::getCacheTages()获取它们的缓存tags，例如$node->getCacheTags()，$user->getCacheTags(),$view->getCacheTags()等。
+
+EntityTypeInterface::getListCacheTags()用于当创建、更新或删除实体类型时使缓存实体类型的列表失效。
+
+#### 缓存失效
+通常使用cache_tags.invalidator:invalidateTags()让缓存tags失效，它接受一个缓存tags集合(string[])。
