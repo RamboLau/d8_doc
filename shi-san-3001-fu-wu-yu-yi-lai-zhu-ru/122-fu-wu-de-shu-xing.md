@@ -46,6 +46,7 @@ services:
     calls:
       - [setContainer, ['@service_container']]
 ```
+代码见：/core/lib/Drupal/Core/StackMiddleware/Session.php
 
 * class: 服务的类
 * configurator: 一个可调用的配置服务
