@@ -56,4 +56,4 @@ services:
     tags:
       - { name: cache.context }
 ```
-Drupal8运行的时候，cache会找到所有实现了cache.context的服务，并把自动注册。
+Drupal8运行的时候，cache会找到所有实现了cache.context的服务，并自动注册。
