@@ -37,7 +37,6 @@ services:
 * alias: 服务的别名
 * arguments: 参数，@指其他服务
 * calls: 使用setter注入，定义其它方法来调用已经实例化的服务
-* class: 服务的类
 如:
 ```php
   cache_factory:
@@ -47,6 +46,7 @@ services:
       - [setContainer, ['@service_container']]
 ```
 
+* class: 服务的类
 * configurator: 一个可调用的配置服务
 如：
 ```php
