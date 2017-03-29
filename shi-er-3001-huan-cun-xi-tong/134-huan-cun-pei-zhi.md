@@ -22,7 +22,7 @@ API见：https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3
 ...
 ```
 
-一个模块可以定义一个缓存bin，需要在模块目录下的modulename.services.yml文件中定义服务，假定缓存bin的名称为’nameofbin’，其定义的代码如下:
+一个模块可以定义一个缓存bin，需要在模块目录下的modulename.services.yml文件中定义服务，假定缓存bin的名称为'nameofbin'，代码如下:
 ```php
 cache.nameofbin:
   class: Drupal\Core\Cache\CacheBackendInterface
