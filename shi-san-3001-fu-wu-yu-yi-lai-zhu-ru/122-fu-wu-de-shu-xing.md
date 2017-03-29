@@ -42,7 +42,7 @@ services:
 * factory_class: 服务的工厂类
 * factory_method: 实例化服务工厂类的方法
 * file: 在服务加载以前包含的文件
-* parent: 一个服务定义的属性能被继承。请看'abstract'。
+* parent: 继承哪个父类的服务。请看'abstract'。
 * properties: 属性注入。
 * public: 设置服务为公共或私有。私有服务仅仅能被用作其它服务的参数。true(default): 服务是公共的，false: 服务是私有的
 如：
