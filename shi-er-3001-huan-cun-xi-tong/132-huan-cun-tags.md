@@ -12,10 +12,9 @@
 ###1、核心缓存tags
 
 Drupal的数据管理主要分为三类:
-
-    实体----缓存tags形式<entity type>:<entity ID>
-    configuration----缓存tags形式config:<configuration name>
-    custom(例子library_info)
+* 实体：缓存tags如<entity type>:<entity ID>
+* configuration：缓存tags如config:<configuration name>
+* custom(例子library_info)
 
 Drupal自动地为实体&配置提供缓存tags----请看实体基类和配置基类。(所有的实体类型和配置对象继承它们)。使用::getCacheTages()获取它们的缓存tags，例如$node->getCacheTags()，$user->getCacheTags(),$view->getCacheTags()等。EntityTypeInterface::getListCacheTags()用于当创建、更新或删除实体类型时使缓存实体类型的列表失效。
 
