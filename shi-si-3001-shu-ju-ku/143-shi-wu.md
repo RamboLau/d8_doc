@@ -51,3 +51,5 @@ function my_other_function($id) {
   }
 }
 ```
+
+通常,数据库操作必须使用try...catch来捕获异常。
