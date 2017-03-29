@@ -99,6 +99,7 @@
   * [13.1 基本概念](shi-er-3001-huan-cun-xi-tong/131-ji-ben-gai-nian.md)
   * [13.2 缓存Tags](shi-er-3001-huan-cun-xi-tong/132-huan-cun-tags.md)
   * [13.3 缓存上下文](shi-er-3001-huan-cun-xi-tong/133-huan-cun-shang-xia-wen.md)
+  * [13.4 缓存max-age](shi-er-3001-huan-cun-xi-tong/134-huan-cun-max-age.md)
 * [十四、数据库](shi-si-3001-shu-ju-ku.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
