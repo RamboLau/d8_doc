@@ -25,3 +25,5 @@ $renderer->addCacheableDependency($build, $config);
 
 #### 响应缓存(Response cache)
 通常使用HtmlResponse来响应，它实现了CacheableResponseInterface接口。
+
+Restful API使用ResourceResponse来响应请求。
