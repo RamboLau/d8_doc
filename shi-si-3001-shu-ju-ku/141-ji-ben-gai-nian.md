@@ -18,7 +18,7 @@ Drupal的数据库抽象层是建立在PHP的PDO库之上。PDO提供了访问�
 
  
 ###1、驱动(Drivers)
-因为不同的数据库有不同的特性，Drupal的数据库抽象层需要为每种数据库类型提供了一个驱动器。一个驱动由许多文件组成，它们位于core/lib/drupal/core/database/driver目录下，driver是一个唯一的字符串。在大多数情况下，驱动的键是小写的数据库名，如"mysql"、"pgsql"或者"mycustomdriver"。
+因为不同的数据库有不同的特性，Drupal的数据库抽象层需要为每种数据库类型提供了一个驱动器。一个驱动由许多文件组成，它们位于core/lib/drupal/core/database/driver目录下，driver是一个唯一的字符串。在大多数情况下，driver就是小写的数据库名，如"mysql"、"pgsql"或者"mycustomdriver"。
 
 每个驱动由几个类组成，这些类由核心的数据库中的类派生。这些特定于驱动的类可以覆写父类的任何行为以支持它们自身的数据库类型。在Drupal 7中特定于驱动类的命名总是先加上父类的名称和下划线，最后者是驱动名。如数据库链接类DatabaseConnection，MySQL的数据库链接类为DatabaseConnection_mysql。Drupal 8引入了命名空间概念，不需要再实现像Drupal 7那样的命名规则。
 
