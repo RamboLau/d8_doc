@@ -7,8 +7,8 @@ hook_schema()返回一个定义表结构的关联数组。
 常用的键:
 * description: 用于描述表用途的纯文本字符串。如果要引用其它表，请使用花括号。例如，node_field_revision表的描述包含"Stores per-revision title and body data for each {node}."，这里的{node}就是引用节点表。
 * fields: 描述数据库表的列的关联数组。如'fieldname' => specification，specification是一个数组，它可以使用下面的键:
-  * description:描述字段用途的纯文本字行串。引用其它的表应使用花括号。例如节点表的vid字段的描述包含"Always holds the largest(most recent){node_field_revision}.vid value for this nid"。
-        type:字段的数据类型:char,varchar,text,blob,int,float,numeric,serial。这些数据类型会映射成具体的数据库类型。如自动增加字段使用’serial’，在MySQL中它对于’INT auto_increment’。
+  * description: 描述字段用途的纯文本字行串。引用其它的表应使用花括号。例如节点表的vid字段的描述包含"Always holds the largest(most recent){node_field_revision}.vid value for this nid"。
+  * type: 字段的数据类型: char,varchar,text,blob,int,tinyint,float,numeric,serial。这些数据类型会映射成具体的数据库类型。如自动增加字段使用'serial'，在MySQL中它相当于'auto_increment'。
         mysql_type,pgsql_type,sqlite_type,etc:如果你需要使用的记录类型没有包含在上面列出的官方支持列表中，你可以为每种数据库后端指定一种类型。在这种情况下，你可以省略类型参数，但建议你的schema在失败时加载一个没有那种类型的后端。一种可行的解决方案是使用”text”作为回退。
         serialize:指出字段值是否被保存为一个序列化的字符串。
         size:数据大小:tiny,small,medium,normal,big。能存储的最大值的提示，这取决于具体的数据库引擎，如MySQL上的TINYINT,INT,BIGINT等。默认为normal。
