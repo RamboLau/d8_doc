@@ -1,3 +1,4 @@
+###1、缓存bin
 缓存的存储被分离到"bins"中，每一个bin包含了各种缓存项。每个bin可以单独地进行配置。
 
 通常我们访问缓存使用
@@ -31,3 +32,22 @@ cache.nameofbin:
   factory: cache_factory:get
   arguments: [nameofbin]
 ```
+
+###2、配置缓存
+
+Drupal 8 的默认缓存数据是存储于数据库中的，这个配置是可以改变的。可以将整个缓存数据或者是单个缓存bin配置到其它的后端缓存，比如APCu或者Memcache等等。
+
+在setttings.php文件中，你可以覆盖这项服务以配置其它的后端缓存。如果你的缓存服务实现了\Drupal\Core\CacheBackendInterface接口并名为cache.custom，下面这一行将让Drupal为缓存bin”cache_render”使用cache.custom缓存服务。
+
+$settings[‘cache’][‘bins’][‘render’] = ‘cache.custom’;
+
+另外，也可以让所有的缓存都使用你提供的缓存服务即:
+
+$settings[‘cache’][‘default’] = ‘cache.custom’;
+
+ 
+###3、配置文件缓存
+
+当我们的数据库不够用时，我们无法再将缓存数据缓存到数据库中，另外数据库也比较慢。基于以上原因，我们可以使用文件缓存，Drupal 8已经为我们提供了PHP文件缓存，下面我们来配置它。
+
+$settings[‘cache’][‘default’] = ‘cache.backend.php’;
