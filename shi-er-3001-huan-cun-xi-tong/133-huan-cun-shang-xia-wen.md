@@ -2,3 +2,39 @@
 
 缓存上下文是一个字符串，它关联到一个可用的缓存上下文服务(service)。缓存上下文以字符串集合进行传递，因此它们的类型提示为string[]。为什么类型为string[]呢？因为单个缓存项可能有很多依赖的缓存上下文。
 
+###1、核心缓存上下文
+```bash
+cookies
+  :name
+headers
+  :name
+ip
+languages
+  :type
+request_format
+route
+  .book_navigation
+  .menu_active_trails
+    :menu_name
+  .name
+session
+  .exists
+theme
+timezone
+url
+  .path
+    .is_front // Available in 8.3.x or higher.
+    .parent
+  .query_args
+    :key
+    .pagers
+      :pager_id
+  .site
+user
+  .is_super_user
+  .node_grants
+    :operation
+  .permissions
+  .roles
+    :role
+```
