@@ -43,3 +43,5 @@ user
   .roles
     :role
 ```
+读法如：user.permissions。
+
