@@ -36,17 +36,25 @@ cache.nameofbin:
 ###2、配置缓存
 Drupal 8的默认缓存数据是存储于数据库中的，这个配置是可以改变的。也可以将整个缓存数据或者是单个缓存bin配置到其它的后端缓存，比如APCu或redis等。
 
-在setttings.php文件中，你可以覆盖这项服务以配置其它的后端缓存。如果你的缓存服务实现了\Drupal\Core\CacheBackendInterface接口并名为cache.custom，下面这一行将让Drupal为缓存bin”cache_render”使用cache.custom缓存服务。
+在setttings.php文件中，你可以覆盖默认缓存配置。
 
-$settings[‘cache’][‘bins’][‘render’] = ‘cache.custom’;
+如果你的缓存服务实现了\Drupal\Core\CacheBackendInterface接口并名为cache.redis，下面这一行让缓存bin为"cache_render"使用cache.redis缓存服务。
 
-另外，也可以让所有的缓存都使用你提供的缓存服务即:
+```php
+$settings['cache']['bins']['render'] = 'cache.redis';
+```
 
-$settings[‘cache’][‘default’] = ‘cache.custom’;
+另外，也可以让所有的缓存都使用你提供的缓存服务:
+
+```php
+$settings['cache']['default'] = 'cache.redis';
+```
 
  
 ###3、配置文件缓存
 
 当我们的数据库不够用时，我们无法再将缓存数据缓存到数据库中，另外数据库也比较慢。基于以上原因，我们可以使用文件缓存，Drupal 8已经为我们提供了PHP文件缓存，下面我们来配置它。
 
-$settings[‘cache’][‘default’] = ‘cache.backend.php’;
+```php
+$settings['cache']['default'] = 'cache.backend.php';
+```
