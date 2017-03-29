@@ -45,3 +45,4 @@ user
 ```
 读法如：user.permissions。
 
+注意：如果出现了a.b.c和a.b，显然a.b包括了a.b.c，这样a.b.c就能省略。
