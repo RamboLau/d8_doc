@@ -8,5 +8,6 @@
 
 API见：https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3Acache/8.2.x
 
-当你请求一个缓存对象时，你可以在\Drupal::cache()中指定bin的名称。你可以通过从服务容器中获取”cache.nameofbin”来请求一个bin。缺省的bin叫”default”，服务名称为”cache.default”，它用来存储公共的和频繁使用的缓存。
+如果我们实现了redis缓存，则可以通过cache.redis来访问。
+
 
