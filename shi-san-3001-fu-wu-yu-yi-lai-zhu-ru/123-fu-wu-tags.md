@@ -54,3 +54,13 @@
     tags:
       - { name: http_client_middleware }
 ```
+
+* backend_overridable: 提供一个标准的重写服务。
+```php
+ config.storage.active:
+    class: Drupal\Core\Config\DatabaseStorage
+    arguments: ['@database', 'config']
+    public: false
+    tags:
+      - { name: backend_overridable }
+```
