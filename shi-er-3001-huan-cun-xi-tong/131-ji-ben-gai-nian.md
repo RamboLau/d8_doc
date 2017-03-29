@@ -9,6 +9,17 @@
 
 #### 渲染缓存
 渲染API将缓存元数据嵌入到渲染数组以完成缓存。因此，缓存API不会与渲染缓存交互(既不获取缓存项也不创建新的缓存项)。
+如：
+```php
+$renderer = \Drupal::service('renderer');
+$config = \Drupal::config('system.site');
+$build = [
+  '#markup' => t('Hi, welcome back to @site!', [ 
+    '@site' => $config->get('name'),
+  ])
+]; 
+$renderer->addCacheableDependency($build, $config); 
+```
 
 #### 响应缓存
 
