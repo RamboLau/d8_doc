@@ -81,7 +81,7 @@ services:
     class: Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag
     public: false
 ```
-上面定义了session服务，flash_bag和attribute_bag服务被session服务所调用，他们设置为私有，在php代码中，不可以直接调用flash_bag中的方法。
+上面定义了session服务，flash_bag和attribute_bag服务被session服务所调用，他们为私有服务，在php代码中，不可以直接调用flash_bag中的方法。
 
 * scope: 确定被服务容器使用实例的范围。'container'(default): 每次从容器中请求该实例都使用同一实例。'prototype': 每次调用服务时都创建一个新实例。'request':每个请求都创建一个新的实例。
 * synthetic: 注入到容器中的服务替换由容器创建的服务。true:synthetic服务;false(default):normal服务。
