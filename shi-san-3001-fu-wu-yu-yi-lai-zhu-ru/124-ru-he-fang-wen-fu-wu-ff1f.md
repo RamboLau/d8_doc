@@ -7,6 +7,37 @@ Drupal8提供了两种方式：
 依赖注入是访问服务的最佳实践。
 
 在服务中显示地传递一个依赖的对象叫做依赖注入。在有些情况下，依赖被显示地传入构造函数，例如，路由访问检测在服务创建时获取当前用户注入，并在检查访问时传递当前请求。你也可以使用setter方法设置一个依赖。
+如：
+```php
+  /**
+   * Checks access.
+   *
+   * @param \Symfony\Component\Routing\Route $route
+   *   The route to check against.
+   * @param \Drupal\Core\Session\AccountInterface $account
+   *   The currently logged in account.
+   *
+   * @return \Drupal\Core\Access\AccessResultInterface
+   *   The access result.
+   */
+  public function access(Route $route, AccountInterface $account) {
+    $permission = $route->getRequirement('_permission');
+
+    if ($permission === NULL) {
+      return AccessResult::neutral();
+    }
+
+    // Allow to conjunct the permissions with OR ('+') or AND (',').
+    $split = explode(',', $permission);
+    if (count($split) > 1) {
+      return AccessResult::allowedIfHasPermissions($account, $split, 'AND');
+    }
+    else {
+      $split = explode('+', $permission);
+      return AccessResult::allowedIfHasPermissions($account, $split, 'OR');
+    }
+  }
+```
 
 ###2、全局函数访问
 全局Drupal类提供了静态方法来访问几种公共服务。例如，Drupal::moduleHandler()将返回模块处理服务，Drupal::translation()将返回字符串翻译服务。如果没有指定方法来访问你想访问的服务，你可以使用Drupal::service()方法来获取已经定义的服务。
