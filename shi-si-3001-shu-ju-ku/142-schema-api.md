@@ -1,9 +1,10 @@
 在Drupal中，schema是一个用来定义数据库结构的数组，在数组中定义字段名称、描述类型以及主键和索引等。
 schema在modulename.install文件中的hook_schema()函数中定义。
 
-hook_schema()函数的功能是定义模块需要的表结构。因为有这个API，你不需要关心不同数据库在创建或修改表时的语法。hook_schema()返回一个定义表结构的关联数组。
+hook_schema()函数的功能是定义模块需要的表结构。因为有这个API，你不需要关心不同数据库在创建或修改表时的语法。
+hook_schema()返回一个定义表结构的关联数组。
 
-可以使用下面的键:
+常用的键:
 
     description:用于描述表用途的纯文本字符串。如果要引用其它表，请使用花括号。例如，node_field_revision表的描述包含”Stores per-revision title and body data for each {node}.”这里的{node}就是引用节点表。
     fields:描述数据库表的列的关联数组。形如(’fieldname’ => specification)，specification是一个数组，它可以使用下面的键:
