@@ -99,7 +99,7 @@ $result = Database::getConnection()->query("SELECT id, title FROM {example_table
   'fetch' => 'ExampleClass',
 ]);
 ```
-id和title属性将会添加到ExampleClass对象中，可以在construct中获取。
+id和title属性将会添加到ExampleClass类中，可以在construct中获取。
 
 ExampleClass.php:
 ```php
