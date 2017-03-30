@@ -26,25 +26,29 @@ $number_of_rows = $result->rowCount();
 $number_of_rows = db_select('node')->countQuery()->execute()->fetchField();
 ```
 
-### 获取所有记录
+### 所有记录
 ```php
 // Retrieve all records into an indexed array of stdClass objects.
 $result->fetchAll();
 ```
-### 获取特定的字段记录
+### 结果集为特定的字段
 ```php
 // Retrieve all records into an associative array keyed by the field in the result specified.
 $result->fetchAllAssoc($field);
 ```
 
+### 结果集为关联数据
+```php
 // Retrieve a 2-column result set as an associative array of field 0 => field 1.
-//获取一个2列的结果集的关联数组。
 $result->fetchAllKeyed();
+
 // You can also specify which two fields to use by specifying the column numbers for each field
-$result->fetchAllKeyed(0,2); // would be field 0 => field 2
-$result->fetchAllKeyed(1,0); // would be field 1 => field 0
+$result->fetchAllKeyed(0, 2); // would be field 0 => field 2
+$result->fetchAllKeyed(1, 0); // would be field 1 => field 0
+
 // If you need an array where keys and values contain the same field (e.g. for creating a 'checkboxes' form element), the following is a perfectly valid method:
-$result->fetchAllKeyed(0,0); // would be field 0 => field 0, e.g. [article] => [article]
+$result->fetchAllKeyed(0, 0); // would be field 0 => field 0, e.g. [article] => [article]
+```
 
 // Retrieve a 1-column result set as one single array.
 $result->fetchCol();
