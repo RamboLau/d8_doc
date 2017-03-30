@@ -64,3 +64,5 @@ Database::getConnection()->merge('example')
 * 如果在updateFields()中指定更新的字段和值，这些字段只有记录存在时才会更新。没有在updateFields()中指定的字段则不受影响
  
 ### upsert
+文档见：https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21Query%21Upsert.php/class/Upsert/8.2.x
+
