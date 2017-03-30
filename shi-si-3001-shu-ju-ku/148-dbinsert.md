@@ -8,11 +8,10 @@ use Drupal\Core\Database\Database;
 Database::getConnection($options['target'])->insert($table, $options);
 ```
 
-
-INSERT查询操作使用db_insert()函数开始，如:
+如:
 
 ```php
-$query = db_insert('node', $options);
+$query = Database::getConnection()->insert('node', $options);
 
 上面的代码创建一个INSERT查询对象，它将会向节点表插入一条或多条记录。注意表名不需要使用大括号，因为查询构建器会自动地处理它。
 
