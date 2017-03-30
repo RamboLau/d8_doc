@@ -45,6 +45,8 @@ $num_rows = $query->countQuery()->execute()->fetchField();
 ```
 
 ###3、排除重复值
+* DISTINCT可能引起性能问题，尽量不要使用
 ```php
 $query->distinct();
 ```
+
