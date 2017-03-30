@@ -1,7 +1,6 @@
-在Drupal中INSERT查询操作必须使用一个查询构建对象。不同的数据库对INSERT的操作略有不同，特别是处理LOB(大对象如MySQL的TEXT型)和BLOB(二进制大对象)字段，因此需要数据库抽象层允许特定类型的数据库驱动来实现这些特定于数据库的处理。
+INSERT查询操作使用db_insert()函数开始，如:
 
-INSERT查询操作使用db_insert()函数开始，如下:
-
+```php
 $query = db_insert('node', $options);
 
 上面的代码创建一个INSERT查询对象，它将会向节点表插入一条或多条记录。注意表名不需要使用大括号，因为查询构建器会自动地处理它。
