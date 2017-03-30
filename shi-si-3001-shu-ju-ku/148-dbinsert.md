@@ -12,8 +12,11 @@ Database::getConnection($options['target'])->insert($table, $options);
 
 ```php
 $query = Database::getConnection()->insert('node', $options);
+```
 
-上面的代码创建一个INSERT查询对象，它将会向节点表插入一条或多条记录。注意表名不需要使用大括号，因为查询构建器会自动地处理它。
+上面的代码创建一个INSERT查询对象，它将向节点表插入一条或多条记录。
+
+注意: 表名不需要使用大括号，因为查询构建器会自动地处理它。
 
 INSERT查询对象使用了流式API，除了execute()方法外，其它方法返回查询对象自身，并允许链式调用方法。在大多数情况下，这意味着查询对象根本不需要保存为中间变量。
 
