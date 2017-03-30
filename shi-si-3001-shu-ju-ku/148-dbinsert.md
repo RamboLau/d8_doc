@@ -1,6 +1,12 @@
 文档见: https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21Query%21Insert.php/class/Insert/8.2.x
 ### 简单的插入操作
 
+用法：
+```php
+use Drupal\Core\Database\Database;
+
+Database::getConnection($options['target'])->insert($table, $options);
+```
 
 
 INSERT查询操作使用db_insert()函数开始，如:
