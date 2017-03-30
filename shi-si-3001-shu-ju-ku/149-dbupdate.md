@@ -21,6 +21,8 @@ $num_updated = Database::getConnection()->update('node')
   ->execute();
 ```
 
+* execute()方法将会返回查询所影响的行数
+
 上面的例子与下面的查询等价:
 
 ```php
