@@ -76,7 +76,7 @@ query()函数的第三个参数是一个选项数组，它指出查询将怎么�
   * PDO::FETCH_ASSOC
   * PDO::FETCH_NUM
   * PDO::FETCH_BOTH
-  * 自定义一个查询类
+  * 自定义一个类获取查询结果
 
 如果指定一个查询类，每一条记录将会被获取到那个类的对象中。
 请阅读 http://php.net/manual/en/pdostatement.fetch.php 以获取更多的细节。
@@ -91,4 +91,5 @@ $result = Database::getConnection()->query("SELECT nid, title FROM {node}", [], 
 ]);
 ```
 
-### 自定义查询类
+### 自定义类获取查询结果
+
