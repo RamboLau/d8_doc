@@ -1,6 +1,5 @@
 文档见：https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21Connection.php/function/Connection%3A%3Aupdate/8.2.x
 
-
 在Drupal中更新查询必须使用一个查询建立对象。不同的数据库对大对象LOB(如MySQL中的TEXT)或者BLOB(二进制大对象)的处理有所不同，因此数据库抽象层应该将这些交由相应的数据库驱动类处理。
 
 更新查询使用up_date()方法:
