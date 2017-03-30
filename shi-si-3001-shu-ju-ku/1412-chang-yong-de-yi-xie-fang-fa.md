@@ -83,3 +83,26 @@ $table_alias = $query->join('users', 'u', 'n.uid = u.uid AND u.uid = :uid', arra
 ```php
 SELECT * FROM node n JOIN users u ON n.uid = u.uid AND u.uid = 5;
 ```
+
+###7、查询结果排序
+```php
+$query->orderBy('title', 'DESC')
+  ->orderBy('node.created', 'ASC');
+```
+
+#### 随机排序
+```php
+$query->orderBy('term')->orderRandom()->execute();
+```
+
+###8、范围查询
+```php
+$query->range(0, 10);
+```
+
+###9、表格排序
+```php
+$query = $query
+  ->extend('TableSort')
+  ->orderByHeader($header);
+```
