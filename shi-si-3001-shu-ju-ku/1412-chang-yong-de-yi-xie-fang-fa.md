@@ -50,3 +50,8 @@ $num_rows = $query->countQuery()->execute()->fetchField();
 $query->distinct();
 ```
 
+###4、表达式(Expressions)
+```php
+$count_alias = $query->addExpression('COUNT(uid)', 'uid_count');
+$count_alias = $query->addExpression('created - :offset', 'timestamp', [':offset' => 3600]);
+```
