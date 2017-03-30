@@ -55,3 +55,21 @@ $query->distinct();
 $count_alias = $query->addExpression('COUNT(uid)', 'uid_count');
 $count_alias = $query->addExpression('created - :offset', 'timestamp', [':offset' => 3600]);
 ```
+
+###5、分组查询
+```php
+$query->groupBy('uid');
+```
+如：
+```php
+$query = $database->select('node', 'n')
+   ->fields('n', ['uid']);
+$query->addExpression('count(uid)', 'uid_node_count');
+$query->groupBy('n.uid');
+$query->having('COUNT(uid) >= :matches', array(':matches' => 2));
+$results = $query->execute();
+```
+相当于:
+```php
+SELECT n.uid, count(uid) as uid_node_count FROM node n GROUP BY n.uid HAVING COUNT(uid) >= 2
+```
