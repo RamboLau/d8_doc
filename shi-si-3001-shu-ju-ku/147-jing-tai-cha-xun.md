@@ -75,7 +75,8 @@ query()函数的第三个参数是一个选项数组，它指出查询将怎么�
   * PDO::FETCH_OBJ
   * PDO::FETCH_ASSOC
   * PDO::FETCH_NUM
-  * PDO::FETCH_BOTH，或者也可以自定义一个查询类。
+  * PDO::FETCH_BOTH
+  * 自定义一个查询类。
 如果指定类名字符串，每一条记录将会被获取到那个类的对象中。被PDO定义的其它值将会把获取的结果作为标准对象(stdClass object)、关联数组、索引数组、以及关联数组和索引数组。请阅读http://php.net/manual/en/pdostatement.fetch.php以获取更多的细节。缺省为PDO::FETCH_OBJ。
 
 下面的例子将会在一个副服务器上执行查询，并且使用关联数组从查询的结果集中返回记录。
