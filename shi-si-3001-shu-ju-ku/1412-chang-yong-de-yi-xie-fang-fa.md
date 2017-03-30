@@ -39,3 +39,12 @@ $query->isNotNull('myfield');
 // Results in (myfield IS NOT NULL)
 ```
 
+###2、统计行数
+```php
+$num_rows = $query->countQuery()->execute()->fetchField();
+```
+
+###3、排除重复值
+```php
+$query->distinct();
+```
