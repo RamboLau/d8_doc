@@ -26,11 +26,11 @@ $query = Database::getConnection()->insert('node', $options);
 
 ```php
 $nid = Database::getConnection()->insert('node')
-  ->fields(array(
+  ->fields([
     'title' => 'Example',
     'uid' => 1,
     'created' => REQUEST_TIME,
-  ))
+  ])
   ->execute();
 ```
 
@@ -48,12 +48,16 @@ INSERT INTO {node} (title, uid, created) VALUES ('Example', 1, 1221717405);
 这种方式不推荐！
 ```php
 $nid = Database::getConnection()->insert('node')
-  ->fields(array('title', 'uid', 'created'))
-  ->values(array(
+  ->fields([
+    'title',
+    'uid', 
+    'created'
+  ])
+  ->values([
     'title' => 'Example',
     'uid' => 1,
     'created' => REQUEST_TIME,
-  ))
+  ])
   ->execute();
 ```  
 
