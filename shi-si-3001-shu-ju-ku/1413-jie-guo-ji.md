@@ -10,22 +10,32 @@ $record = $result->fetchAssoc();   // 返回一个关联数组
 
 如果结果集中没有记录，则会返回FALSE。应尽量避免使用fetch()而使用fetchObject()和fetchAsscoc，因为后者带有自身描述更易于理解。如果你使用其它的PDO支持的fetch模式，请使用fecth()。
 
-从结果集中获取某列请使用:
-
+### 从结果集中获取某列
+```php
 $record = $result->fetchField($column_index);
+```
 列索引$column_index的默认值为0，表示第一列。
-统计DELETE、INSERT或者UPDATE的受影响行数，请使用:
-$number_of_rows = $result->rowCount();
-统计选择查询返回的行数请使用:
-$number_of_rows = db_select('node')->countQuery()->execute()->fetchField();
-获取所有记录到数组中，请使用:
-// Retrieve all records into an indexed array of stdClass objects.
-//获取所有数据到索引数组。
-$result->fetchAll();
 
+### 统计受影响的行数
+```php
+$number_of_rows = $result->rowCount();
+```
+
+### 统计选择查询返回的行数
+```php
+$number_of_rows = db_select('node')->countQuery()->execute()->fetchField();
+```
+
+### 获取所有记录
+```php
+// Retrieve all records into an indexed array of stdClass objects.
+$result->fetchAll();
+```
+### 获取特定的字段记录
+```php
 // Retrieve all records into an associative array keyed by the field in the result specified.
-//获取所有数据到关联数组，其键为字段名。
 $result->fetchAllAssoc($field);
+```
 
 // Retrieve a 2-column result set as an associative array of field 0 => field 1.
 //获取一个2列的结果集的关联数组。
