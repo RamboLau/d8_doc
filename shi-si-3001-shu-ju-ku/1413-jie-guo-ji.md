@@ -31,6 +31,12 @@ $number_of_rows = db_select('node')->countQuery()->execute()->fetchField();
 // Retrieve all records into an indexed array of stdClass objects.
 $result->fetchAll();
 ```
+如:
+```php
+// Get an array of arrays with both numeric and associative keys.
+$result->fetchAll(PDO::FETCH_BOTH);
+```
+
 ### 结果集为特定的字段
 ```php
 // Retrieve all records into an associative array keyed by the field in the result specified.
@@ -74,8 +80,6 @@ $result->fetchObject();
 fetchAll()和fetchAllAssoc使用的是默认的fetch模式(索引数组、关联数组或者对象)。这是可能通过设置fetch模式常量进行修改。对于fetchAll()方法fetch模式对应第一个参数，对于fetchAllAssoc()方法它对应第二个参数。例子:
 
 
-// Get an array of arrays with both numeric and associative keys.
-$result->fetchAll(PDO::FETCH_BOTH);
 因为PHP在返回对象上支持链式方法调用，所以经常会跳过$result变量。请看:
 // Get an associative array of nids to titles.
 $nodes = db_query("SELECT nid, title FROM {node}")->fetchAllKeyed();
