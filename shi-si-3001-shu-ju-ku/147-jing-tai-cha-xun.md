@@ -8,9 +8,9 @@ Database::getConnection($options['target'])->query($query, $args, $options);
 ```
 
 query方法包含三个参数:
-* $query: 需运行的查询字符串，在字符串中使用占位符代替变量使用，表名使用大括号。
-* $args: 用来替换占位符的数组。
-* $options: 一个控制查询如何执行的可选数组。
+* $query: 需运行的查询字符串，在字符串中使用占位符代替变量使用，表名使用大括号
+* $args: 用来替换占位符的数组
+* $options: 一个控制查询如何执行的可选数组
 
  
 前缀(Prefixing)
