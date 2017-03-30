@@ -18,53 +18,36 @@ $query = Database::getConnection()->insert('node', $options);
 
 注意: 表名不需要使用大括号，因为查询构建器会自动地处理它。
 
-INSERT查询对象使用了流式API，除了execute()方法外，其它方法返回查询对象自身，并允许链式调用方法。在大多数情况下，这意味着查询对象根本不需要保存为中间变量。
 
-INSERT查询对象支持多种不同的使用方式以满足不同的需求。通常，需要指定待插入的字段以及它的值，然后执行插入操作。下面是一些推荐的用法。
+### 推荐写法
 
  
-紧凑形式
+紧凑形式:
 
-大多数INSERT查询操作使用紧凑形式:
-
-$nid = db_insert('node')
+```php
+$nid = Database::getConnection()->insert('node')
   ->fields(array(
     'title' => 'Example',
     'uid' => 1,
     'created' => REQUEST_TIME,
   ))
   ->execute();
+```
+
+* fields: 关联数组，键对应数据库的字段名，值对应字段值
+* execute: 调用了这个方法，查询才会正常执行
+* 如果表含有自增字段，则会返回自动增加的字段值，否则无任何返回值
 
 上面的查询代码与以下SQL语句相同:
 
+```php
 INSERT INTO {node} (title, uid, created) VALUES ('Example', 1, 1221717405);
+```
 
-上面的代码将插入操作的各个部份链接在一起。
-
-db_insert('node')
-
-这一行为节点表创建一个新的INSERT查询对象
-
-->fields(array(
-    'title' => 'Example',
-    'uid' => 1,
-    'created' => REQUEST_TIME,
-  ))
-
-fields方法接受多种形式的参数，但是最常用的是关联数组。数组的键对于表中的列，键值对于到需插入的列值。其结果是在指定表上执行单个插入操作。
-
-->execute();
-
-execute()方法告诉Drupal运行这个查询。只有调用了这个方法，查询才会真正执行。
-
-与INSERT查询对象上的其它方法返回查询对象自身不同，execute()返回一个自动增加的字段值(hook_schema()中的serial类型值)。在上面的例子中其返回值赋给了$nid。如果没有使用自动增加字段，execute()的返回值是没有定义的并且不应该相信。
-
-一般来说，这种形式的INSERT查询是最常用的
-
- 
-冗余形式
-
-$nid = db_insert('node')
+### 冗余形式
+这种方式不推荐！
+```php
+$nid = Database::getConnection()->insert('node')
   ->fields(array('title', 'uid', 'created'))
   ->values(array(
     'title' => 'Example',
@@ -72,25 +55,12 @@ $nid = db_insert('node')
     'created' => REQUEST_TIME,
   ))
   ->execute();
+```  
 
 这种形式与前面的形式相比，虽效果一样，但显得更冗长。
 
-->fields(array('title', 'uid', 'created'))
-
-在调用fields()时其参数使用一个索引数组而不是关联数组，它只是设置是INSERT查询用到的字段(数据表的列)并没有指定字段值。这主要用于运行一次性插入多条记录(后面讲)。
-
-->values(array(
-    'title' => 'Example',
-    'uid' => 1,
-    'created' => REQUEST_TIME,
-  ))
-
-调用这个方法指定了一个带有字段名和字段值的关联数组。这个value()方法可以接受一个索引数组作为参数，如果使用索引数组，需注意数组元素的顺序必须与字段顺序相对应。如果使用关联数组，顺序可以随意。通常关联数组具有更高的可读性。
-
-这种查询形式用得较少，因为紧凑形式更简洁。大多数情况下，只有运行multi-insert查询操作时使用。
-
  
-多行插入形式
+### 多行插入形式
 
 INSERT查询对象也可以一次性插入多条记录。只须多次调用values()方法将它们加入到查询表达式队列并将它们组合在一起。不过这依赖于具体的数据库能力。对于大多数数据库，将会一次性插入多条记录以提高数据插入速度。在MySQL中，它将会使用MySQL多值插入语法。
 
@@ -111,7 +81,7 @@ $values = array(
     'created' => REQUEST_TIME,
   ),
 );
-$query = db_insert('node')->fields(array('title', 'uid', 'created'));
+$query = Database::getConnection()->insert('node')->fields(array('title', 'uid', 'created'));
 foreach ($values as $record) {
   $query->values($record);
 }
