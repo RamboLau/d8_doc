@@ -82,7 +82,11 @@ $values = array(
     'created' => REQUEST_TIME,
   ),
 );
-$query = Database::getConnection()->insert('node')->fields(array('title', 'uid', 'created'));
+$query = Database::getConnection()->insert('node')->fields([
+  'title', 
+  'uid', 
+  'created'
+]);
 foreach ($values as $record) {
   $query->values($record);
 }
