@@ -26,21 +26,23 @@ $result = Database::getConnection()->query("SELECT nid, title FROM {node} WHERE 
 
 * :created 将会在执行查询时被动态地替换成REQUEST_TIME – 3600。
 
-一个查询中可以有多个占位符，但是所有的占位符必须有唯一的名称。根据具体的使用情况，占位符可以嵌入代码中(如上例)，也可以定义一个占位符数组变量并传入，数组中占位符的顺序不用管。
+一个查询中可以有多个占位符，但是所有的占位符必须有唯一的名称。
 
-以”db_”开始的占位符是为内部系统预留的，请不要显示地指定。
+以“db_"开始的占位符是为内部系统预留的，请不要显示地指定。
 
-注意占位符不能转义也不能使用引号。因为它们被单独地传递给数据库服务器，服务器能区分查询字符串和占位符的值。
+注意占位符不能转义也不能使用引号，Drupal8核心可以区分查询字符串和占位符的值。
 
+```php
 // 错误 (:type占位符使用了引号)
-$result = db_query("SELECT title FROM {node} WHERE type = ':type'", array(
+$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = ':type'", array(
   ':type' => 'page',
 ));
 
 // 正确 (:type占位符没有使用引号)
-$result = db_query("SELECT title FROM {node} WHERE type = :type", array(
+$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = :type", array(
   ':type' => 'page',
 ));
+```
 
 占位符不能用于列名和表名。如果表名来自于不安全的输入，应该使用db_escape_table()，这个函数会返回一个安全的表名。
 
