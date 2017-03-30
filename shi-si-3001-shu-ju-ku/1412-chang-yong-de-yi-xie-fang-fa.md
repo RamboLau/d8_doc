@@ -38,3 +38,4 @@ $query->isNull('myfield');
 $query->isNotNull('myfield');
 // Results in (myfield IS NOT NULL)
 ```
+
