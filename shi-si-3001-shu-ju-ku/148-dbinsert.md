@@ -130,12 +130,3 @@ Database::getConnection()->insert('mytable')
   ->execute();
 ?>
 ```
-
- 
-缺省值
-
-在正常情况下，如果你没有为给定的字段指定一个值，由schema定义的数据库表将智能地为其应用一个缺省值。然而有时，你需要明确地通知数据库应用一个默认值。比如你想为整个记录应用默认值。要明确地指定默认值，可以使用useDefaults()方法。
-
-$query->useDefaults(array('field1', 'field2'));
-
-这一行通知查询使用数据库为field1和field2定义的默认值。注意在useDefaults()和fields()或values()指定相同字段会导致一个错误，并抛出一个异常。
