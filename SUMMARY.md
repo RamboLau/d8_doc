@@ -110,13 +110,14 @@
   * [14.5 schema API](shi-si-3001-shu-ju-ku/142-schema-api.md)
   * [14.6 数据库配置](shi-si-3001-shu-ju-ku/146-shu-ju-ku-pei-zhi.md)
   * [14.7 静态查询](shi-si-3001-shu-ju-ku/147-jing-tai-cha-xun.md)
-  * [14.x 实践](shi-si-3001-shu-ju-ku/14x-shi-jian.md)
   * [14.8 db\_insert](shi-si-3001-shu-ju-ku/148-dbinsert.md)
   * 14.9 db\_update
   * 14.10 db\_delete
   * 14.11 合并查询
   * 14.12 hook\_query\_alter
-  * 14.13 最佳实践
+  * 14.13 结果集
+  * 14.14 最佳实践
+  * [14.15 实践](shi-si-3001-shu-ju-ku/14x-shi-jian.md)
 * [十五、RESTful开发](shi-wu-3001-restful-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
 * [十七、主题开发](shi-qi-3001-zhu-ti-kai-fa.md)
