@@ -1,20 +1,12 @@
 从结果集中获取数据有多种方式，视具体的情况而定。
 
-大多数情况下，可以使用foreach()来遍历集果集。如下例子:
-
-$result = db_query("SELECT nid, title FROM {node}");
-foreach ($result as $record) {
-  // Do something with each $record
-  $node = node_load($record->nid);
-}
-
-根据具体的使用情况，可以使用其它方式获取记录。
-
 如:
 
-$record = $result->fetch();            // 缺省模式
+```php
+$record = $result->fetch();        // 缺省模式
 $record = $result->fetchObject();  // 返回一个记录对象
 $record = $result->fetchAssoc();   // 返回一个关联数组
+```
 
 如果结果集中没有记录，则会返回FALSE。应尽量避免使用fetch()而使用fetchObject()和fetchAsscoc，因为后者带有自身描述更易于理解。如果你使用其它的PDO支持的fetch模式，请使用fecth()。
 
