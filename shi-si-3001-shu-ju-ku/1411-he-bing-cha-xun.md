@@ -50,8 +50,8 @@ Database::getConnection()->merge('example')
     'name' => $name
   ])
   ->fields([
-      'field1' => $value1,
-      'field2' => $value2,
+    'field1' => $value1,
+    'field2' => $value2,
   ])
   ->expression('field1', 'field1 + :inc', [':inc' => 1])
   ->execute();
