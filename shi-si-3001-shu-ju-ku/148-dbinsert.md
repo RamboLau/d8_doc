@@ -97,26 +97,26 @@ foreach ($values as $record) {
 $query->execute();
 ```
 
-上面的代码将会把插入的三条记录组合在一起执行，为了更有效地执行，这需要使用相应的数据库驱动的插入方法。注意上面的代码我们将查询对象保存在变量中以使我们通过循环调用values()构造多行查询。
-
 上面的代码与以下三个查询相等:
 
+```php
 INSERT INTO {node} (title, uid, created) VALUES ('Example', 1, 1221717405);
 INSERT INTO {node} (title, uid, created) VALUES ('Example2', 1, 1221717405);
 INSERT INTO {node} (title, uid, created) VALUES ('Example3', 2, 1221717405);
+```
 
-执行多行查询的execute()方法的返回值没有定义并且是不可信的，因为它随着数据库的不同而不同。
-
+注意： execute方法是没有返回值的。
  
-基于SELECT查询的INSERT
+### 基于SELECT查询的INSERT
 
 如果你想处理的一个表带有其它表数据，你可能需要在源表上执行SELECT查询，然后在PHP中遍历数据并将其插入新表，或者使用INSERT INTO...SELECT语句将SELECT返回的每行作为INSERT查询的数据源。
 
-举一个例子，我们想建立一个”mytable”表，它包含节点id(nid)和用户名(name)，这个表的数据来源于节点表和用户表，并且针对于特定的页面类型。
+举一个例子，我们想建立一个mytable表，它包含节点id(nid)和用户名(name)，这个表的数据来源于节点表和用户表。
 
+```php
 <?php
 // Build the SELECT query.
-$query = db_select('node', 'n');
+$query = Database::getConnection()->select('node', 'n');
 // Join to the users table.
 $query->join('users', 'u', 'n.uid = u.uid');
 // Add the fields we want.
@@ -126,10 +126,11 @@ $query->addField('u','name');
 $query->condition('type', 'page');
 
 // Perform the insert.
-db_insert('mytable')
+Database::getConnection()->insert('mytable')
   ->from($query)
   ->execute();
 ?>
+```
 
  
 缺省值
