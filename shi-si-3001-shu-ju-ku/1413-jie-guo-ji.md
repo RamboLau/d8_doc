@@ -74,20 +74,3 @@ $result->fetchCol($column_index);
 ```php
 $result->fetchObject();
 ```
-
- 
-
-fetchAll()和fetchAllAssoc使用的是默认的fetch模式(索引数组、关联数组或者对象)。这是可能通过设置fetch模式常量进行修改。对于fetchAll()方法fetch模式对应第一个参数，对于fetchAllAssoc()方法它对应第二个参数。例子:
-
-
-因为PHP在返回对象上支持链式方法调用，所以经常会跳过$result变量。请看:
-// Get an associative array of nids to titles.
-$nodes = db_query("SELECT nid, title FROM {node}")->fetchAllKeyed();
-
-// Get a single record out of the database.
-$node = db_query("SELECT * FROM {node} WHERE nid = :nid", array(':nid' => $nid))->fetchObject();
-
-// Get a single value out of the database.
-$title = db_query("SELECT title FROM {node} WHERE nid = :nid", array(':nid' => $nid))->fetchField();
-如果你想使用一个像array(1,2,3,4,5)这样的简单数组，并且想设置成这样array(1=>1,2=>2,3=>3,4=>4,5=>5)。你可以这样使用:
-$nids = db_query("SELECT nid FROM {node}")->fetchAllKeyed(0,0);
