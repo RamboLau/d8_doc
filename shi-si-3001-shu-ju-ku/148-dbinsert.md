@@ -19,10 +19,9 @@ $query = Database::getConnection()->insert('node', $options);
 注意: 表名不需要使用大括号，因为查询构建器会自动地处理它。
 
 
-### 推荐写法
+### 常用写法
 
- 
-紧凑形式:
+#### 紧凑形式
 
 ```php
 $nid = Database::getConnection()->insert('node')
@@ -44,7 +43,7 @@ $nid = Database::getConnection()->insert('node')
 INSERT INTO {node} (title, uid, created) VALUES ('Example', 1, 1221717405);
 ```
 
-### 冗余形式
+#### 冗余形式
 这种方式不推荐！
 ```php
 $nid = Database::getConnection()->insert('node')
@@ -64,7 +63,7 @@ $nid = Database::getConnection()->insert('node')
 这种形式与前面的形式相比，虽效果一样，但显得更冗长。
 
  
-### 多行插入形式
+#### 多行插入形式
 
 INSERT查询对象也可以一次性插入多条记录。只须多次调用values()方法将它们加入到查询表达式队列并将它们组合在一起。对于大多数数据库，将会一次性插入多条记录以提高数据插入速度。在MySQL中，它将会使用MySQL多值插入语法。
 
@@ -107,7 +106,7 @@ INSERT INTO {node} (title, uid, created) VALUES ('Example3', 2, 1221717405);
 
 注意： execute方法是没有返回值的。
  
-### 基于SELECT查询的INSERT
+#### 基于SELECT查询的INSERT
 
 如果你想处理的一个表带有其它表数据，你可能需要在源表上执行SELECT查询，然后在PHP中遍历数据并将其插入新表，或者使用INSERT INTO...SELECT语句将SELECT返回的每行作为INSERT查询的数据源。
 
