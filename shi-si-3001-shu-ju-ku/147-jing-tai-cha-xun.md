@@ -5,7 +5,7 @@
 ```php
 use Drupal\Core\Database\Database;
 
-Database::getConnection($options['target'])->query($query, $args, $options);
+Database::getConnection($target)->query($query, $args, $options);
 ```
 
 query方法包含三个参数:
@@ -16,11 +16,13 @@ query方法包含三个参数:
  
 ### 占位符
 
-占位符是在查询字符串中使用一个由冒号和一个有意义的字符串组成，在查询执行时它会被替换成真正的值。这样做是为了防止SQL注入攻击。
+占位符是在查询字符串中使用一个由冒号和一个有意义的字符串组成，在查询执行时它会被替换成真正的值。这样做是主要是为了防止SQL注入攻击。
 
-$result = db_query("SELECT nid, title FROM {node} WHERE created > :created", array(
+```php
+$result = Database::getConnection()->query("SELECT nid, title FROM {node} WHERE created > :created", [
   ':created' => REQUEST_TIME - 3600,
-));
+]);
+```
 
 上面的代码将会从节点表中选择出过去一小时创建的所有节点。占位符:created将会在运行查询时被动态地替换成REQUEST_TIME – 3600。
 
