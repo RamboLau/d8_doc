@@ -73,3 +73,13 @@ $results = $query->execute();
 ```php
 SELECT n.uid, count(uid) as uid_node_count FROM node n GROUP BY n.uid HAVING COUNT(uid) >= 2
 ```
+
+###6、join
+```php
+$query = $database->select('node', 'n');
+$table_alias = $query->join('users', 'u', 'n.uid = u.uid AND u.uid = :uid', array(':uid' => 5));
+```
+相当于：
+```php
+SELECT * FROM node n JOIN users u ON n.uid = u.uid AND u.uid = 5;
+```
