@@ -114,6 +114,7 @@
   * [14.9 更新查询update](shi-si-3001-shu-ju-ku/149-dbupdate.md)
   * [14.10 删除查询delete](shi-si-3001-shu-ju-ku/1410-shan-chu-cha-xun-delete.md)
   * [14.11 合并查询upsert](shi-si-3001-shu-ju-ku/1411-he-bing-cha-xun.md)
+  * [14.12 常用的一些方法](shi-si-3001-shu-ju-ku/1412-chang-yong-de-yi-xie-fang-fa.md)
   * [14.13 结果集](shi-si-3001-shu-ju-ku/1413-jie-guo-ji.md)
   * [14.14 最佳实践](shi-si-3001-shu-ju-ku/1414-zui-jia-shi-jian.md)
   * [14.15 实践](shi-si-3001-shu-ju-ku/14x-shi-jian.md)
