@@ -114,7 +114,6 @@
   * 14.9 db\_update
   * 14.10 db\_delete
   * 14.11 合并查询
-  * [14.12 hook\_query\_alter](shi-si-3001-shu-ju-ku/1412-hookquery-alter.md)
   * [14.13 结果集](shi-si-3001-shu-ju-ku/1413-jie-guo-ji.md)
   * [14.14 最佳实践](shi-si-3001-shu-ju-ku/1414-zui-jia-shi-jian.md)
   * [14.15 实践](shi-si-3001-shu-ju-ku/14x-shi-jian.md)
