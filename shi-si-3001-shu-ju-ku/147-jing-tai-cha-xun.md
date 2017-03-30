@@ -34,14 +34,14 @@ $result = Database::getConnection()->query("SELECT nid, title FROM {node} WHERE 
 
 ```php
 // 错误 (:type占位符使用了引号)
-$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = ':type'", array(
+$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = ':type'", [
   ':type' => 'page',
-));
+]);
 
 // 正确 (:type占位符没有使用引号)
-$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = :type", array(
+$result = Database::getConnection()->query("SELECT title FROM {node} WHERE type = :type", [
   ':type' => 'page',
-));
+]);
 ```
 
 占位符不能用于列名和表名。如果表名来自于不安全的输入，应该使用db_escape_table()，这个函数会返回一个安全的表名。
