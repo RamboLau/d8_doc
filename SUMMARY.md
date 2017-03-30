@@ -112,7 +112,7 @@
   * [14.7 静态查询](shi-si-3001-shu-ju-ku/147-jing-tai-cha-xun.md)
   * [14.8 插入查询insert](shi-si-3001-shu-ju-ku/148-dbinsert.md)
   * [14.9 更新查询update](shi-si-3001-shu-ju-ku/149-dbupdate.md)
-  * 14.10 删除查询delete
+  * [14.10 删除查询delete](shi-si-3001-shu-ju-ku/1410-shan-chu-cha-xun-delete.md)
   * 14.11 合并查询
   * [14.13 结果集](shi-si-3001-shu-ju-ku/1413-jie-guo-ji.md)
   * [14.14 最佳实践](shi-si-3001-shu-ju-ku/1414-zui-jia-shi-jian.md)
