@@ -99,27 +99,13 @@ $result = Database::getConnection()->query("SELECT id, title FROM {example_table
   'fetch' => 'ExampleClass',
 ]);
 ```
+id和title属性将会添加到ExampleClass对象中，可以在construct中获取。
 
-如果这个类定义了一个__construct()方法，在类对象被创建时，属性将会添加到对象中，然后会调用类的构造函数。例如，如果你有下面的类和查询。
-
+ExampleClass.php:
+```php
 class ExampleClass {
   function __construct() {
     // Do something
   }
 }
-
-$result = db_query("SELECT id, title FROM {example_table}", array(), array(
-  'fetch' => 'ExampleClass',
-));
-
-上面的例子将会创建ExampleClass的对象，id和title属性将会添加到这个对象中，然后才执行__construct()构造函数。这样的执行顺序是由于5.2以前的PHP版本中的bug造成的，PHP 5.2及以后出现了常量PDO::FETCH_PROPS_LATE，其作用是在设置属性前调用构造函数。
-
-如果对象上有一个构造函数并且需要在属性添加到对象之前执行它的构造函数，请使用下面的代码。
-
-$result = db_query("SELECT id, title FROM {example_table}");
-foreach ($result->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'ExampleClass') as $record) {
-  // Do something
-}
-
-通过给fetchAll传递一些参数能获得相同的fetch效果。PDO::FETCH_CLASS告诉fetchAll将返回的结果集作为ExampleClass类型对象的属性。PDO::FETCH_PROPS_LATE告诉fetchAll向对象添加属性应放在调用对象的构造函数之后进行。
-
+```
