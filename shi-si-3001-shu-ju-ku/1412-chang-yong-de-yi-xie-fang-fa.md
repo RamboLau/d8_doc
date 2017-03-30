@@ -20,7 +20,7 @@ $query->condition('myfield', [5,10], 'BETWEEN');
 $query->condition('myfield', [1, 2, 3], 'NOT IN');
 ```
 
-也支持嵌套：
+#### 嵌套
 ```php
 $or = db_or()->condition('field2', 5)->condition('field3', 6);
 $query
@@ -30,3 +30,11 @@ $query
 // (field1 IN (:db_placeholder_1, :db_placeholder_2) AND (field2 = :db_placeholder3 OR field3 = :db_placeholder_4))
 ```
 
+#### 检测NULL值
+```php
+$query->isNull('myfield');
+// Results in (myfield IS NULL)
+
+$query->isNotNull('myfield');
+// Results in (myfield IS NOT NULL)
+```
