@@ -82,21 +82,13 @@ query()函数的第三个参数是一个选项数组，它指出查询将怎么�
 请阅读 http://php.net/manual/en/pdostatement.fetch.php 以获取更多的细节。
 缺省为PDO::FETCH_OBJ。
 
-下面的例子将会在一个副服务器上执行查询，并且使用关联数组从查询的结果集中返回记录。
+下面的例子将会在一个slave服务器上执行查询，并且使用关联数组从查询的结果集中返回记录。
 
-$result = db_query("SELECT nid, title FROM {node}", array(), array(
+```php
+$result = Database::getConnection()->query("SELECT nid, title FROM {node}", [], [
   'target' => 'slave',
   'fetch' => PDO::FETCH_ASSOC,
-));
+]);
+```
 
-调用db_query()函数会返回一个结果对象，结果对象包含了返回的所有行和列。下面的例子中，$result变量存储了查询返回的所有行，同时使用了它的fetchAssoc()方法获取一行并存储到$row变量中。
-
-$sql = "SELECT name, quantity FROM goods WHERE vid = :vid";
-$result = db_query($sql, array(':vid' => $vid));
-if ($result) {
-  while ($row = $result->fetchAssoc()) {
-    // Do something with:
-    // $row['name']
-    // $row['quantity']
-  }
-}
+### 自定义查询类
