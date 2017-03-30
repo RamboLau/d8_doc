@@ -79,7 +79,8 @@ query()函数的第三个参数是一个选项数组，它指出查询将怎么�
   * 自定义一个查询类
 
 如果指定一个查询类，每一条记录将会被获取到那个类的对象中。
-请阅读 http://php.net/manual/en/pdostatement.fetch.php 以获取更多的细节。缺省为PDO::FETCH_OBJ。
+请阅读 http://php.net/manual/en/pdostatement.fetch.php 以获取更多的细节。
+缺省为PDO::FETCH_OBJ。
 
 下面的例子将会在一个副服务器上执行查询，并且使用关联数组从查询的结果集中返回记录。
 
