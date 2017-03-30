@@ -37,7 +37,7 @@ $result->fetchAll();
 $result->fetchAllAssoc($field);
 ```
 
-### 结果集为关联数据
+### 结果集为2列关联数据
 ```php
 // Retrieve a 2-column result set as an associative array of field 0 => field 1.
 $result->fetchAllKeyed();
@@ -50,10 +50,15 @@ $result->fetchAllKeyed(1, 0); // would be field 1 => field 0
 $result->fetchAllKeyed(0, 0); // would be field 0 => field 0, e.g. [article] => [article]
 ```
 
+### 单行记录
+```php
 // Retrieve a 1-column result set as one single array.
 $result->fetchCol();
+
 // Column number can be specified otherwise defaults to first column
 $result->fetchCol($column_index);
+```
+
 
  
 
