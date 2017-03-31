@@ -123,6 +123,7 @@
   * [15.1 基本概念](shi-wu-3001-restful-kai-fa/151-ji-ben-gai-nian.md)
   * [15.2 动态路由](shi-wu-3001-restful-kai-fa/152-dong-tai-lu-you.md)
   * [15.3 使用其他认证协议](shi-wu-3001-restful-kai-fa/153-shi-yong-qi-ta-ren-zheng-xie-yi.md)
+  * [15.4 接口开发](shi-wu-3001-restful-kai-fa/154-jie-kou-kai-fa.md)
 * [十六、渲染系统](shi-liu-3001-xuan-ran-xi-tong.md)
 * [十七、主题开发](shi-qi-3001-zhu-ti-kai-fa.md)
 * [十八、视图开发](shi-ba-3001-shi-tu-kai-fa.md)
