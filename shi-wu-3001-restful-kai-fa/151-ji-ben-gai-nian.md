@@ -1,9 +1,9 @@
 文档见：https://www.drupal.org/docs/8/core/modules/rest
 
-###一、协议
+###1、协议
 API与用户的通信协议，总是使用HTTPS协议。
 
-###二、域名
+###2、域名
 应该尽量将API部署在专用域名之下。
 ```php
 https://api.example.com
@@ -14,14 +14,14 @@ https://api.example.com
 https://example.org/api/
 ```
 
-###三、版本（Versioning）
+###3、版本（Versioning）
 应该将API的版本号放入URL。
 ```php
 https://api.example.com/v1/
 ```
 另一种做法是，将版本号放在HTTP头信息中，但不如放入URL方便和直观。Github采用这种做法。
 
-###四、路径（Endpoint）
+###4、路径（Endpoint）
 路径又称"终点"（endpoint），表示API的具体网址。
 在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的"集合"（collection），所以API中的名词也应该使用复数。
 举例来说，有一个API提供动物园（zoo）的信息，还包括各种动物和雇员的信息，则它的路径应该设计成下面这样。
@@ -31,7 +31,7 @@ https://api.example.com/v1/animals
 https://api.example.com/v1/employees
 ```
 
-###五、HTTP动词
+###5、HTTP动词
 对于资源的具体操作类型，由HTTP动词表示。
 常用的HTTP动词有下面五个（括号里是对应的SQL命令）。
 ```php
@@ -59,7 +59,7 @@ GET /zoos/ID/animals：列出某个指定动物园的所有动物
 DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 ```
 
-###六、过滤信息（Filtering）
+###6、过滤信息（Filtering）
 如果记录数量很多，服务器不可能都将它们返回给用户。API应该提供参数，过滤返回结果。
 下面是一些常见的参数。
 ```php
@@ -71,7 +71,7 @@ DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 ```
 参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /zoo/ID/animals 与 GET /animals?zoo_id=ID 的含义是相同的。
 
-###七、状态码（Status Codes）
+###7、状态码（Status Codes）
 服务器向用户返回的状态码和提示信息，常见的有以下一些（方括号中是该状态码对应的HTTP动词）。
 ```php
 200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。
@@ -89,7 +89,7 @@ DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 ```
 状态码的完全列表参见https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html。
 
-###八、错误处理（Error handling）
+###8、错误处理（Error handling）
 如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。
 ```php
 {
@@ -97,7 +97,7 @@ DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 }
 ```
 
-###九、返回结果
+###9、返回结果
 针对不同操作，服务器向用户返回的结果应该符合以下规范。
 ```php
 GET /collection：返回资源对象的列表（数组）
