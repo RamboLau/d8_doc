@@ -17,3 +17,7 @@ drupal generate:plugin:rest:resource
 ```
 
 接口注解以@RestResource开头。
+
+* id: 唯一ID
+* label: 管理界面显示的标签
+* uri_paths: 定义路径
