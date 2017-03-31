@@ -15,3 +15,5 @@ drupal generate:plugin:rest:resource
  *   }
  * )
 ```
+
+接口注解以@RestResource开头。
