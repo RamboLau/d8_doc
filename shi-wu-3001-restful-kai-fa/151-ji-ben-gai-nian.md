@@ -88,17 +88,26 @@ DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
 500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
 ```
 状态码的完全列表参见https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html。
-八、错误处理（Error handling）
-如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。
 
+###八、错误处理（Error handling）
+如果状态码是4xx，就应该向用户返回出错信息。一般来说，返回的信息中将error作为键名，出错信息作为键值即可。
+```php
 {
     error: "Invalid API key"
 }
-九、返回结果
+```
+
+###九、返回结果
 针对不同操作，服务器向用户返回的结果应该符合以下规范。
+```php
 GET /collection：返回资源对象的列表（数组）
 GET /collection/resource：返回单个资源对象
 POST /collection：返回新生成的资源对象
 PUT /collection/resource：返回完整的资源对象
 PATCH /collection/resource：返回完整的资源对象
 DELETE /collection/resource：返回一个空文档
+```
+
+###10、认证方式
+* API的身份认证应该使用OAuth 2.0框架，见http://www.rfcreader.com/#rfc6749
+* 服务器返回的数据格式，应该尽量使用JSON，避免使用XML。
