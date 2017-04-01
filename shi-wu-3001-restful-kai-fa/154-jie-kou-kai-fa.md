@@ -131,3 +131,9 @@ X-CSRF-Token可以通过这个API来获取：
 ```php
 curl -i 'http://localhost/rest/session/token'
 ```
+
+完整示例：
+
+```php
+curl -i -X POST 'http://localhost/api/test' -H 'X-CSRF-Token:Your token' -H 'Content-type: application/json' -d '{}'
+```
