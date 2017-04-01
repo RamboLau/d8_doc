@@ -68,7 +68,7 @@ Database::getConnection()->schema()->dropTable($table);
 Database::getConnection()->schema()->renameTable($table, $new_name);
 ```
 
-### 清空表
+####å 清空表
 ```php
 Database::getConnection($options['target'])->truncate($table, $options);
 ```
