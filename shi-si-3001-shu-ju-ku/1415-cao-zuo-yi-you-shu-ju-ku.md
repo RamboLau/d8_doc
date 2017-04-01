@@ -5,10 +5,19 @@
 ### 字段更改
 
 #### 添加字段
+```php
+Database::getConnection()->schema()->addField($table, $field, $spec, $keys_new);
+```
 
 #### 修改字段
+```php
+Database::getConnection()->schema()->changeField($table, $field, $field_new, $spec, $keys_new);
+```
 
 #### 删除字段
+```php
+
+```
 
 ### 索引更改
 
