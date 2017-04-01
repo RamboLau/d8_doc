@@ -120,3 +120,13 @@ class PostRest extends ResourceBase {
 
 }
 ```
+
+使用POST请求的时候，需要添加header：
+```php
+X-CSRF-Token
+```
+
+X-CSRF-Token可以通过这个API来获取：
+```php
+curl -i 'http://localhost/rest/session/token'
+```
