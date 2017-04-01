@@ -121,6 +121,7 @@ class PostRest extends ResourceBase {
 }
 ```
 
+###3、POST请求
 使用POST请求的时候，需要添加header：
 ```php
 X-CSRF-Token
