@@ -70,7 +70,7 @@ Database::getConnection()->schema()->renameTable($table, $new_name);
 
 ### 清空表
 ```php
-
+Database::getConnection($options['target'])->truncate($table, $options);
 ```
 
 完成以后，执行drush updb完成更新！
