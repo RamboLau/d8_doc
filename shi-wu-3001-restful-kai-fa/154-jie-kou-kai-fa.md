@@ -11,7 +11,8 @@ drupal generate:plugin:rest:resource
  *   id = "default_rest_resource",
  *   label = @Translation("Default rest resource"),
  *   uri_paths = {
- *     "canonical" = "/tests"
+ *     "canonical" = "/tests",
+ *     "https://www.drupal.org/link-relations/create" = "/tests" // 针对POST请求
  *   }
  * )
 ```
